@@ -59,7 +59,7 @@ namespace TpIsGrupo2
             lblSeleccioneMetodo.Visible = false;
 
             btnComprar.Enabled = true;
-            btnComprar.Location = new Point(47, 1000);
+            btnComprar.Location = new Point(btnComprar.Location.X, 780);
         }
 
         private void setDefaultConidtions()
@@ -77,13 +77,13 @@ namespace TpIsGrupo2
             lblSeleccioneMetodo.Size = new Size(300, 80);
 
             // Reubicaciones, estan px primero x y despues el eje y
-            lblSeleccioneMetodo.Location = new Point(pnlHoraEntrega.Location.X + 25, 610);
+            lblSeleccioneMetodo.Location = new Point(pnlHoraEntrega.Location.X + 20, 470);
 
-            pnlHoraEntrega.Location = new Point(47, 300);
 
-            pnlMetodo.Location = new Point(47, 485);
 
-            btnComprar.Location = new Point(btnComprar.Location.X, 700);
+
+
+            btnComprar.Location = new Point(btnComprar.Location.X, 550);
             btnComprar.Enabled = false;
 
             // Padding
@@ -95,11 +95,11 @@ namespace TpIsGrupo2
             pnlDatosTarjeta.Visible = false;
             lblSeleccioneMetodo.Visible = true;
 
-            // Deshabilitar el scroll horizontal y que quede nomas el vertical
-            pnlGeneral.HorizontalScroll.Maximum = 0;
-            pnlGeneral.AutoScroll = false;
-            pnlGeneral.HorizontalScroll.Visible = false;
-            pnlGeneral.AutoScroll = true; // Habilitar nuevamente el scroll vertical
+            //// Deshabilitar el scroll horizontal y que quede nomas el vertical
+            //pnlGeneral.HorizontalScroll.Maximum = 0;
+            //pnlGeneral.AutoScroll = false;
+            //pnlGeneral.HorizontalScroll.Visible = false;
+            //pnlGeneral.AutoScroll = true; // Habilitar nuevamente el scroll vertical
         }
     }
 }
