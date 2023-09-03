@@ -16,7 +16,7 @@ namespace TpIsGrupo2
             this.Location = new System.Drawing.Point(500, 10);
 
             // Llamo a setDefault para establecer las posiciones por defecto de los elementos
-            setDefaultConidtions();
+            SetDefaultConidtions();
         }
 
         private void btnVisa_Click(object sender, EventArgs e)
@@ -44,7 +44,7 @@ namespace TpIsGrupo2
             // Programar todo lo que sea marcar uno y desmarcar el otro
             if (!chkTarjeta.Checked)
             {
-                setDefaultConidtions();
+                SetDefaultConidtions();
             }
             else
             {
@@ -62,7 +62,7 @@ namespace TpIsGrupo2
             btnComprar.Location = new Point(btnComprar.Location.X, 780);
         }
 
-        private void setDefaultConidtions()
+        private void SetDefaultConidtions()
         {
             // Este metodo es cuando no se tiene seleccionado nada en el checkbox del metodo de pago
 
