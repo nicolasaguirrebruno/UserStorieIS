@@ -1,4 +1,5 @@
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TpIsGrupo2
 {
@@ -14,6 +15,10 @@ namespace TpIsGrupo2
             // Le digo al form donde quiero que arranque en la pantalla de mi coputadora
             this.StartPosition = FormStartPosition.Manual;
             this.Location = new System.Drawing.Point(500, 10);
+
+            lbl_completarCiudad.Visible = false;
+            lbl_completarCalle.Visible = false;
+            lbl_completarNumCalle.Visible = false;
 
             // Llamo a setDefault para establecer las posiciones por defecto de los elementos
             SetDefaultConidtions();
@@ -84,7 +89,7 @@ namespace TpIsGrupo2
 
 
             btnComprar.Location = new Point(btnComprar.Location.X, 550);
-            btnComprar.Enabled = false;
+            btnComprar.Enabled = true;
 
             // Padding
             lblSeleccioneMetodo.Padding = new Padding(0, 10, 0, 0);
@@ -100,6 +105,47 @@ namespace TpIsGrupo2
             //pnlGeneral.AutoScroll = false;
             //pnlGeneral.HorizontalScroll.Visible = false;
             //pnlGeneral.AutoScroll = true; // Habilitar nuevamente el scroll vertical
+        }
+
+        private void btnComprar_Click(object sender, EventArgs e)
+        {
+            if (cmbCiudades.Text == "")
+            {
+                ControlPaint.DrawBorder(cmbCiudades.CreateGraphics(), cmbCiudades.ClientRectangle, Color.Red, ButtonBorderStyle.Solid);
+                lbl_completarCiudad.Visible = true;
+                //return;
+            }
+            if (txtCalle.Text == "")
+            {
+                ControlPaint.DrawBorder(txtCalle.CreateGraphics(), txtCalle.ClientRectangle, Color.Red, ButtonBorderStyle.Solid);
+                lbl_completarCalle.Visible = true;
+                //return;
+            }
+            if (txtNumero.Text == "")
+            {
+                ControlPaint.DrawBorder(txtNumero.CreateGraphics(), txtNumero.ClientRectangle, Color.Red, ButtonBorderStyle.Solid);
+                lbl_completarNumCalle.Visible = true;
+                //return;
+            }
+            if (cmbCiudades.Text == "" || txtCalle.Text == "" || txtNumero.Text == "")
+            {
+                MessageBox.Show("Debe completar campos obligatorios");
+            }
+        }
+
+        private void txtCalle_TextChanged(object sender, EventArgs e)
+        {
+            lbl_completarCalle.Visible = false;
+        }
+
+        private void cmbCiudades_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lbl_completarCiudad.Visible = false;
+        }
+
+        private void txtNumero_TextChanged(object sender, EventArgs e)
+        {
+            lbl_completarNumCalle.Visible = false;
         }
     }
 }
