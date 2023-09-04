@@ -37,7 +37,7 @@ namespace TpIsGrupo2
             setBorderToCard(this.btnMastercard);
         }
 
-        private void setBorderToCard(Button button)
+        private void setBorderToCard(System.Windows.Forms.Button button)
         {
             // Le pongo un color al borde, si se les ocurre una mejor forma de resaltar el tipo de tarjeta modifiquen esto
             button.FlatAppearance.BorderColor = Color.FromArgb(255, 178, 128);
