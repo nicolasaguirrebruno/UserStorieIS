@@ -119,7 +119,6 @@ namespace TpIsGrupo2
             {
                 ControlPaint.DrawBorder(cmbCiudades.CreateGraphics(), cmbCiudades.ClientRectangle, Color.Red, ButtonBorderStyle.Solid);
                 lbl_completarCiudad.Visible = true;
-                //return;
             }
             string ciudadIngresada = cmbCiudades.Text;
             if (!ciudadesCordoba.Contains(ciudadIngresada) && (cmbCiudades.Text != ""))
@@ -131,13 +130,11 @@ namespace TpIsGrupo2
             {
                 ControlPaint.DrawBorder(txtCalle.CreateGraphics(), txtCalle.ClientRectangle, Color.Red, ButtonBorderStyle.Solid);
                 lbl_completarCalle.Visible = true;
-                //return;
             }
             if (txtNumero.Text == "")
             {
                 ControlPaint.DrawBorder(txtNumero.CreateGraphics(), txtNumero.ClientRectangle, Color.Red, ButtonBorderStyle.Solid);
                 lbl_completarNumCalle.Visible = true;
-                //return;
             }
             if (cmbCiudades.Text == "" || txtCalle.Text == "" || txtNumero.Text == "")
             {
@@ -170,11 +167,6 @@ namespace TpIsGrupo2
 
         private void CargarComboCiudades()
         {
-            //List<string> ciudadesCordoba = new List<string>
-            //{
-            //    "Córdoba", "Carlos Paz", "Villa Allende", "Villa María", "Río Cuarto", "Río Primero",
-            //    "Río Tercero", "Alta Gracia", "Pilar",
-            //};
             // Se asigna la lista como fuente de datos del Combo
             cmbCiudades.DataSource = ciudadesCordoba;
             cmbCiudades.AutoCompleteMode = AutoCompleteMode.Suggest;
@@ -182,7 +174,6 @@ namespace TpIsGrupo2
             // Crea una fuente de datos para el autocompletado
             AutoCompleteStringCollection fuenteAutocompletado = new AutoCompleteStringCollection();
             fuenteAutocompletado.AddRange(ciudadesCordoba.ToArray());
-
             // Asigna la fuente de datos al ComboBox
             cmbCiudades.AutoCompleteCustomSource = fuenteAutocompletado;
         }
