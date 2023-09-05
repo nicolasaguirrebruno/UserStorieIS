@@ -5,6 +5,11 @@ namespace TpIsGrupo2
 {
     public partial class Form1 : Form
     {
+        private List<string> ciudadesCordoba = new List<string>
+        {
+            "Córdoba", "Carlos Paz", "Villa Allende", "Villa María", "Río Cuarto", "Río Primero",
+                "Río Tercero", "Alta Gracia", "Pilar",
+        };
         public Form1()
         {
             InitializeComponent();
@@ -16,6 +21,7 @@ namespace TpIsGrupo2
             this.StartPosition = FormStartPosition.Manual;
             this.Location = new System.Drawing.Point(500, 10);
 
+            CargarComboCiudades();
             lbl_completarCiudad.Visible = false;
             lbl_completarCalle.Visible = false;
             lbl_completarNumCalle.Visible = false;
@@ -115,6 +121,12 @@ namespace TpIsGrupo2
                 lbl_completarCiudad.Visible = true;
                 //return;
             }
+            string ciudadIngresada = cmbCiudades.Text;
+            if (!ciudadesCordoba.Contains(ciudadIngresada) && (cmbCiudades.Text != ""))
+            {
+                MessageBox.Show("Por favor, seleccione una ciudad válida de la lista.");
+            }
+
             if (txtCalle.Text == "")
             {
                 ControlPaint.DrawBorder(txtCalle.CreateGraphics(), txtCalle.ClientRectangle, Color.Red, ButtonBorderStyle.Solid);
@@ -147,5 +159,34 @@ namespace TpIsGrupo2
         {
             lbl_completarNumCalle.Visible = false;
         }
+
+        private void txtNumero_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void CargarComboCiudades()
+        {
+            //List<string> ciudadesCordoba = new List<string>
+            //{
+            //    "Córdoba", "Carlos Paz", "Villa Allende", "Villa María", "Río Cuarto", "Río Primero",
+            //    "Río Tercero", "Alta Gracia", "Pilar",
+            //};
+            // Se asigna la lista como fuente de datos del Combo
+            cmbCiudades.DataSource = ciudadesCordoba;
+            cmbCiudades.AutoCompleteMode = AutoCompleteMode.Suggest;
+            cmbCiudades.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            // Crea una fuente de datos para el autocompletado
+            AutoCompleteStringCollection fuenteAutocompletado = new AutoCompleteStringCollection();
+            fuenteAutocompletado.AddRange(ciudadesCordoba.ToArray());
+
+            // Asigna la fuente de datos al ComboBox
+            cmbCiudades.AutoCompleteCustomSource = fuenteAutocompletado;
+        }
+
+
     }
 }
