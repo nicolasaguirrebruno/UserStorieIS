@@ -147,5 +147,14 @@ namespace TpIsGrupo2
         {
             lbl_completarNumCalle.Visible = false;
         }
+
+        private void btnCarrito_Click(object sender, EventArgs e)
+        {
+            Carrito consultarCarrito = new Carrito();
+            consultarCarrito.Show();
+            this.Hide();    
+        }
+
+                
     }
 }
