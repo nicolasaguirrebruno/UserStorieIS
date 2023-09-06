@@ -102,7 +102,7 @@
             pnlGeneral.Margin = new Padding(3, 2, 3, 2);
             pnlGeneral.MaximumSize = new Size(0, 844);
             pnlGeneral.Name = "pnlGeneral";
-            pnlGeneral.Size = new Size(390, 591);
+            pnlGeneral.Size = new Size(390, 844);
             pnlGeneral.TabIndex = 0;
             // 
             // lblSeleccioneMetodo
@@ -206,7 +206,7 @@
             lblCantidadProductos.Size = new Size(17, 18);
             lblCantidadProductos.TabIndex = 18;
             lblCantidadProductos.Text = "0";
-            lblCantidadProductos.Visible = false;
+            lblCantidadProductos.Click += btnCarrito_Click;
             // 
             // pnlMetodo
             // 
@@ -272,7 +272,7 @@
             btnCarrito.Size = new Size(47, 38);
             btnCarrito.TabIndex = 17;
             btnCarrito.UseVisualStyleBackColor = false;
-            btnCarrito.Visible = false;
+            btnCarrito.Click += btnCarrito_Click_1;
             // 
             // btnComprar
             // 
@@ -494,7 +494,6 @@
             // 
             // cmbCiudades
             // 
-            cmbCiudades.Font = new Font("Segoe UI Emoji", 9F, FontStyle.Regular, GraphicsUnit.Point);
             cmbCiudades.FormattingEnabled = true;
             cmbCiudades.Location = new Point(30, 28);
             cmbCiudades.Margin = new Padding(3, 2, 3, 2);
@@ -541,10 +540,8 @@
             // 
             // txtCalle
             // 
-            txtCalle.Font = new Font("Segoe UI Emoji", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtCalle.Location = new Point(30, 78);
             txtCalle.Margin = new Padding(3, 2, 3, 2);
-            txtCalle.MaxLength = 30;
             txtCalle.Name = "txtCalle";
             txtCalle.Size = new Size(170, 23);
             txtCalle.TabIndex = 7;
@@ -552,15 +549,12 @@
             // 
             // txtNumero
             // 
-            txtNumero.Font = new Font("Segoe UI Emoji", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtNumero.Location = new Point(30, 125);
             txtNumero.Margin = new Padding(3, 2, 3, 2);
-            txtNumero.MaxLength = 6;
             txtNumero.Name = "txtNumero";
             txtNumero.Size = new Size(92, 23);
             txtNumero.TabIndex = 6;
             txtNumero.TextChanged += txtNumero_TextChanged;
-            txtNumero.KeyPress += txtNumero_KeyPress;
             // 
             // label1
             // 
@@ -614,7 +608,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(390, 591);
+            ClientSize = new Size(390, 844);
             Controls.Add(pnlGeneral);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);

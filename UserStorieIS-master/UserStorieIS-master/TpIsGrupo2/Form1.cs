@@ -178,6 +178,16 @@ namespace TpIsGrupo2
             cmbCiudades.AutoCompleteCustomSource = fuenteAutocompletado;
         }
 
+        private void btnCarrito_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void btnCarrito_Click_1(object sender, EventArgs e)
+        {
+            Carrito consultarCarrito = new Carrito();
+            consultarCarrito.Show();
+            this.Hide();
+        }
     }
 }
