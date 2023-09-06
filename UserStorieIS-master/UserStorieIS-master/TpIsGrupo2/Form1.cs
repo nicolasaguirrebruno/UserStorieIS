@@ -1,6 +1,7 @@
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
+
 namespace TpIsGrupo2
 {
     public partial class Form1 : Form
@@ -19,23 +20,21 @@ namespace TpIsGrupo2
             lbl_completarCiudad.Visible = false;
             lbl_completarCalle.Visible = false;
             lbl_completarNumCalle.Visible = false;
+            
+            // bandera para validar que el monto sea distinto de cero
+            lblMontoValido.Visible = false;
+
+            btnError.Visible = false;
+            lblSimbolo.Visible = false;
+            lblErrorTarjeta.Visible = false;
 
             // Llamo a setDefault para establecer las posiciones por defecto de los elementos
             SetDefaultConidtions();
+
+           
+
         }
 
-        private void btnVisa_Click(object sender, EventArgs e)
-        {
-            // Debe programarse que no se puedan seleccionar ambas al mismo tiempo y que si selecciono una reconozca el numero de esa tarjeta
-            setBorderToCard(this.btnVisa);
-        }
-
-        private void btnMastercard_Click(object sender, EventArgs e)
-        {
-            // Debe programarse que no se puedan seleccionar ambas al mismo tiempo y que si selecciono una reconozca el numero de esa tarjeta
-
-            setBorderToCard(this.btnMastercard);
-        }
 
         private void setBorderToCard(System.Windows.Forms.Button button)
         {
@@ -44,27 +43,32 @@ namespace TpIsGrupo2
             button.FlatAppearance.BorderSize = 2;
         }
 
-        private void chkTarjeta_CheckedChanged(object sender, EventArgs e)
-        {
-            // Programar todo lo que sea marcar uno y desmarcar el otro
-            if (!chkTarjeta.Checked)
-            {
-                SetDefaultConidtions();
-            }
-            else
-            {
-                setCardConditions();
-            }
-        }
+    
 
         private void setCardConditions()
         {
             // Este metodo hace que se vea el panel del metodo tarjeta y reubicar la posicion de boton
             pnlDatosTarjeta.Visible = true;
             lblSeleccioneMetodo.Visible = false;
+            pnlDatosEfectivo.Visible = false;
+            lblSimbolo.Visible = false;
+
+            // Setea los valores
+
+            txtApellidoTitular.Text = "";
+            txtNumeroTarjeta.Text = "";
+            txtCodigoSeguridad.Text = "";
+            txtNombreTitular.Text = "";
+
+            btnVisa.Visible = true;
+            btnError.Visible = false;
+            lblSimbolo.Visible = false;
+            lblErrorTarjeta.Visible = false;
+
 
             btnComprar.Enabled = true;
-            btnComprar.Location = new Point(btnComprar.Location.X, 780);
+            btnComprar.Location = new Point(btnComprar.Location.X, 820);
+      
         }
 
         private void SetDefaultConidtions()
@@ -85,21 +89,21 @@ namespace TpIsGrupo2
             lblSeleccioneMetodo.Location = new Point(pnlHoraEntrega.Location.X + 20, 470);
 
 
-
-
-
             btnComprar.Location = new Point(btnComprar.Location.X, 550);
             btnComprar.Enabled = true;
 
             // Padding
             lblSeleccioneMetodo.Padding = new Padding(0, 10, 0, 0);
 
+
+            //this.Height = 844;
+            //this.Width = 390;
             // Medidas basadas en el Iphone 12 Pro
             this.Height = 844;
             this.Width = 390;
             pnlDatosTarjeta.Visible = false;
             lblSeleccioneMetodo.Visible = true;
-
+            pnlDatosEfectivo.Visible = false;
             //// Deshabilitar el scroll horizontal y que quede nomas el vertical
             //pnlGeneral.HorizontalScroll.Maximum = 0;
             //pnlGeneral.AutoScroll = false;
@@ -131,7 +135,98 @@ namespace TpIsGrupo2
             {
                 MessageBox.Show("Debe completar campos obligatorios");
             }
+
+            if(pnlDatosTarjeta.Visible == true)
+            {
+                ValidarTarjetaYDatos();
+            }
+            else
+            {
+                ValidarEfectivo();
+            }
+
+            
         }
+
+        private void ValidarEfectivo()
+        {
+            // Obtener el valor actual del control NumericUpDown
+            decimal valorEfectivo = nupEfectivo.Value;
+
+
+            // Verificar si el valor es igual a cero
+            if (valorEfectivo == 0)
+            {
+                // Si es cero, mostrar el mensaje de error en el lblMontoValido
+                lblMontoValido.Visible = true;
+            }
+            else
+            {
+                // Si no es cero, ocultar el mensaje de error
+                lblMontoValido.Visible = false;
+            }
+        }
+
+        private void ValidarTarjetaYDatos()
+        {
+            // Obtener el número de tarjeta ingresado en txtNumeroTarjeta
+            string numeroTarjeta = txtNumeroTarjeta.Text.Replace(" ", "");
+
+            // Verificar si el número de tarjeta es de tipo Visa (comprobación trivial)
+            if (numeroTarjeta.StartsWith("4") && numeroTarjeta.Length == 16)
+            {
+                // El número de tarjeta es válido, oculta el botón de error y muestra el de Visa
+                btnVisa.Visible = true;
+                btnError.Visible = false;
+                lblErrorTarjeta.Visible = false;
+
+            }
+            else
+            {
+                // El número de tarjeta no es de tipo Visa o no tiene la longitud correcta, muestra el botón de error y oculta el de Visa
+                btnVisa.Visible = false;
+                btnError.Visible = true;
+                lblErrorTarjeta.Visible = true;
+
+                return; // Sale de la función si el número de tarjeta no es válido
+            }
+
+            // Obtener el nombre y apellido del titular
+            string nombreTitular = txtNombreTitular.Text.Trim();
+            string apellidoTitular = txtApellidoTitular.Text.Trim();
+
+            // Verificar que los campos de nombre y apellido no estén vacíos
+            if (string.IsNullOrWhiteSpace(nombreTitular) || string.IsNullOrWhiteSpace(apellidoTitular))
+            {
+                // El nombre o el apellido están vacíos, muestra el botón de error y oculta el de Visa
+                btnVisa.Visible = false;
+                btnError.Visible = true;
+                lblErrorTarjeta.Visible = true;
+                return; // Sale de la función si el nombre o el apellido están vacíos
+            }
+
+            // Obtener el CVC ingresado en txtCodigoSeguridad
+            string cvc = txtCodigoSeguridad.Text.Trim();
+
+            // Verificar que el campo CVC no esté vacío y tenga 3 o 4 dígitos
+            if (string.IsNullOrEmpty(cvc) || (cvc.Length != 3 && cvc.Length != 4))
+            {
+                // El CVC no es válido, muestra el botón de error y oculta el de Visa
+                btnVisa.Visible = false;
+                btnError.Visible = true;
+                lblErrorTarjeta.Visible = true;
+                return; // Sale de la función si el CVC no es válido
+            }
+
+            // Si todas las validaciones son exitosas, muestra el botón de Visa y oculta el de error
+            btnVisa.Visible = true;
+            btnError.Visible = false;
+            lblErrorTarjeta.Visible = false;
+        }
+
+
+
+
 
         private void txtCalle_TextChanged(object sender, EventArgs e)
         {
@@ -147,5 +242,101 @@ namespace TpIsGrupo2
         {
             lbl_completarNumCalle.Visible = false;
         }
+
+        private void rbCredito_CheckedChanged(object sender, EventArgs e)
+        {
+            // Programar todo lo que sea marcar uno y desmarcar el otro
+            if (!rbCredito.Checked)
+            {
+                SetDefaultConidtions();
+            }
+            else
+            {
+                setCardConditions();
+            }
+        }
+
+        private void rbDebito_CheckedChanged(object sender, EventArgs e)
+        {
+            // Programar todo lo que sea marcar uno y desmarcar el otro
+            if (!rbDebito.Checked)
+            {
+                SetDefaultConidtions();
+            }
+            else
+            {
+                setCardConditions();
+            }
+        }
+
+        private void txtNumeroTarjeta_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Verifica si la tecla presionada no es un número o la tecla de retroceso (borrar)
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true; // Bloquea la entrada de caracteres no numéricos
+            }
+
+            // Verifica si el número de tarjeta ya tiene 16 dígitos
+            if (txtNumeroTarjeta.Text.Replace(" ", "").Length >= 16 && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true; // Bloquea la entrada si ya se alcanzó la longitud máxima
+            }
+        }
+
+        private void txtNumeroTarjeta_TextChanged(object sender, EventArgs e)
+        {
+            // Formatea el número de tarjeta en grupos de cuatro dígitos
+            string input = txtNumeroTarjeta.Text.Replace(" ", ""); // Elimina espacios en blanco
+            if (input.Length > 0)
+            {
+                string formattedNumber = string.Join(" ", Enumerable.Range(0, (input.Length + 3) / 4).Select(i => input.Substring(i * 4, Math.Min(4, input.Length - i * 4))));
+                txtNumeroTarjeta.Text = formattedNumber;
+                txtNumeroTarjeta.SelectionStart = txtNumeroTarjeta.Text.Length; // Coloca el cursor al final
+            }
+        }
+
+        private void txtCodigoSeguridad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Verifica si la tecla presionada no es un número o la tecla de retroceso (borrar)
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true; // Bloquea la entrada de caracteres no numéricos
+            }
+
+            // Verifica si el CVC ya tiene 3 dígitos
+            if (txtCodigoSeguridad.Text.Length >= 3 && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true; // Bloquea la entrada si ya se alcanzó la longitud máxima (3 dígitos)
+            }
+        }
+
+        private void rbEfectivo_CheckedChanged(object sender, EventArgs e)
+        {
+            // Programar todo lo que sea marcar uno y desmarcar el otro
+            if (!rbEfectivo.Checked)
+            {
+                SetDefaultConidtions();
+            }
+            else
+            {
+                setCashConditions();
+            }
+        }
+
+        private void setCashConditions()
+        {
+            // Este metodo hace que se vea el panel del metodo tarjeta y reubicar la posicion de boton
+            pnlDatosTarjeta.Visible = false;
+            lblSeleccioneMetodo.Visible = false;
+            pnlDatosEfectivo.Visible = true;
+            lblSimbolo.Visible = Visible;
+            nupEfectivo.Value = 0;
+            lblMontoValido.Visible = false;
+
+            btnComprar.Enabled = true;
+            btnComprar.Location = new Point(btnComprar.Location.X, 625);
+        }
+
     }
 }
