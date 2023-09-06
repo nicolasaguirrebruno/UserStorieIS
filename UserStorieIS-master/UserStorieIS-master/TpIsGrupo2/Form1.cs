@@ -20,7 +20,7 @@ namespace TpIsGrupo2
             lbl_completarCiudad.Visible = false;
             lbl_completarCalle.Visible = false;
             lbl_completarNumCalle.Visible = false;
-            
+
             // bandera para validar que el monto sea distinto de cero
             lblMontoValido.Visible = false;
 
@@ -31,7 +31,7 @@ namespace TpIsGrupo2
             // Llamo a setDefault para establecer las posiciones por defecto de los elementos
             SetDefaultConidtions();
 
-           
+
 
         }
 
@@ -43,7 +43,7 @@ namespace TpIsGrupo2
             button.FlatAppearance.BorderSize = 2;
         }
 
-    
+
 
         private void setCardConditions()
         {
@@ -67,8 +67,9 @@ namespace TpIsGrupo2
 
 
             btnComprar.Enabled = true;
-            btnComprar.Location = new Point(btnComprar.Location.X, 820);
-      
+            btnComprar.Location = new Point(btnComprar.Location.X, 785);
+            pnlDatosTarjeta.Location = new Point(btnComprar.Location.X, 480);
+
         }
 
         private void SetDefaultConidtions()
@@ -136,7 +137,7 @@ namespace TpIsGrupo2
                 MessageBox.Show("Debe completar campos obligatorios");
             }
 
-            if(pnlDatosTarjeta.Visible == true)
+            if (pnlDatosTarjeta.Visible == true)
             {
                 ValidarTarjetaYDatos();
             }
@@ -145,7 +146,7 @@ namespace TpIsGrupo2
                 ValidarEfectivo();
             }
 
-            
+
         }
 
         private void ValidarEfectivo()
@@ -336,6 +337,8 @@ namespace TpIsGrupo2
 
             btnComprar.Enabled = true;
             btnComprar.Location = new Point(btnComprar.Location.X, 625);
+
+            pnlDatosEfectivo.Location = new Point(btnComprar.Location.X, 490);
         }
 
     }
