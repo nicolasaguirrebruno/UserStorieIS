@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             pnlGeneral = new GradientPanel();
+            pnlDatosEfectivo = new GradientPanel();
+            lblSimbolo = new Label();
+            lblMontoValido = new Label();
+            nupEfectivo = new NumericUpDown();
+            lblEfectivo = new Label();
             lblSeleccioneMetodo = new Label();
             pnlHoraEntrega = new GradientPanel();
             chkSeleccionarHora = new CheckBox();
@@ -38,12 +43,15 @@
             button5 = new Button();
             lblCantidadProductos = new Label();
             pnlMetodo = new GradientPanel();
-            chkTarjeta = new CheckBox();
-            chkEfectivo = new CheckBox();
+            rbDebito = new RadioButton();
+            rbCredito = new RadioButton();
+            rbEfectivo = new RadioButton();
             label6 = new Label();
             btnCarrito = new Button();
             btnComprar = new Button();
             pnlDatosTarjeta = new GradientPanel();
+            lblErrorTarjeta = new Label();
+            btnError = new Button();
             label12 = new Label();
             label9 = new Label();
             label8 = new Label();
@@ -52,7 +60,6 @@
             label7 = new Label();
             label5 = new Label();
             txtNombreTitular = new TextBox();
-            btnMastercard = new Button();
             txtNumeroTarjeta = new TextBox();
             btnVisa = new Button();
             gradientPanel2 = new GradientPanel();
@@ -70,6 +77,8 @@
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
             pnlGeneral.SuspendLayout();
+            pnlDatosEfectivo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)nupEfectivo).BeginInit();
             pnlHoraEntrega.SuspendLayout();
             pnlMetodo.SuspendLayout();
             pnlDatosTarjeta.SuspendLayout();
@@ -83,6 +92,7 @@
             // 
             pnlGeneral.ColorBottom = Color.FromArgb(224, 224, 224);
             pnlGeneral.ColorTop = Color.FromArgb(224, 224, 224);
+            pnlGeneral.Controls.Add(pnlDatosEfectivo);
             pnlGeneral.Controls.Add(lblSeleccioneMetodo);
             pnlGeneral.Controls.Add(pnlHoraEntrega);
             pnlGeneral.Controls.Add(button5);
@@ -105,13 +115,71 @@
             pnlGeneral.Size = new Size(390, 844);
             pnlGeneral.TabIndex = 0;
             // 
+            // pnlDatosEfectivo
+            // 
+            pnlDatosEfectivo.BackColor = Color.White;
+            pnlDatosEfectivo.ColorBottom = Color.Empty;
+            pnlDatosEfectivo.ColorTop = Color.Empty;
+            pnlDatosEfectivo.Controls.Add(lblSimbolo);
+            pnlDatosEfectivo.Controls.Add(lblMontoValido);
+            pnlDatosEfectivo.Controls.Add(nupEfectivo);
+            pnlDatosEfectivo.Controls.Add(lblEfectivo);
+            pnlDatosEfectivo.Location = new Point(71, 513);
+            pnlDatosEfectivo.Margin = new Padding(3, 2, 3, 2);
+            pnlDatosEfectivo.Name = "pnlDatosEfectivo";
+            pnlDatosEfectivo.Size = new Size(243, 105);
+            pnlDatosEfectivo.TabIndex = 17;
+            pnlDatosEfectivo.Visible = false;
+            // 
+            // lblSimbolo
+            // 
+            lblSimbolo.AutoSize = true;
+            lblSimbolo.Font = new Font("Segoe UI Emoji", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            lblSimbolo.Location = new Point(10, 51);
+            lblSimbolo.Name = "lblSimbolo";
+            lblSimbolo.Size = new Size(17, 19);
+            lblSimbolo.TabIndex = 16;
+            lblSimbolo.Text = "$";
+            // 
+            // lblMontoValido
+            // 
+            lblMontoValido.AutoSize = true;
+            lblMontoValido.BackColor = Color.Transparent;
+            lblMontoValido.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblMontoValido.ForeColor = Color.Red;
+            lblMontoValido.Location = new Point(28, 77);
+            lblMontoValido.Name = "lblMontoValido";
+            lblMontoValido.Size = new Size(120, 13);
+            lblMontoValido.TabIndex = 15;
+            lblMontoValido.Text = "Ingrese un monto valido";
+            // 
+            // nupEfectivo
+            // 
+            nupEfectivo.Location = new Point(28, 51);
+            nupEfectivo.Maximum = new decimal(new int[] { 1241513984, 370409800, 542101, 0 });
+            nupEfectivo.Name = "nupEfectivo";
+            nupEfectivo.Size = new Size(120, 23);
+            nupEfectivo.TabIndex = 14;
+            // 
+            // lblEfectivo
+            // 
+            lblEfectivo.AutoSize = true;
+            lblEfectivo.BackColor = Color.Transparent;
+            lblEfectivo.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            lblEfectivo.ForeColor = Color.FromArgb(153, 61, 1);
+            lblEfectivo.Location = new Point(28, 18);
+            lblEfectivo.Name = "lblEfectivo";
+            lblEfectivo.Size = new Size(186, 17);
+            lblEfectivo.TabIndex = 13;
+            lblEfectivo.Text = "Ingrese el monto en efectivo";
+            // 
             // lblSeleccioneMetodo
             // 
             lblSeleccioneMetodo.AutoSize = true;
             lblSeleccioneMetodo.BackColor = Color.Transparent;
             lblSeleccioneMetodo.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblSeleccioneMetodo.ForeColor = Color.FromArgb(64, 64, 64);
-            lblSeleccioneMetodo.Location = new Point(70, 412);
+            lblSeleccioneMetodo.Location = new Point(23, 471);
             lblSeleccioneMetodo.Name = "lblSeleccioneMetodo";
             lblSeleccioneMetodo.Size = new Size(335, 20);
             lblSeleccioneMetodo.TabIndex = 16;
@@ -213,17 +281,29 @@
             pnlMetodo.BackColor = Color.White;
             pnlMetodo.ColorBottom = Color.Empty;
             pnlMetodo.ColorTop = Color.Empty;
-            pnlMetodo.Controls.Add(chkTarjeta);
-            pnlMetodo.Controls.Add(chkEfectivo);
+            pnlMetodo.Controls.Add(rbDebito);
+            pnlMetodo.Controls.Add(rbCredito);
+            pnlMetodo.Controls.Add(rbEfectivo);
             pnlMetodo.Controls.Add(label6);
             pnlMetodo.Location = new Point(71, 372);
             pnlMetodo.Margin = new Padding(3, 2, 3, 2);
             pnlMetodo.Name = "pnlMetodo";
-            pnlMetodo.Size = new Size(245, 81);
+            pnlMetodo.Size = new Size(243, 93);
             pnlMetodo.TabIndex = 13;
             // 
-            // chkTarjeta
+            // rbDebito
             // 
+            rbDebito.AutoSize = true;
+            rbDebito.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            rbDebito.ForeColor = Color.FromArgb(153, 61, 1);
+            rbDebito.Location = new Point(22, 64);
+            rbDebito.Name = "rbDebito";
+            rbDebito.Size = new Size(134, 21);
+            rbDebito.TabIndex = 14;
+            rbDebito.TabStop = true;
+            rbDebito.Text = "Tarjeta de debito";
+            rbDebito.UseVisualStyleBackColor = true;
+            rbDebito.CheckedChanged += rbDebito_CheckedChanged;
             chkTarjeta.AutoSize = true;
             chkTarjeta.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             chkTarjeta.ForeColor = Color.FromArgb(153, 61, 1);
@@ -236,8 +316,19 @@
             chkTarjeta.UseVisualStyleBackColor = true;
             chkTarjeta.CheckedChanged += chkTarjeta_CheckedChanged;
             // 
-            // chkEfectivo
+            // rbCredito
             // 
+            rbCredito.AutoSize = true;
+            rbCredito.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            rbCredito.ForeColor = Color.FromArgb(153, 61, 1);
+            rbCredito.Location = new Point(22, 46);
+            rbCredito.Name = "rbCredito";
+            rbCredito.Size = new Size(138, 21);
+            rbCredito.TabIndex = 13;
+            rbCredito.TabStop = true;
+            rbCredito.Text = "Tarjeta de credito";
+            rbCredito.UseVisualStyleBackColor = true;
+            rbCredito.CheckedChanged += rbCredito_CheckedChanged;
             chkEfectivo.AutoSize = true;
             chkEfectivo.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             chkEfectivo.ForeColor = Color.FromArgb(153, 61, 1);
@@ -248,6 +339,20 @@
             chkEfectivo.TabIndex = 10;
             chkEfectivo.Text = "Efectivo";
             chkEfectivo.UseVisualStyleBackColor = true;
+            // 
+            // rbEfectivo
+            // 
+            rbEfectivo.AutoSize = true;
+            rbEfectivo.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            rbEfectivo.ForeColor = Color.FromArgb(153, 61, 1);
+            rbEfectivo.Location = new Point(23, 28);
+            rbEfectivo.Name = "rbEfectivo";
+            rbEfectivo.Size = new Size(76, 21);
+            rbEfectivo.TabIndex = 12;
+            rbEfectivo.TabStop = true;
+            rbEfectivo.Text = "Efectivo";
+            rbEfectivo.UseVisualStyleBackColor = true;
+            rbEfectivo.CheckedChanged += rbEfectivo_CheckedChanged;
             // 
             // label6
             // 
@@ -281,7 +386,7 @@
             btnComprar.FlatStyle = FlatStyle.Flat;
             btnComprar.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             btnComprar.ForeColor = Color.White;
-            btnComprar.Location = new Point(69, 778);
+            btnComprar.Location = new Point(69, 820);
             btnComprar.Margin = new Padding(3, 2, 3, 2);
             btnComprar.Name = "btnComprar";
             btnComprar.Size = new Size(245, 48);
@@ -295,6 +400,8 @@
             pnlDatosTarjeta.BackColor = Color.White;
             pnlDatosTarjeta.ColorBottom = Color.Empty;
             pnlDatosTarjeta.ColorTop = Color.Empty;
+            pnlDatosTarjeta.Controls.Add(lblErrorTarjeta);
+            pnlDatosTarjeta.Controls.Add(btnError);
             pnlDatosTarjeta.Controls.Add(label12);
             pnlDatosTarjeta.Controls.Add(label9);
             pnlDatosTarjeta.Controls.Add(label8);
@@ -303,15 +410,41 @@
             pnlDatosTarjeta.Controls.Add(label7);
             pnlDatosTarjeta.Controls.Add(label5);
             pnlDatosTarjeta.Controls.Add(txtNombreTitular);
-            pnlDatosTarjeta.Controls.Add(btnMastercard);
             pnlDatosTarjeta.Controls.Add(txtNumeroTarjeta);
             pnlDatosTarjeta.Controls.Add(btnVisa);
-            pnlDatosTarjeta.Location = new Point(71, 468);
+            pnlDatosTarjeta.Location = new Point(71, 513);
             pnlDatosTarjeta.Margin = new Padding(3, 2, 3, 2);
             pnlDatosTarjeta.Name = "pnlDatosTarjeta";
-            pnlDatosTarjeta.Size = new Size(245, 284);
+            pnlDatosTarjeta.Size = new Size(243, 292);
             pnlDatosTarjeta.TabIndex = 14;
             pnlDatosTarjeta.Visible = false;
+            // 
+            // lblErrorTarjeta
+            // 
+            lblErrorTarjeta.AutoSize = true;
+            lblErrorTarjeta.BackColor = Color.Transparent;
+            lblErrorTarjeta.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            lblErrorTarjeta.ForeColor = Color.Red;
+            lblErrorTarjeta.Location = new Point(91, 55);
+            lblErrorTarjeta.Name = "lblErrorTarjeta";
+            lblErrorTarjeta.Size = new Size(110, 17);
+            lblErrorTarjeta.TabIndex = 17;
+            lblErrorTarjeta.Text = "Datos Invalidos!!";
+            // 
+            // btnError
+            // 
+            btnError.BackgroundImage = Images.Imagen_de_error;
+            btnError.BackgroundImageLayout = ImageLayout.Zoom;
+            btnError.FlatAppearance.BorderSize = 0;
+            btnError.FlatStyle = FlatStyle.Flat;
+            btnError.Location = new Point(28, 51);
+            btnError.Margin = new Padding(3, 2, 3, 2);
+            btnError.Name = "btnError";
+            btnError.Padding = new Padding(9, 8, 9, 8);
+            btnError.Size = new Size(65, 26);
+            btnError.TabIndex = 16;
+            btnError.TextImageRelation = TextImageRelation.TextBeforeImage;
+            btnError.UseVisualStyleBackColor = true;
             // 
             // label12
             // 
@@ -319,7 +452,7 @@
             label12.BackColor = Color.Transparent;
             label12.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             label12.ForeColor = Color.FromArgb(153, 61, 1);
-            label12.Location = new Point(12, 10);
+            label12.Location = new Point(22, 19);
             label12.Name = "label12";
             label12.Size = new Size(199, 17);
             label12.TabIndex = 12;
@@ -331,7 +464,7 @@
             label9.BackColor = Color.Transparent;
             label9.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             label9.ForeColor = Color.FromArgb(153, 61, 1);
-            label9.Location = new Point(18, 220);
+            label9.Location = new Point(28, 231);
             label9.Name = "label9";
             label9.Size = new Size(157, 17);
             label9.TabIndex = 13;
@@ -343,7 +476,7 @@
             label8.BackColor = Color.Transparent;
             label8.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             label8.ForeColor = Color.FromArgb(153, 61, 1);
-            label8.Location = new Point(22, 181);
+            label8.Location = new Point(28, 181);
             label8.Name = "label8";
             label8.Size = new Size(127, 17);
             label8.TabIndex = 15;
@@ -351,15 +484,16 @@
             // 
             // txtCodigoSeguridad
             // 
-            txtCodigoSeguridad.Location = new Point(22, 238);
+            txtCodigoSeguridad.Location = new Point(28, 250);
             txtCodigoSeguridad.Margin = new Padding(3, 2, 3, 2);
             txtCodigoSeguridad.Name = "txtCodigoSeguridad";
             txtCodigoSeguridad.Size = new Size(92, 23);
             txtCodigoSeguridad.TabIndex = 12;
+            txtCodigoSeguridad.KeyPress += txtCodigoSeguridad_KeyPress;
             // 
             // txtApellidoTitular
             // 
-            txtApellidoTitular.Location = new Point(18, 198);
+            txtApellidoTitular.Location = new Point(28, 200);
             txtApellidoTitular.Margin = new Padding(3, 2, 3, 2);
             txtApellidoTitular.Name = "txtApellidoTitular";
             txtApellidoTitular.Size = new Size(170, 23);
@@ -391,34 +525,21 @@
             // 
             // txtNombreTitular
             // 
-            txtNombreTitular.Location = new Point(24, 147);
+            txtNombreTitular.Location = new Point(28, 149);
             txtNombreTitular.Margin = new Padding(3, 2, 3, 2);
             txtNombreTitular.Name = "txtNombreTitular";
             txtNombreTitular.Size = new Size(170, 23);
             txtNombreTitular.TabIndex = 12;
             // 
-            // btnMastercard
-            // 
-            btnMastercard.BackgroundImage = Images.mastercard;
-            btnMastercard.BackgroundImageLayout = ImageLayout.Zoom;
-            btnMastercard.FlatAppearance.BorderSize = 0;
-            btnMastercard.FlatStyle = FlatStyle.Flat;
-            btnMastercard.Location = new Point(120, 38);
-            btnMastercard.Margin = new Padding(3, 2, 3, 2);
-            btnMastercard.Name = "btnMastercard";
-            btnMastercard.Padding = new Padding(9, 8, 9, 8);
-            btnMastercard.Size = new Size(80, 26);
-            btnMastercard.TabIndex = 1;
-            btnMastercard.UseVisualStyleBackColor = true;
-            btnMastercard.Click += btnMastercard_Click;
-            // 
             // txtNumeroTarjeta
             // 
-            txtNumeroTarjeta.Location = new Point(24, 96);
+            txtNumeroTarjeta.Location = new Point(28, 98);
             txtNumeroTarjeta.Margin = new Padding(3, 2, 3, 2);
             txtNumeroTarjeta.Name = "txtNumeroTarjeta";
             txtNumeroTarjeta.Size = new Size(208, 23);
             txtNumeroTarjeta.TabIndex = 12;
+            txtNumeroTarjeta.TextChanged += txtNumeroTarjeta_TextChanged;
+            txtNumeroTarjeta.KeyPress += txtNumeroTarjeta_KeyPress;
             // 
             // btnVisa
             // 
@@ -426,12 +547,13 @@
             btnVisa.BackgroundImageLayout = ImageLayout.Zoom;
             btnVisa.FlatAppearance.BorderSize = 0;
             btnVisa.FlatStyle = FlatStyle.Flat;
-            btnVisa.Location = new Point(30, 38);
+            btnVisa.Location = new Point(91, 51);
             btnVisa.Margin = new Padding(3, 2, 3, 2);
             btnVisa.Name = "btnVisa";
             btnVisa.Padding = new Padding(9, 8, 9, 8);
             btnVisa.Size = new Size(65, 26);
             btnVisa.TabIndex = 0;
+            btnVisa.TextImageRelation = TextImageRelation.TextBeforeImage;
             btnVisa.UseVisualStyleBackColor = true;
             btnVisa.Click += btnVisa_Click;
             // 
@@ -500,7 +622,6 @@
             cmbCiudades.Name = "cmbCiudades";
             cmbCiudades.Size = new Size(178, 24);
             cmbCiudades.TabIndex = 8;
-            cmbCiudades.SelectedIndexChanged += cmbCiudades_SelectedIndexChanged;
             // 
             // label4
             // 
@@ -617,6 +738,9 @@
             Text = "Form1";
             pnlGeneral.ResumeLayout(false);
             pnlGeneral.PerformLayout();
+            pnlDatosEfectivo.ResumeLayout(false);
+            pnlDatosEfectivo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)nupEfectivo).EndInit();
             pnlHoraEntrega.ResumeLayout(false);
             pnlHoraEntrega.PerformLayout();
             pnlMetodo.ResumeLayout(false);
@@ -674,5 +798,16 @@
         private Label lbl_completarCiudad;
         private Label lbl_completarCalle;
         private Label lbl_completarNumCalle;
+        private RadioButton rbDebito;
+        private RadioButton rbCredito;
+        private RadioButton rbEfectivo;
+        private Button btnVisa;
+        private Button btnError;
+        private GradientPanel pnlDatosEfectivo;
+        private NumericUpDown nupEfectivo;
+        private Label lblEfectivo;
+        private Label lblMontoValido;
+        private Label lblSimbolo;
+        private Label lblErrorTarjeta;
     }
 }
