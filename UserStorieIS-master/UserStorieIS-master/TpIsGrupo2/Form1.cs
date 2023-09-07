@@ -350,7 +350,7 @@ namespace TpIsGrupo2
             pnlDatosEfectivo.Location = new Point(btnComprar.Location.X, 490);
         }
 
-    }
+
 
         private void txtNumero_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -375,14 +375,11 @@ namespace TpIsGrupo2
 
         private void btnCarrito_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnCarrito_Click_1(object sender, EventArgs e)
-        {
-            Carrito consultarCarrito = new Carrito();
+            Carrito consultarCarrito = new Carrito(this);
             consultarCarrito.Show();
             this.Hide();
         }
+
     }
+    
 }
