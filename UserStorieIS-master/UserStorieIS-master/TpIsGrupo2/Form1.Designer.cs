@@ -95,6 +95,7 @@
             // 
             // pnlGeneral
             // 
+            this.pnlGeneral.AutoScroll = true;
             this.pnlGeneral.ColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.pnlGeneral.ColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.pnlGeneral.Controls.Add(this.pnlDatosEfectivo);
@@ -129,7 +130,7 @@
             this.pnlDatosEfectivo.Controls.Add(this.lblMontoValido);
             this.pnlDatosEfectivo.Controls.Add(this.nupEfectivo);
             this.pnlDatosEfectivo.Controls.Add(this.lblEfectivo);
-            this.pnlDatosEfectivo.Location = new System.Drawing.Point(66, 988);
+            this.pnlDatosEfectivo.Location = new System.Drawing.Point(66, 921);
             this.pnlDatosEfectivo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlDatosEfectivo.Name = "pnlDatosEfectivo";
             this.pnlDatosEfectivo.Size = new System.Drawing.Size(243, 105);
@@ -160,6 +161,7 @@
             // 
             // nupEfectivo
             // 
+            this.nupEfectivo.DecimalPlaces = 2;
             this.nupEfectivo.Location = new System.Drawing.Point(28, 51);
             this.nupEfectivo.Maximum = new decimal(new int[] {
             1241513984,

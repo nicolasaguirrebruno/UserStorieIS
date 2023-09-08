@@ -12,8 +12,12 @@ namespace TpIsGrupo2
 {
     public partial class Carrito : Form
     {
-        Form form1 = new Form(); 
-        public Carrito(Form form)
+        //Form form1 = new Form(); //forma 1
+        
+        private Form1 form1; //forma 2
+
+
+        public Carrito(Form1 form)
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.Manual;
@@ -28,8 +32,16 @@ namespace TpIsGrupo2
     
         private void btnComprar_Click(object sender, EventArgs e)
         {
-            Form1 form = new Form1();
+
+            // Elimina el símbolo "$" de total.Text y convierte la cadena resultante a entero
+            decimal monto = decimal.Parse(total.Text.Replace("$", ""));
+
+            // Luego, llama al método ActualizarMontoEfectivoCarrito con el valor entero
+            form1.ActualizarMontoEfectivoCarrito(monto);
+
+
             form1.Show();
+
             this.Close();
         }
 

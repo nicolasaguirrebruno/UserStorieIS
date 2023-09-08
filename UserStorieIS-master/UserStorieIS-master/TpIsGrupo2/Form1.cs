@@ -11,6 +11,9 @@ namespace TpIsGrupo2
             "Córdoba", "Carlos Paz", "Villa Allende", "Villa María", "Río Cuarto", "Río Primero",
                 "Río Tercero", "Alta Gracia", "Pilar",
         };
+
+        private decimal montoEfectivoCarrito = 4500;
+
         public Form1()
         {
             InitializeComponent();
@@ -49,17 +52,7 @@ namespace TpIsGrupo2
 
 
         }
-
-
-        private void setBorderToCard(System.Windows.Forms.Button button)
-        {
-            // Le pongo un color al borde, si se les ocurre una mejor forma de resaltar el tipo de tarjeta modifiquen esto
-            button.FlatAppearance.BorderColor = Color.FromArgb(255, 178, 128);
-            button.FlatAppearance.BorderSize = 2;
-        }
-
-
-
+     
 
         private void SetDefaultConidtions()
         {
@@ -146,18 +139,38 @@ namespace TpIsGrupo2
             // Obtener el valor actual del control NumericUpDown
             decimal valorEfectivo = nupEfectivo.Value;
 
-
-            // Verificar si el valor es igual a cero
+            // Verificar si el valor es igual a 0
             if (valorEfectivo == 0)
             {
-                // Si es cero, mostrar el mensaje de error en el lblMontoValido
+                // Si igual a 0, mostrar el mensaje de error en el lblMontoValido y salir
                 lblMontoValido.Visible = true;
+                return;
+            }
+
+            // Verificar si el valor es igual o mayor al montoEfectivoCarrito
+            if (valorEfectivo >= montoEfectivoCarrito)
+            {
+                // Si es igual o mayor, ocultar el mensaje de error
+                lblMontoValido.Visible = false;
             }
             else
             {
-                // Si no es cero, ocultar el mensaje de error
-                lblMontoValido.Visible = false;
+                // Si es menor, mostrar el mensaje de error en el lblMontoValido
+                lblMontoValido.Visible = true;
             }
+        }
+
+
+        public void ActualizarMontoEfectivoCarrito(decimal nuevoMonto)
+        {
+            montoEfectivoCarrito = nuevoMonto; // Esto está permitido dentro de la misma clase
+        }
+
+        private void btnCarrito_Click(object sender, EventArgs e)
+        {
+            Carrito consultarCarrito = new Carrito(this);
+            consultarCarrito.Show();
+            this.Hide();
         }
 
         private void ValidarTarjetaYDatos()
@@ -265,16 +278,10 @@ namespace TpIsGrupo2
                 }
             }
 
-
-
-
-
             // Si todas las validaciones son exitosas, muestra el botón de Visa y oculta el de error
             btnVisa.Visible = true;
             btnError.Visible = false;
             lblErrorTarjeta.Visible = false;
-
-           
 
         }
 
@@ -485,12 +492,6 @@ namespace TpIsGrupo2
             cmbCiudades.AutoCompleteCustomSource = fuenteAutocompletado;
         }
 
-        private void btnCarrito_Click(object sender, EventArgs e)
-        {
-            Carrito consultarCarrito = new Carrito(this);
-            consultarCarrito.Show();
-            this.Hide();
-        }
 
         private void txtFechaVencimiento_KeyPress(object sender, KeyPressEventArgs e)
         {
