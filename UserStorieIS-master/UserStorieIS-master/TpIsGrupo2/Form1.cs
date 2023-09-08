@@ -14,9 +14,7 @@ namespace TpIsGrupo2
         public Form1()
         {
             InitializeComponent();
-            // Hago que se pueda seleccionar fecha y hora, aunque debe modificarse para que muestre solamente el dia de hoy
-            dtpSeleccionarFecha.Format = DateTimePickerFormat.Custom;
-            dtpSeleccionarFecha.CustomFormat = "dd/MM/yyyy     hh:mm:ss";
+
 
             // Le digo al form donde quiero que arranque en la pantalla de mi coputadora
             this.StartPosition = FormStartPosition.Manual;
@@ -37,8 +35,9 @@ namespace TpIsGrupo2
             // Llamo a setDefault para establecer las posiciones por defecto de los elementos
             SetDefaultConidtions();
 
-
-
+            dtpSeleccionarFecha.Format = DateTimePickerFormat.Custom;
+            dtpSeleccionarFecha.CustomFormat = "yyyy-MM-dd HH:mm";
+            dtpSeleccionarFecha.Visible = false;
         }
 
 
@@ -155,6 +154,8 @@ namespace TpIsGrupo2
                 ValidarEfectivo();
             }
 
+
+            checkeo_rango_horario();
 
         }
 
@@ -378,6 +379,54 @@ namespace TpIsGrupo2
             Carrito consultarCarrito = new Carrito(this);
             consultarCarrito.Show();
             this.Hide();
+        }
+
+        private void rbFechaSeleccion_CheckedChanged(object sender, EventArgs e)
+        {
+            dtpSeleccionarFecha.Visible = true;
+            dtpSeleccionarFecha.Format = DateTimePickerFormat.Custom;
+            dtpSeleccionarFecha.CustomFormat = "yyyy-MM-dd HH:mm";
+
+            dtpSeleccionarFecha.MinDate = DateTime.Now;
+            dtpSeleccionarFecha.MaxDate = DateTime.Now.AddDays(6);
+
+            dtpSeleccionarFecha.Enabled = true;
+
+            //seteo la fecha minima de seleccion en el datepicker
+
+        }
+
+
+
+        private void rnPronto_CheckedChanged(object sender, EventArgs e)
+        {
+            dtpSeleccionarFecha.Visible = false;
+            dtpSeleccionarFecha.Value= DateTime.Now;
+            //acá tambien debería quedar acentado en algún lado 
+        }
+
+
+
+        public void checkeo_rango_horario()
+        {
+            // Obtener la fecha y hora seleccionada en el DateTimePicker
+            int HoraSeleccionada = dtpSeleccionarFecha.Value.Hour;
+
+
+            // Establecer los límites del rango
+            int limiteInferior = 7; // 7:00 AM
+            int limiteSuperior = 24; // 11:59 PM
+
+            // Verificar si la hora seleccionada está dentro del rango
+
+            /// és un checkeo para borrar 
+            if (HoraSeleccionada >= limiteInferior && HoraSeleccionada < limiteSuperior)
+            {/*si vamos a poner el horario en algún lado, va acá */ 
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un horario dentro de nuestro turno (7:00 - 23:59).");
+            }
         }
 
     }

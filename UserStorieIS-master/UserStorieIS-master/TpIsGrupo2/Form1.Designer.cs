@@ -36,9 +36,9 @@
             this.lblEfectivo = new System.Windows.Forms.Label();
             this.lblSeleccioneMetodo = new System.Windows.Forms.Label();
             this.pnlHoraEntrega = new TpIsGrupo2.GradientPanel();
-            this.chkSeleccionarHora = new System.Windows.Forms.CheckBox();
+            this.rbFechaSeleccion = new System.Windows.Forms.RadioButton();
+            this.rnPronto = new System.Windows.Forms.RadioButton();
             this.dtpSeleccionarFecha = new System.Windows.Forms.DateTimePicker();
-            this.chkAntesPosible = new System.Windows.Forms.CheckBox();
             this.label11 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.lblCantidadProductos = new System.Windows.Forms.Label();
@@ -194,9 +194,9 @@
             this.pnlHoraEntrega.BackColor = System.Drawing.Color.White;
             this.pnlHoraEntrega.ColorBottom = System.Drawing.Color.Empty;
             this.pnlHoraEntrega.ColorTop = System.Drawing.Color.Empty;
-            this.pnlHoraEntrega.Controls.Add(this.chkSeleccionarHora);
+            this.pnlHoraEntrega.Controls.Add(this.rbFechaSeleccion);
+            this.pnlHoraEntrega.Controls.Add(this.rnPronto);
             this.pnlHoraEntrega.Controls.Add(this.dtpSeleccionarFecha);
-            this.pnlHoraEntrega.Controls.Add(this.chkAntesPosible);
             this.pnlHoraEntrega.Controls.Add(this.label11);
             this.pnlHoraEntrega.Location = new System.Drawing.Point(69, 234);
             this.pnlHoraEntrega.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -204,42 +204,48 @@
             this.pnlHoraEntrega.Size = new System.Drawing.Size(245, 122);
             this.pnlHoraEntrega.TabIndex = 14;
             // 
-            // chkSeleccionarHora
+            // rbFechaSeleccion
             // 
-            this.chkSeleccionarHora.AutoSize = true;
-            this.chkSeleccionarHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.chkSeleccionarHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(61)))), ((int)(((byte)(1)))));
-            this.chkSeleccionarHora.Location = new System.Drawing.Point(30, 58);
-            this.chkSeleccionarHora.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.chkSeleccionarHora.Name = "chkSeleccionarHora";
-            this.chkSeleccionarHora.Size = new System.Drawing.Size(134, 21);
-            this.chkSeleccionarHora.TabIndex = 12;
-            this.chkSeleccionarHora.Text = "Seleccionar hora";
-            this.chkSeleccionarHora.UseVisualStyleBackColor = true;
+            this.rbFechaSeleccion.AutoSize = true;
+            this.rbFechaSeleccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rbFechaSeleccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(61)))), ((int)(((byte)(1)))));
+            this.rbFechaSeleccion.Location = new System.Drawing.Point(25, 56);
+            this.rbFechaSeleccion.Name = "rbFechaSeleccion";
+            this.rbFechaSeleccion.Size = new System.Drawing.Size(209, 20);
+            this.rbFechaSeleccion.TabIndex = 14;
+            this.rbFechaSeleccion.TabStop = true;
+            this.rbFechaSeleccion.Text = "Seleccionar Fecha De Entrega";
+            this.rbFechaSeleccion.UseVisualStyleBackColor = true;
+            this.rbFechaSeleccion.CheckedChanged += new System.EventHandler(this.rbFechaSeleccion_CheckedChanged);
+            // 
+            // rnPronto
+            // 
+            this.rnPronto.AutoSize = true;
+            this.rnPronto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rnPronto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(61)))), ((int)(((byte)(1)))));
+            this.rnPronto.Location = new System.Drawing.Point(25, 30);
+            this.rnPronto.Name = "rnPronto";
+            this.rnPronto.Size = new System.Drawing.Size(158, 20);
+            this.rnPronto.TabIndex = 13;
+            this.rnPronto.TabStop = true;
+            this.rnPronto.Text = "Lo más pronto posible";
+            this.rnPronto.UseVisualStyleBackColor = true;
+            this.rnPronto.CheckedChanged += new System.EventHandler(this.rnPronto_CheckedChanged);
             // 
             // dtpSeleccionarFecha
             // 
             this.dtpSeleccionarFecha.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(61)))), ((int)(((byte)(1)))));
+            this.dtpSeleccionarFecha.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dtpSeleccionarFecha.Enabled = false;
             this.dtpSeleccionarFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dtpSeleccionarFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpSeleccionarFecha.Location = new System.Drawing.Point(12, 82);
             this.dtpSeleccionarFecha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dtpSeleccionarFecha.MinDate = new System.DateTime(2023, 8, 29, 0, 0, 0, 0);
+            this.dtpSeleccionarFecha.MaxDate = new System.DateTime(2023, 9, 15, 0, 0, 0, 0);
+            this.dtpSeleccionarFecha.MinDate = new System.DateTime(2023, 9, 8, 0, 0, 0, 0);
             this.dtpSeleccionarFecha.Name = "dtpSeleccionarFecha";
             this.dtpSeleccionarFecha.Size = new System.Drawing.Size(219, 23);
             this.dtpSeleccionarFecha.TabIndex = 11;
-            // 
-            // chkAntesPosible
-            // 
-            this.chkAntesPosible.AutoSize = true;
-            this.chkAntesPosible.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.chkAntesPosible.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(61)))), ((int)(((byte)(1)))));
-            this.chkAntesPosible.Location = new System.Drawing.Point(30, 32);
-            this.chkAntesPosible.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.chkAntesPosible.Name = "chkAntesPosible";
-            this.chkAntesPosible.Size = new System.Drawing.Size(131, 21);
-            this.chkAntesPosible.TabIndex = 10;
-            this.chkAntesPosible.Text = "Lo antes posible";
-            this.chkAntesPosible.UseVisualStyleBackColor = true;
             // 
             // label11
             // 
@@ -306,6 +312,7 @@
             this.rbDebito.TabStop = true;
             this.rbDebito.Text = "Tarjeta de debito";
             this.rbDebito.UseVisualStyleBackColor = true;
+            this.rbDebito.CheckedChanged += new System.EventHandler(this.rbDebito_CheckedChanged);
             // 
             // rbCredito
             // 
@@ -319,6 +326,7 @@
             this.rbCredito.TabStop = true;
             this.rbCredito.Text = "Tarjeta de credito";
             this.rbCredito.UseVisualStyleBackColor = true;
+            this.rbCredito.CheckedChanged += new System.EventHandler(this.rbCredito_CheckedChanged);
             // 
             // rbEfectivo
             // 
@@ -332,6 +340,7 @@
             this.rbEfectivo.TabStop = true;
             this.rbEfectivo.Text = "Efectivo";
             this.rbEfectivo.UseVisualStyleBackColor = true;
+            this.rbEfectivo.CheckedChanged += new System.EventHandler(this.rbEfectivo_CheckedChanged);
             // 
             // label6
             // 
@@ -372,6 +381,7 @@
             this.btnComprar.TabIndex = 15;
             this.btnComprar.Text = "Comprar";
             this.btnComprar.UseVisualStyleBackColor = false;
+            this.btnComprar.Click += new System.EventHandler(this.btnComprar_Click);
             // 
             // pnlDatosTarjeta
             // 
@@ -596,6 +606,7 @@
             this.cmbCiudades.Name = "cmbCiudades";
             this.cmbCiudades.Size = new System.Drawing.Size(178, 24);
             this.cmbCiudades.TabIndex = 8;
+            this.cmbCiudades.SelectedIndexChanged += new System.EventHandler(this.cmbCiudades_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -640,6 +651,7 @@
             this.txtCalle.Name = "txtCalle";
             this.txtCalle.Size = new System.Drawing.Size(170, 23);
             this.txtCalle.TabIndex = 7;
+            this.txtCalle.TextChanged += new System.EventHandler(this.txtCalle_TextChanged);
             // 
             // txtNumero
             // 
@@ -648,6 +660,7 @@
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(92, 23);
             this.txtNumero.TabIndex = 6;
+            this.txtNumero.TextChanged += new System.EventHandler(this.txtNumero_TextChanged);
             // 
             // label1
             // 
@@ -761,10 +774,8 @@
         private Button btnCarrito;
         private Label lblCantidadProductos;
         private GradientPanel pnlHoraEntrega;
-        private CheckBox chkAntesPosible;
         private Label label11;
         private DateTimePicker dtpSeleccionarFecha;
-        private CheckBox chkSeleccionarHora;
         private Label label12;
         private Label lblSeleccioneMetodo;
         private Button button5;
@@ -781,5 +792,7 @@
         private Label lblMontoValido;
         private Label lblSimbolo;
         private Label lblErrorTarjeta;
+        private RadioButton rbFechaSeleccion;
+        private RadioButton rnPronto;
     }
 }
