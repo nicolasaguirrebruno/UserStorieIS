@@ -8,8 +8,7 @@ namespace TpIsGrupo2
     {
         private List<string> ciudadesCordoba = new List<string>
         {
-            "Córdoba", "Carlos Paz", "Villa Allende", "Villa María", "Río Cuarto", "Río Primero",
-                "Río Tercero", "Alta Gracia", "Pilar",
+            "Córdoba", "Carlos Paz"
         };
 
         private decimal montoEfectivoCarrito = 4500;
