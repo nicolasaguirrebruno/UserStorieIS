@@ -34,6 +34,15 @@ namespace TpIsGrupo2
             lblSimbolo.Visible = false;
             lblErrorTarjeta.Visible = false;
 
+            // Hago invisible los mensajes de error de la tarjeta
+
+            lblErrorNumero.Visible = false;
+            lblErrorNombre.Visible = false;
+            lblErrorCodigo.Visible = false;
+            lblErrorFechaVencimiento.Visible = false;
+    
+
+
             // Llamo a setDefault para establecer las posiciones por defecto de los elementos
             SetDefaultConidtions();
 
@@ -51,32 +60,6 @@ namespace TpIsGrupo2
 
 
 
-        private void setCardConditions()
-        {
-            // Este metodo hace que se vea el panel del metodo tarjeta y reubicar la posicion de boton
-            pnlDatosTarjeta.Visible = true;
-            lblSeleccioneMetodo.Visible = false;
-            pnlDatosEfectivo.Visible = false;
-            lblSimbolo.Visible = false;
-
-            // Setea los valores
-
-            txtApellidoTitular.Text = "";
-            txtNumeroTarjeta.Text = "";
-            txtCodigoSeguridad.Text = "";
-            txtNombreTitular.Text = "";
-
-            btnVisa.Visible = true;
-            btnError.Visible = false;
-            lblSimbolo.Visible = false;
-            lblErrorTarjeta.Visible = false;
-
-
-            btnComprar.Enabled = true;
-            btnComprar.Location = new Point(btnComprar.Location.X, 785);
-            pnlDatosTarjeta.Location = new Point(btnComprar.Location.X, 480);
-
-        }
 
         private void SetDefaultConidtions()
         {
@@ -179,6 +162,15 @@ namespace TpIsGrupo2
 
         private void ValidarTarjetaYDatos()
         {
+            // Hago invisible los mensajes de error de la tarjeta
+
+            lblErrorNumero.Visible = false;
+            lblErrorNombre.Visible = false;
+            lblErrorCodigo.Visible = false;
+            lblErrorFechaVencimiento.Visible = false;
+
+
+
             // Obtener el número de tarjeta ingresado en txtNumeroTarjeta
             string numeroTarjeta = txtNumeroTarjeta.Text.Replace(" ", "");
 
@@ -197,21 +189,26 @@ namespace TpIsGrupo2
                 btnVisa.Visible = false;
                 btnError.Visible = true;
                 lblErrorTarjeta.Visible = true;
+                lblErrorNumero.Visible = true;
 
                 return; // Sale de la función si el número de tarjeta no es válido
             }
 
+
+
             // Obtener el nombre y apellido del titular
             string nombreTitular = txtNombreTitular.Text.Trim();
-            string apellidoTitular = txtApellidoTitular.Text.Trim();
 
             // Verificar que los campos de nombre y apellido no estén vacíos
-            if (string.IsNullOrWhiteSpace(nombreTitular) || string.IsNullOrWhiteSpace(apellidoTitular))
+            if (string.IsNullOrWhiteSpace(nombreTitular))
             {
                 // El nombre o el apellido están vacíos, muestra el botón de error y oculta el de Visa
                 btnVisa.Visible = false;
                 btnError.Visible = true;
                 lblErrorTarjeta.Visible = true;
+                lblErrorNombre.Visible = true;
+
+
                 return; // Sale de la función si el nombre o el apellido están vacíos
             }
 
@@ -225,15 +222,77 @@ namespace TpIsGrupo2
                 btnVisa.Visible = false;
                 btnError.Visible = true;
                 lblErrorTarjeta.Visible = true;
+                lblErrorCodigo.Visible = true;
                 return; // Sale de la función si el CVC no es válido
             }
+       
+
+            // Obtener la fecha de vencimiento ingresada en txtFechaVencimiento
+            string fechaVencimiento = txtFechaVencimiento.Text.Trim();
+
+            // Verificar si el campo fecha de vencimiento no esté vacío y tenga el formato MM/AAAA
+            if (string.IsNullOrWhiteSpace(fechaVencimiento) || !EsFormatoFechaValido(fechaVencimiento))
+            {
+                // La fecha de vencimiento no es válida, muestra el botón de error y oculta el de Visa
+                btnVisa.Visible = false;
+                btnError.Visible = true;
+                lblErrorTarjeta.Visible = true;
+                lblErrorFechaVencimiento.Visible = true;
+
+                return; // Sale de la función si la fecha de vencimiento no es válida
+            }
+
+            // Obtener el mes y el año de la fecha de vencimiento
+            string[] partesFecha = fechaVencimiento.Split('/');
+            int mes, año;
+
+            if (partesFecha.Length == 2 && int.TryParse(partesFecha[0], out mes) && int.TryParse(partesFecha[1], out año))
+            {
+               
+                // Crear una fecha de vencimiento
+                DateTime fechaVencimientoTarjeta = new DateTime(año, mes, 1);
+
+                // Verificar si la fecha de vencimiento es menor o igual que la fecha actual
+                if (fechaVencimientoTarjeta <= DateTime.Now)
+                {
+                    // La fecha de vencimiento es menor o igual que la fecha actual, muestra el botón de error y oculta el de Visa
+                    btnVisa.Visible = false;
+                    btnError.Visible = true;
+                    lblErrorTarjeta.Visible = true;
+                    lblErrorFechaVencimiento.Visible = true;
+
+                    return; // Sale de la función si la fecha de vencimiento es menor o igual
+                }
+            }
+
+
+
+
 
             // Si todas las validaciones son exitosas, muestra el botón de Visa y oculta el de error
             btnVisa.Visible = true;
             btnError.Visible = false;
             lblErrorTarjeta.Visible = false;
+
+           
+
         }
 
+        // Función para verificar el formato MM/AAAA
+        bool EsFormatoFechaValido(string fecha)
+        {
+            if (fecha.Length != 7) // Cambiamos la longitud esperada a 7 caracteres
+                return false;
+
+            string[] partes = fecha.Split('/');
+            if (partes.Length != 2)
+                return false;
+
+            if (!int.TryParse(partes[0], out int mes) || !int.TryParse(partes[1], out int año))
+                return false;
+
+            return mes >= 1 && mes <= 12 && año >= DateTime.Now.Year && año <= DateTime.Now.Year + 10; // Cambiamos la validación del año
+        }
 
 
 
@@ -334,15 +393,68 @@ namespace TpIsGrupo2
             }
         }
 
+        private void setCardConditions()
+        {
+            // Este metodo hace que se vea el panel del metodo tarjeta y reubicar la posicion de boton
+            pnlDatosTarjeta.Visible = true;
+            lblSeleccioneMetodo.Visible = false;
+            pnlDatosEfectivo.Visible = false;
+            lblSimbolo.Visible = false;
+
+            // Setea los valores
+
+            txtNumeroTarjeta.Text = "";
+            txtCodigoSeguridad.Text = "";
+            txtNombreTitular.Text = "";
+            txtFechaVencimiento.Text = "";
+
+
+
+            btnVisa.Visible = true;
+            btnError.Visible = false;
+            lblSimbolo.Visible = false;
+            lblErrorTarjeta.Visible = false;
+
+
+            // quitar visibilidad a errores
+
+            lblErrorNumero.Visible = false;
+            lblErrorNombre.Visible = false;
+            lblErrorCodigo.Visible = false;
+            lblErrorFechaVencimiento.Visible = false;
+
+
+
+            btnComprar.Enabled = true;
+            btnComprar.Location = new Point(btnComprar.Location.X, 850);
+            pnlDatosTarjeta.Location = new Point(btnComprar.Location.X, 480);
+
+        }
+
+
+
         private void setCashConditions()
         {
             // Este metodo hace que se vea el panel del metodo tarjeta y reubicar la posicion de boton
             pnlDatosTarjeta.Visible = false;
             lblSeleccioneMetodo.Visible = false;
+
             pnlDatosEfectivo.Visible = true;
-            lblSimbolo.Visible = Visible;
+            lblSimbolo.Visible = true;
+
+
             nupEfectivo.Value = 0;
             lblMontoValido.Visible = false;
+
+            // quitar visible errores de tarjeta
+
+            lblErrorNumero.Visible = false;
+            lblErrorNombre.Visible = false;
+            lblErrorCodigo.Visible = false;
+            lblErrorFechaVencimiento.Visible = false;
+
+
+
 
             btnComprar.Enabled = true;
             btnComprar.Location = new Point(btnComprar.Location.X, 625);
@@ -380,6 +492,41 @@ namespace TpIsGrupo2
             this.Hide();
         }
 
+        private void txtFechaVencimiento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Verificar si la tecla presionada es un número o una tecla de control válida
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                // Si no es un número ni una tecla de control válida, no se permite escribir el carácter
+                e.Handled = true;
+            }
+
+            // Verificar si el texto en el TextBox tiene ya 2 caracteres (MM)
+            if (txtFechaVencimiento.Text.Length == 2 && e.KeyChar != (char)Keys.Back)
+            {
+                // Si ya se han ingresado los dos caracteres del mes, agregar automáticamente el carácter "/"
+                txtFechaVencimiento.Text += "/";
+                txtFechaVencimiento.SelectionStart = txtFechaVencimiento.Text.Length;
+            }
+
+            // Verificar si el texto en el TextBox tiene más de 7 caracteres (MM/AAAA) y el carácter actual no es retroceso
+            if (txtFechaVencimiento.Text.Length >= 7 && e.KeyChar != (char)Keys.Back)
+            {
+                // Si ya se han ingresado los siete caracteres (MM/AAAA), no se permite escribir más
+                e.Handled = true;
+            }
+        }
+
+        private void txtNombreTitular_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Verificar si la tecla presionada es una letra o una tecla de control válida
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != ' ')
+            {
+                // Si no es una letra ni una tecla de control válida ni un espacio, no se permite escribir el carácter
+                e.Handled = true;
+            }
+        }
+
     }
-    
+
 }

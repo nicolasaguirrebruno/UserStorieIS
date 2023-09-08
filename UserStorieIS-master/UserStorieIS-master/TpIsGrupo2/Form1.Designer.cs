@@ -41,6 +41,24 @@
             this.chkAntesPosible = new System.Windows.Forms.CheckBox();
             this.label11 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
+            this.pnlDatosTarjeta = new TpIsGrupo2.GradientPanel();
+            this.lblErrorCodigo = new System.Windows.Forms.Label();
+            this.lblErrorFechaVencimiento = new System.Windows.Forms.Label();
+            this.lblErrorNombre = new System.Windows.Forms.Label();
+            this.lblErrorNumero = new System.Windows.Forms.Label();
+            this.lblFechita = new System.Windows.Forms.Label();
+            this.lblFechaVencimiento = new System.Windows.Forms.Label();
+            this.txtFechaVencimiento = new System.Windows.Forms.TextBox();
+            this.lblErrorTarjeta = new System.Windows.Forms.Label();
+            this.btnError = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtCodigoSeguridad = new System.Windows.Forms.TextBox();
+            this.lblNombreTitular = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtNombreTitular = new System.Windows.Forms.TextBox();
+            this.txtNumeroTarjeta = new System.Windows.Forms.TextBox();
+            this.btnVisa = new System.Windows.Forms.Button();
             this.lblCantidadProductos = new System.Windows.Forms.Label();
             this.pnlMetodo = new TpIsGrupo2.GradientPanel();
             this.rbDebito = new System.Windows.Forms.RadioButton();
@@ -49,19 +67,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnCarrito = new System.Windows.Forms.Button();
             this.btnComprar = new System.Windows.Forms.Button();
-            this.pnlDatosTarjeta = new TpIsGrupo2.GradientPanel();
-            this.lblErrorTarjeta = new System.Windows.Forms.Label();
-            this.btnError = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtCodigoSeguridad = new System.Windows.Forms.TextBox();
-            this.txtApellidoTitular = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtNombreTitular = new System.Windows.Forms.TextBox();
-            this.txtNumeroTarjeta = new System.Windows.Forms.TextBox();
-            this.btnVisa = new System.Windows.Forms.Button();
             this.gradientPanel2 = new TpIsGrupo2.GradientPanel();
             this.lbl_completarNumCalle = new System.Windows.Forms.Label();
             this.lbl_completarCalle = new System.Windows.Forms.Label();
@@ -80,8 +85,8 @@
             this.pnlDatosEfectivo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupEfectivo)).BeginInit();
             this.pnlHoraEntrega.SuspendLayout();
-            this.pnlMetodo.SuspendLayout();
             this.pnlDatosTarjeta.SuspendLayout();
+            this.pnlMetodo.SuspendLayout();
             this.gradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -96,11 +101,11 @@
             this.pnlGeneral.Controls.Add(this.lblSeleccioneMetodo);
             this.pnlGeneral.Controls.Add(this.pnlHoraEntrega);
             this.pnlGeneral.Controls.Add(this.button5);
+            this.pnlGeneral.Controls.Add(this.pnlDatosTarjeta);
             this.pnlGeneral.Controls.Add(this.lblCantidadProductos);
             this.pnlGeneral.Controls.Add(this.pnlMetodo);
             this.pnlGeneral.Controls.Add(this.btnCarrito);
             this.pnlGeneral.Controls.Add(this.btnComprar);
-            this.pnlGeneral.Controls.Add(this.pnlDatosTarjeta);
             this.pnlGeneral.Controls.Add(this.gradientPanel2);
             this.pnlGeneral.Controls.Add(this.label1);
             this.pnlGeneral.Controls.Add(this.pictureBox3);
@@ -112,7 +117,7 @@
             this.pnlGeneral.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlGeneral.MaximumSize = new System.Drawing.Size(0, 844);
             this.pnlGeneral.Name = "pnlGeneral";
-            this.pnlGeneral.Size = new System.Drawing.Size(390, 844);
+            this.pnlGeneral.Size = new System.Drawing.Size(390, 788);
             this.pnlGeneral.TabIndex = 0;
             // 
             // pnlDatosEfectivo
@@ -124,7 +129,7 @@
             this.pnlDatosEfectivo.Controls.Add(this.lblMontoValido);
             this.pnlDatosEfectivo.Controls.Add(this.nupEfectivo);
             this.pnlDatosEfectivo.Controls.Add(this.lblEfectivo);
-            this.pnlDatosEfectivo.Location = new System.Drawing.Point(71, 513);
+            this.pnlDatosEfectivo.Location = new System.Drawing.Point(66, 988);
             this.pnlDatosEfectivo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlDatosEfectivo.Name = "pnlDatosEfectivo";
             this.pnlDatosEfectivo.Size = new System.Drawing.Size(243, 105);
@@ -135,7 +140,7 @@
             // 
             this.lblSimbolo.AutoSize = true;
             this.lblSimbolo.Font = new System.Drawing.Font("Segoe UI Emoji", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblSimbolo.Location = new System.Drawing.Point(10, 51);
+            this.lblSimbolo.Location = new System.Drawing.Point(5, 52);
             this.lblSimbolo.Name = "lblSimbolo";
             this.lblSimbolo.Size = new System.Drawing.Size(17, 19);
             this.lblSimbolo.TabIndex = 16;
@@ -171,7 +176,7 @@
             this.lblEfectivo.BackColor = System.Drawing.Color.Transparent;
             this.lblEfectivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblEfectivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(61)))), ((int)(((byte)(1)))));
-            this.lblEfectivo.Location = new System.Drawing.Point(28, 18);
+            this.lblEfectivo.Location = new System.Drawing.Point(27, 19);
             this.lblEfectivo.Name = "lblEfectivo";
             this.lblEfectivo.Size = new System.Drawing.Size(186, 17);
             this.lblEfectivo.TabIndex = 13;
@@ -267,135 +272,115 @@
             this.button5.TabIndex = 19;
             this.button5.UseVisualStyleBackColor = false;
             // 
-            // lblCantidadProductos
-            // 
-            this.lblCantidadProductos.AutoSize = true;
-            this.lblCantidadProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(81)))), ((int)(((byte)(1)))));
-            this.lblCantidadProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblCantidadProductos.ForeColor = System.Drawing.Color.White;
-            this.lblCantidadProductos.Location = new System.Drawing.Point(318, 0);
-            this.lblCantidadProductos.Name = "lblCantidadProductos";
-            this.lblCantidadProductos.Size = new System.Drawing.Size(17, 18);
-            this.lblCantidadProductos.TabIndex = 18;
-            this.lblCantidadProductos.Text = "0";
-            // 
-            // pnlMetodo
-            // 
-            this.pnlMetodo.BackColor = System.Drawing.Color.White;
-            this.pnlMetodo.ColorBottom = System.Drawing.Color.Empty;
-            this.pnlMetodo.ColorTop = System.Drawing.Color.Empty;
-            this.pnlMetodo.Controls.Add(this.rbDebito);
-            this.pnlMetodo.Controls.Add(this.rbCredito);
-            this.pnlMetodo.Controls.Add(this.rbEfectivo);
-            this.pnlMetodo.Controls.Add(this.label6);
-            this.pnlMetodo.Location = new System.Drawing.Point(71, 372);
-            this.pnlMetodo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnlMetodo.Name = "pnlMetodo";
-            this.pnlMetodo.Size = new System.Drawing.Size(243, 93);
-            this.pnlMetodo.TabIndex = 13;
-            // 
-            // rbDebito
-            // 
-            this.rbDebito.AutoSize = true;
-            this.rbDebito.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rbDebito.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(61)))), ((int)(((byte)(1)))));
-            this.rbDebito.Location = new System.Drawing.Point(22, 64);
-            this.rbDebito.Name = "rbDebito";
-            this.rbDebito.Size = new System.Drawing.Size(134, 21);
-            this.rbDebito.TabIndex = 14;
-            this.rbDebito.TabStop = true;
-            this.rbDebito.Text = "Tarjeta de debito";
-            this.rbDebito.UseVisualStyleBackColor = true;
-            // 
-            // rbCredito
-            // 
-            this.rbCredito.AutoSize = true;
-            this.rbCredito.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rbCredito.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(61)))), ((int)(((byte)(1)))));
-            this.rbCredito.Location = new System.Drawing.Point(22, 46);
-            this.rbCredito.Name = "rbCredito";
-            this.rbCredito.Size = new System.Drawing.Size(138, 21);
-            this.rbCredito.TabIndex = 13;
-            this.rbCredito.TabStop = true;
-            this.rbCredito.Text = "Tarjeta de credito";
-            this.rbCredito.UseVisualStyleBackColor = true;
-            // 
-            // rbEfectivo
-            // 
-            this.rbEfectivo.AutoSize = true;
-            this.rbEfectivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rbEfectivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(61)))), ((int)(((byte)(1)))));
-            this.rbEfectivo.Location = new System.Drawing.Point(23, 28);
-            this.rbEfectivo.Name = "rbEfectivo";
-            this.rbEfectivo.Size = new System.Drawing.Size(76, 21);
-            this.rbEfectivo.TabIndex = 12;
-            this.rbEfectivo.TabStop = true;
-            this.rbEfectivo.Text = "Efectivo";
-            this.rbEfectivo.UseVisualStyleBackColor = true;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(61)))), ((int)(((byte)(1)))));
-            this.label6.Location = new System.Drawing.Point(57, 8);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(111, 17);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Metodo de pago";
-            // 
-            // btnCarrito
-            // 
-            this.btnCarrito.BackColor = System.Drawing.Color.Transparent;
-            this.btnCarrito.BackgroundImage = global::TpIsGrupo2.Images.shoppingcart2;
-            this.btnCarrito.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCarrito.Location = new System.Drawing.Point(279, 6);
-            this.btnCarrito.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCarrito.Name = "btnCarrito";
-            this.btnCarrito.Size = new System.Drawing.Size(47, 38);
-            this.btnCarrito.TabIndex = 17;
-            this.btnCarrito.UseVisualStyleBackColor = false;
-            this.btnCarrito.Click += new System.EventHandler(this.btnCarrito_Click);
-            // 
-            // btnComprar
-            // 
-            this.btnComprar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(82)))), ((int)(((byte)(153)))));
-            this.btnComprar.FlatAppearance.BorderSize = 0;
-            this.btnComprar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnComprar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnComprar.ForeColor = System.Drawing.Color.White;
-            this.btnComprar.Location = new System.Drawing.Point(69, 820);
-            this.btnComprar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnComprar.Name = "btnComprar";
-            this.btnComprar.Size = new System.Drawing.Size(245, 48);
-            this.btnComprar.TabIndex = 15;
-            this.btnComprar.Text = "Comprar";
-            this.btnComprar.UseVisualStyleBackColor = false;
-            // 
             // pnlDatosTarjeta
             // 
             this.pnlDatosTarjeta.BackColor = System.Drawing.Color.White;
             this.pnlDatosTarjeta.ColorBottom = System.Drawing.Color.Empty;
             this.pnlDatosTarjeta.ColorTop = System.Drawing.Color.Empty;
+            this.pnlDatosTarjeta.Controls.Add(this.lblErrorCodigo);
+            this.pnlDatosTarjeta.Controls.Add(this.lblErrorFechaVencimiento);
+            this.pnlDatosTarjeta.Controls.Add(this.lblErrorNombre);
+            this.pnlDatosTarjeta.Controls.Add(this.lblErrorNumero);
+            this.pnlDatosTarjeta.Controls.Add(this.lblFechita);
+            this.pnlDatosTarjeta.Controls.Add(this.lblFechaVencimiento);
+            this.pnlDatosTarjeta.Controls.Add(this.txtFechaVencimiento);
             this.pnlDatosTarjeta.Controls.Add(this.lblErrorTarjeta);
             this.pnlDatosTarjeta.Controls.Add(this.btnError);
             this.pnlDatosTarjeta.Controls.Add(this.label12);
             this.pnlDatosTarjeta.Controls.Add(this.label9);
-            this.pnlDatosTarjeta.Controls.Add(this.label8);
             this.pnlDatosTarjeta.Controls.Add(this.txtCodigoSeguridad);
-            this.pnlDatosTarjeta.Controls.Add(this.txtApellidoTitular);
-            this.pnlDatosTarjeta.Controls.Add(this.label7);
+            this.pnlDatosTarjeta.Controls.Add(this.lblNombreTitular);
             this.pnlDatosTarjeta.Controls.Add(this.label5);
             this.pnlDatosTarjeta.Controls.Add(this.txtNombreTitular);
             this.pnlDatosTarjeta.Controls.Add(this.txtNumeroTarjeta);
             this.pnlDatosTarjeta.Controls.Add(this.btnVisa);
-            this.pnlDatosTarjeta.Location = new System.Drawing.Point(71, 513);
+            this.pnlDatosTarjeta.Location = new System.Drawing.Point(66, 515);
             this.pnlDatosTarjeta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlDatosTarjeta.Name = "pnlDatosTarjeta";
-            this.pnlDatosTarjeta.Size = new System.Drawing.Size(243, 292);
+            this.pnlDatosTarjeta.Size = new System.Drawing.Size(243, 324);
             this.pnlDatosTarjeta.TabIndex = 14;
             this.pnlDatosTarjeta.Visible = false;
+            // 
+            // lblErrorCodigo
+            // 
+            this.lblErrorCodigo.AutoSize = true;
+            this.lblErrorCodigo.BackColor = System.Drawing.Color.Transparent;
+            this.lblErrorCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblErrorCodigo.ForeColor = System.Drawing.Color.Red;
+            this.lblErrorCodigo.Location = new System.Drawing.Point(25, 297);
+            this.lblErrorCodigo.Name = "lblErrorCodigo";
+            this.lblErrorCodigo.Size = new System.Drawing.Size(123, 13);
+            this.lblErrorCodigo.TabIndex = 25;
+            this.lblErrorCodigo.Text = "Ingrese un codigo valido";
+            // 
+            // lblErrorFechaVencimiento
+            // 
+            this.lblErrorFechaVencimiento.AutoSize = true;
+            this.lblErrorFechaVencimiento.BackColor = System.Drawing.Color.Transparent;
+            this.lblErrorFechaVencimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblErrorFechaVencimiento.ForeColor = System.Drawing.Color.Red;
+            this.lblErrorFechaVencimiento.Location = new System.Drawing.Point(26, 240);
+            this.lblErrorFechaVencimiento.Name = "lblErrorFechaVencimiento";
+            this.lblErrorFechaVencimiento.Size = new System.Drawing.Size(124, 13);
+            this.lblErrorFechaVencimiento.TabIndex = 24;
+            this.lblErrorFechaVencimiento.Text = "Ingrese una fecha valida";
+            // 
+            // lblErrorNombre
+            // 
+            this.lblErrorNombre.AutoSize = true;
+            this.lblErrorNombre.BackColor = System.Drawing.Color.Transparent;
+            this.lblErrorNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblErrorNombre.ForeColor = System.Drawing.Color.Red;
+            this.lblErrorNombre.Location = new System.Drawing.Point(27, 180);
+            this.lblErrorNombre.Name = "lblErrorNombre";
+            this.lblErrorNombre.Size = new System.Drawing.Size(126, 13);
+            this.lblErrorNombre.TabIndex = 22;
+            this.lblErrorNombre.Text = "Ingrese un nombre valido";
+            // 
+            // lblErrorNumero
+            // 
+            this.lblErrorNumero.AutoSize = true;
+            this.lblErrorNumero.BackColor = System.Drawing.Color.Transparent;
+            this.lblErrorNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblErrorNumero.ForeColor = System.Drawing.Color.Red;
+            this.lblErrorNumero.Location = new System.Drawing.Point(28, 123);
+            this.lblErrorNumero.Name = "lblErrorNumero";
+            this.lblErrorNumero.Size = new System.Drawing.Size(126, 13);
+            this.lblErrorNumero.TabIndex = 21;
+            this.lblErrorNumero.Text = "Ingrese un numero valido";
+            // 
+            // lblFechita
+            // 
+            this.lblFechita.AutoSize = true;
+            this.lblFechita.BackColor = System.Drawing.Color.Transparent;
+            this.lblFechita.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblFechita.ForeColor = System.Drawing.Color.Black;
+            this.lblFechita.Location = new System.Drawing.Point(125, 217);
+            this.lblFechita.Name = "lblFechita";
+            this.lblFechita.Size = new System.Drawing.Size(80, 17);
+            this.lblFechita.TabIndex = 20;
+            this.lblFechita.Text = "(MM/AAAA)";
+            // 
+            // lblFechaVencimiento
+            // 
+            this.lblFechaVencimiento.AutoSize = true;
+            this.lblFechaVencimiento.BackColor = System.Drawing.Color.Transparent;
+            this.lblFechaVencimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblFechaVencimiento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(61)))), ((int)(((byte)(1)))));
+            this.lblFechaVencimiento.Location = new System.Drawing.Point(27, 196);
+            this.lblFechaVencimiento.Name = "lblFechaVencimiento";
+            this.lblFechaVencimiento.Size = new System.Drawing.Size(208, 17);
+            this.lblFechaVencimiento.TabIndex = 19;
+            this.lblFechaVencimiento.Text = "Ingrese la fecha de vencimiento";
+            // 
+            // txtFechaVencimiento
+            // 
+            this.txtFechaVencimiento.Location = new System.Drawing.Point(26, 215);
+            this.txtFechaVencimiento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtFechaVencimiento.Name = "txtFechaVencimiento";
+            this.txtFechaVencimiento.Size = new System.Drawing.Size(92, 23);
+            this.txtFechaVencimiento.TabIndex = 18;
+            this.txtFechaVencimiento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFechaVencimiento_KeyPress);
             // 
             // lblErrorTarjeta
             // 
@@ -442,51 +427,32 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(61)))), ((int)(((byte)(1)))));
-            this.label9.Location = new System.Drawing.Point(28, 231);
+            this.label9.Location = new System.Drawing.Point(26, 253);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(157, 17);
             this.label9.TabIndex = 13;
             this.label9.Text = "Ingrese el codigo (CVC)";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(61)))), ((int)(((byte)(1)))));
-            this.label8.Location = new System.Drawing.Point(28, 181);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(127, 17);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "Ingrese su apellido";
-            // 
             // txtCodigoSeguridad
             // 
-            this.txtCodigoSeguridad.Location = new System.Drawing.Point(28, 250);
+            this.txtCodigoSeguridad.Location = new System.Drawing.Point(26, 272);
             this.txtCodigoSeguridad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCodigoSeguridad.Name = "txtCodigoSeguridad";
             this.txtCodigoSeguridad.Size = new System.Drawing.Size(92, 23);
             this.txtCodigoSeguridad.TabIndex = 12;
+            this.txtCodigoSeguridad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigoSeguridad_KeyPress);
             // 
-            // txtApellidoTitular
+            // lblNombreTitular
             // 
-            this.txtApellidoTitular.Location = new System.Drawing.Point(28, 200);
-            this.txtApellidoTitular.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtApellidoTitular.Name = "txtApellidoTitular";
-            this.txtApellidoTitular.Size = new System.Drawing.Size(170, 23);
-            this.txtApellidoTitular.TabIndex = 14;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(61)))), ((int)(((byte)(1)))));
-            this.label7.Location = new System.Drawing.Point(24, 130);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(126, 17);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Ingrese su nombre";
+            this.lblNombreTitular.AutoSize = true;
+            this.lblNombreTitular.BackColor = System.Drawing.Color.Transparent;
+            this.lblNombreTitular.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNombreTitular.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(61)))), ((int)(((byte)(1)))));
+            this.lblNombreTitular.Location = new System.Drawing.Point(28, 136);
+            this.lblNombreTitular.Name = "lblNombreTitular";
+            this.lblNombreTitular.Size = new System.Drawing.Size(186, 17);
+            this.lblNombreTitular.TabIndex = 13;
+            this.lblNombreTitular.Text = "Ingrese el nombre y apellido";
             // 
             // label5
             // 
@@ -502,11 +468,12 @@
             // 
             // txtNombreTitular
             // 
-            this.txtNombreTitular.Location = new System.Drawing.Point(28, 149);
+            this.txtNombreTitular.Location = new System.Drawing.Point(29, 155);
             this.txtNombreTitular.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombreTitular.Name = "txtNombreTitular";
             this.txtNombreTitular.Size = new System.Drawing.Size(170, 23);
             this.txtNombreTitular.TabIndex = 12;
+            this.txtNombreTitular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreTitular_KeyPress);
             // 
             // txtNumeroTarjeta
             // 
@@ -515,6 +482,8 @@
             this.txtNumeroTarjeta.Name = "txtNumeroTarjeta";
             this.txtNumeroTarjeta.Size = new System.Drawing.Size(208, 23);
             this.txtNumeroTarjeta.TabIndex = 12;
+            this.txtNumeroTarjeta.TextChanged += new System.EventHandler(this.txtNumeroTarjeta_TextChanged);
+            this.txtNumeroTarjeta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeroTarjeta_KeyPress);
             // 
             // btnVisa
             // 
@@ -530,6 +499,116 @@
             this.btnVisa.TabIndex = 0;
             this.btnVisa.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnVisa.UseVisualStyleBackColor = true;
+            // 
+            // lblCantidadProductos
+            // 
+            this.lblCantidadProductos.AutoSize = true;
+            this.lblCantidadProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(81)))), ((int)(((byte)(1)))));
+            this.lblCantidadProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblCantidadProductos.ForeColor = System.Drawing.Color.White;
+            this.lblCantidadProductos.Location = new System.Drawing.Point(318, 0);
+            this.lblCantidadProductos.Name = "lblCantidadProductos";
+            this.lblCantidadProductos.Size = new System.Drawing.Size(17, 18);
+            this.lblCantidadProductos.TabIndex = 18;
+            this.lblCantidadProductos.Text = "0";
+            // 
+            // pnlMetodo
+            // 
+            this.pnlMetodo.BackColor = System.Drawing.Color.White;
+            this.pnlMetodo.ColorBottom = System.Drawing.Color.Empty;
+            this.pnlMetodo.ColorTop = System.Drawing.Color.Empty;
+            this.pnlMetodo.Controls.Add(this.rbDebito);
+            this.pnlMetodo.Controls.Add(this.rbCredito);
+            this.pnlMetodo.Controls.Add(this.rbEfectivo);
+            this.pnlMetodo.Controls.Add(this.label6);
+            this.pnlMetodo.Location = new System.Drawing.Point(71, 372);
+            this.pnlMetodo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlMetodo.Name = "pnlMetodo";
+            this.pnlMetodo.Size = new System.Drawing.Size(243, 93);
+            this.pnlMetodo.TabIndex = 13;
+            // 
+            // rbDebito
+            // 
+            this.rbDebito.AutoSize = true;
+            this.rbDebito.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rbDebito.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(61)))), ((int)(((byte)(1)))));
+            this.rbDebito.Location = new System.Drawing.Point(22, 64);
+            this.rbDebito.Name = "rbDebito";
+            this.rbDebito.Size = new System.Drawing.Size(134, 21);
+            this.rbDebito.TabIndex = 14;
+            this.rbDebito.TabStop = true;
+            this.rbDebito.Text = "Tarjeta de debito";
+            this.rbDebito.UseVisualStyleBackColor = true;
+            this.rbDebito.CheckedChanged += new System.EventHandler(this.rbDebito_CheckedChanged);
+            // 
+            // rbCredito
+            // 
+            this.rbCredito.AutoSize = true;
+            this.rbCredito.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rbCredito.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(61)))), ((int)(((byte)(1)))));
+            this.rbCredito.Location = new System.Drawing.Point(22, 46);
+            this.rbCredito.Name = "rbCredito";
+            this.rbCredito.Size = new System.Drawing.Size(138, 21);
+            this.rbCredito.TabIndex = 13;
+            this.rbCredito.TabStop = true;
+            this.rbCredito.Text = "Tarjeta de credito";
+            this.rbCredito.UseVisualStyleBackColor = true;
+            this.rbCredito.CheckedChanged += new System.EventHandler(this.rbCredito_CheckedChanged);
+            // 
+            // rbEfectivo
+            // 
+            this.rbEfectivo.AutoSize = true;
+            this.rbEfectivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rbEfectivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(61)))), ((int)(((byte)(1)))));
+            this.rbEfectivo.Location = new System.Drawing.Point(23, 28);
+            this.rbEfectivo.Name = "rbEfectivo";
+            this.rbEfectivo.Size = new System.Drawing.Size(76, 21);
+            this.rbEfectivo.TabIndex = 12;
+            this.rbEfectivo.TabStop = true;
+            this.rbEfectivo.Text = "Efectivo";
+            this.rbEfectivo.UseVisualStyleBackColor = true;
+            this.rbEfectivo.CheckedChanged += new System.EventHandler(this.rbEfectivo_CheckedChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(61)))), ((int)(((byte)(1)))));
+            this.label6.Location = new System.Drawing.Point(57, 8);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(111, 17);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Metodo de pago";
+            // 
+            // btnCarrito
+            // 
+            this.btnCarrito.BackColor = System.Drawing.Color.Transparent;
+            this.btnCarrito.BackgroundImage = global::TpIsGrupo2.Images.shoppingcart2;
+            this.btnCarrito.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCarrito.Location = new System.Drawing.Point(279, 6);
+            this.btnCarrito.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCarrito.Name = "btnCarrito";
+            this.btnCarrito.Size = new System.Drawing.Size(47, 38);
+            this.btnCarrito.TabIndex = 17;
+            this.btnCarrito.UseVisualStyleBackColor = false;
+            this.btnCarrito.Click += new System.EventHandler(this.btnCarrito_Click);
+            // 
+            // btnComprar
+            // 
+            this.btnComprar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(82)))), ((int)(((byte)(153)))));
+            this.btnComprar.FlatAppearance.BorderSize = 0;
+            this.btnComprar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnComprar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnComprar.ForeColor = System.Drawing.Color.White;
+            this.btnComprar.Location = new System.Drawing.Point(66, 856);
+            this.btnComprar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnComprar.Name = "btnComprar";
+            this.btnComprar.Size = new System.Drawing.Size(245, 48);
+            this.btnComprar.TabIndex = 15;
+            this.btnComprar.Text = "Comprar";
+            this.btnComprar.UseVisualStyleBackColor = false;
+            this.btnComprar.Click += new System.EventHandler(this.btnComprar_Click);
             // 
             // gradientPanel2
             // 
@@ -596,6 +675,7 @@
             this.cmbCiudades.Name = "cmbCiudades";
             this.cmbCiudades.Size = new System.Drawing.Size(178, 24);
             this.cmbCiudades.TabIndex = 8;
+            this.cmbCiudades.SelectedIndexChanged += new System.EventHandler(this.cmbCiudades_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -640,6 +720,7 @@
             this.txtCalle.Name = "txtCalle";
             this.txtCalle.Size = new System.Drawing.Size(170, 23);
             this.txtCalle.TabIndex = 7;
+            this.txtCalle.TextChanged += new System.EventHandler(this.txtCalle_TextChanged);
             // 
             // txtNumero
             // 
@@ -648,6 +729,8 @@
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(92, 23);
             this.txtNumero.TabIndex = 6;
+            this.txtNumero.TextChanged += new System.EventHandler(this.txtNumero_TextChanged);
+            this.txtNumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumero_KeyPress);
             // 
             // label1
             // 
@@ -701,7 +784,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(390, 844);
+            this.ClientSize = new System.Drawing.Size(390, 788);
             this.Controls.Add(this.pnlGeneral);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -715,10 +798,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.nupEfectivo)).EndInit();
             this.pnlHoraEntrega.ResumeLayout(false);
             this.pnlHoraEntrega.PerformLayout();
-            this.pnlMetodo.ResumeLayout(false);
-            this.pnlMetodo.PerformLayout();
             this.pnlDatosTarjeta.ResumeLayout(false);
             this.pnlDatosTarjeta.PerformLayout();
+            this.pnlMetodo.ResumeLayout(false);
+            this.pnlMetodo.PerformLayout();
             this.gradientPanel2.ResumeLayout(false);
             this.gradientPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -752,10 +835,8 @@
         private Label label5;
         private TextBox txtNumeroTarjeta;
         private Label label9;
-        private Label label8;
         private TextBox txtCodigoSeguridad;
-        private TextBox txtApellidoTitular;
-        private Label label7;
+        private Label lblNombreTitular;
         private TextBox txtNombreTitular;
         private Button btnComprar;
         private Button btnCarrito;
@@ -781,5 +862,12 @@
         private Label lblMontoValido;
         private Label lblSimbolo;
         private Label lblErrorTarjeta;
+        private Label lblFechita;
+        private Label lblFechaVencimiento;
+        private TextBox txtFechaVencimiento;
+        private Label lblErrorCodigo;
+        private Label lblErrorFechaVencimiento;
+        private Label lblErrorNombre;
+        private Label lblErrorNumero;
     }
 }
