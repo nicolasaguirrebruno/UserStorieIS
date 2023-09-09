@@ -203,7 +203,7 @@ namespace TpIsGrupo2
                 lblErrorTarjeta.Visible = true;
                 lblErrorNumero.Visible = true;
 
-                return; // Sale de la función si el número de tarjeta no es válido
+                //return; // Sale de la función si el número de tarjeta no es válido
             }
 
 
@@ -221,7 +221,7 @@ namespace TpIsGrupo2
                 lblErrorNombre.Visible = true;
 
 
-                return; // Sale de la función si el nombre o el apellido están vacíos
+                //return; // Sale de la función si el nombre o el apellido están vacíos
             }
 
             // Obtener el CVC ingresado en txtCodigoSeguridad
@@ -235,7 +235,7 @@ namespace TpIsGrupo2
                 btnError.Visible = true;
                 lblErrorTarjeta.Visible = true;
                 lblErrorCodigo.Visible = true;
-                return; // Sale de la función si el CVC no es válido
+                //return; // Sale de la función si el CVC no es válido
             }
        
 
@@ -273,7 +273,7 @@ namespace TpIsGrupo2
                     lblErrorTarjeta.Visible = true;
                     lblErrorFechaVencimiento.Visible = true;
 
-                    return; // Sale de la función si la fecha de vencimiento es menor o igual
+                    //return; // Sale de la función si la fecha de vencimiento es menor o igual
                 }
             }
 
