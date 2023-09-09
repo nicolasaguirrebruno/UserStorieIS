@@ -16,9 +16,7 @@ namespace TpIsGrupo2
         public Form1()
         {
             InitializeComponent();
-            // Hago que se pueda seleccionar fecha y hora, aunque debe modificarse para que muestre solamente el dia de hoy
-            dtpSeleccionarFecha.Format = DateTimePickerFormat.Custom;
-            dtpSeleccionarFecha.CustomFormat = "dd/MM/yyyy     hh:mm:ss";
+
 
             // Le digo al form donde quiero que arranque en la pantalla de mi coputadora
             this.StartPosition = FormStartPosition.Manual;
@@ -42,16 +40,17 @@ namespace TpIsGrupo2
             lblErrorNombre.Visible = false;
             lblErrorCodigo.Visible = false;
             lblErrorFechaVencimiento.Visible = false;
-    
+
 
 
             // Llamo a setDefault para establecer las posiciones por defecto de los elementos
             SetDefaultConidtions();
 
-
-
+            dtpSeleccionarFecha.Format = DateTimePickerFormat.Custom;
+            dtpSeleccionarFecha.CustomFormat = "yyyy-MM-dd HH:mm";
+            dtpSeleccionarFecha.Visible = false;
         }
-     
+
 
         private void SetDefaultConidtions()
         {
@@ -68,15 +67,17 @@ namespace TpIsGrupo2
             lblSeleccioneMetodo.Size = new Size(300, 80);
 
             // Reubicaciones, estan px primero x y despues el eje y
-            lblSeleccioneMetodo.Location = new Point(pnlHoraEntrega.Location.X + 20, 470);
+            lblSeleccioneMetodo.Location = new Point(100, 620);
+            pnlHoraEntrega.Location = new Point(71, 300);
+            pnlDireccion.Location = new Point(71, 65);
 
-
-            btnComprar.Location = new Point(btnComprar.Location.X, 550);
+            pnlMetodo.Location = new Point(71, 470);
+            btnComprar.Location = new Point(71, 710);
             btnComprar.Enabled = true;
 
             // Padding
             lblSeleccioneMetodo.Padding = new Padding(0, 10, 0, 0);
-
+            btnComprar.Enabled = false;
 
             //this.Height = 844;
             //this.Width = 390;
@@ -86,11 +87,11 @@ namespace TpIsGrupo2
             pnlDatosTarjeta.Visible = false;
             lblSeleccioneMetodo.Visible = true;
             pnlDatosEfectivo.Visible = false;
-            //// Deshabilitar el scroll horizontal y que quede nomas el vertical
-            //pnlGeneral.HorizontalScroll.Maximum = 0;
-            //pnlGeneral.AutoScroll = false;
-            //pnlGeneral.HorizontalScroll.Visible = false;
-            //pnlGeneral.AutoScroll = true; // Habilitar nuevamente el scroll vertical
+            // Deshabilitar el scroll horizontal y que quede nomas el vertical
+            pnlGeneral.HorizontalScroll.Maximum = 0;
+            pnlGeneral.AutoScroll = false;
+            pnlGeneral.HorizontalScroll.Visible = false;
+            pnlGeneral.AutoScroll = true; // Habilitar nuevamente el scroll vertical
         }
 
         private void btnComprar_Click(object sender, EventArgs e)
@@ -131,6 +132,8 @@ namespace TpIsGrupo2
             }
 
 
+            checkeo_rango_horario();
+
         }
 
         private void ValidarEfectivo()
@@ -143,7 +146,7 @@ namespace TpIsGrupo2
             {
                 // Si igual a 0, mostrar el mensaje de error en el lblMontoValido y salir
                 lblMontoValido.Visible = true;
-                return;
+                //return;
             }
 
             // Verificar si el valor es igual o mayor al montoEfectivoCarrito
@@ -203,7 +206,7 @@ namespace TpIsGrupo2
                 lblErrorTarjeta.Visible = true;
                 lblErrorNumero.Visible = true;
 
-                return; // Sale de la función si el número de tarjeta no es válido
+                //return; // Sale de la función si el número de tarjeta no es válido
             }
 
 
@@ -221,7 +224,7 @@ namespace TpIsGrupo2
                 lblErrorNombre.Visible = true;
 
 
-                return; // Sale de la función si el nombre o el apellido están vacíos
+                //return; // Sale de la función si el nombre o el apellido están vacíos
             }
 
             // Obtener el CVC ingresado en txtCodigoSeguridad
@@ -235,9 +238,9 @@ namespace TpIsGrupo2
                 btnError.Visible = true;
                 lblErrorTarjeta.Visible = true;
                 lblErrorCodigo.Visible = true;
-                return; // Sale de la función si el CVC no es válido
+                //return; // Sale de la función si el CVC no es válido
             }
-       
+
 
             // Obtener la fecha de vencimiento ingresada en txtFechaVencimiento
             string fechaVencimiento = txtFechaVencimiento.Text.Trim();
@@ -260,7 +263,7 @@ namespace TpIsGrupo2
 
             if (partesFecha.Length == 2 && int.TryParse(partesFecha[0], out mes) && int.TryParse(partesFecha[1], out año))
             {
-               
+
                 // Crear una fecha de vencimiento
                 DateTime fechaVencimientoTarjeta = new DateTime(año, mes, 1);
 
@@ -273,7 +276,7 @@ namespace TpIsGrupo2
                     lblErrorTarjeta.Visible = true;
                     lblErrorFechaVencimiento.Visible = true;
 
-                    return; // Sale de la función si la fecha de vencimiento es menor o igual
+                    //return; // Sale de la función si la fecha de vencimiento es menor o igual
                 }
             }
 
@@ -401,6 +404,7 @@ namespace TpIsGrupo2
 
         private void setCardConditions()
         {
+            pnlGeneral.VerticalScroll.Value = 0;
             // Este metodo hace que se vea el panel del metodo tarjeta y reubicar la posicion de boton
             pnlDatosTarjeta.Visible = true;
             lblSeleccioneMetodo.Visible = false;
@@ -432,8 +436,12 @@ namespace TpIsGrupo2
 
 
             btnComprar.Enabled = true;
-            btnComprar.Location = new Point(btnComprar.Location.X, 850);
-            pnlDatosTarjeta.Location = new Point(btnComprar.Location.X, 480);
+            btnComprar.Location = new Point(71, 1000);
+            pnlDatosTarjeta.Location = new Point(71, 600);
+            pnlHoraEntrega.Location = new Point(71, 290);
+
+
+            pnlMetodo.Location = new Point(71, 450);
 
         }
 
@@ -441,6 +449,7 @@ namespace TpIsGrupo2
 
         private void setCashConditions()
         {
+            pnlGeneral.VerticalScroll.Value = 0;
             // Este metodo hace que se vea el panel del metodo tarjeta y reubicar la posicion de boton
             pnlDatosTarjeta.Visible = false;
             lblSeleccioneMetodo.Visible = false;
@@ -463,9 +472,9 @@ namespace TpIsGrupo2
 
 
             btnComprar.Enabled = true;
-            btnComprar.Location = new Point(btnComprar.Location.X, 625);
+            btnComprar.Location = new Point(71, 780);
 
-            pnlDatosEfectivo.Location = new Point(btnComprar.Location.X, 490);
+            pnlDatosEfectivo.Location = new Point(71, 630);
         }
 
 
@@ -524,6 +533,54 @@ namespace TpIsGrupo2
             {
                 // Si no es una letra ni una tecla de control válida ni un espacio, no se permite escribir el carácter
                 e.Handled = true;
+            }
+        }
+
+        private void rbFechaSeleccion_CheckedChanged(object sender, EventArgs e)
+        {
+            dtpSeleccionarFecha.Visible = true;
+            dtpSeleccionarFecha.Format = DateTimePickerFormat.Custom;
+            dtpSeleccionarFecha.CustomFormat = "yyyy-MM-dd HH:mm";
+
+            dtpSeleccionarFecha.MinDate = DateTime.Now;
+            dtpSeleccionarFecha.MaxDate = DateTime.Now.AddDays(6);
+
+            dtpSeleccionarFecha.Enabled = true;
+
+            //seteo la fecha minima de seleccion en el datepicker
+
+        }
+
+
+
+        private void rnPronto_CheckedChanged(object sender, EventArgs e)
+        {
+            dtpSeleccionarFecha.Visible = false;
+            dtpSeleccionarFecha.Value = DateTime.Now;
+            //acá tambien debería quedar acentado en algún lado 
+        }
+
+
+
+        public void checkeo_rango_horario()
+        {
+            // Obtener la fecha y hora seleccionada en el DateTimePicker
+            int HoraSeleccionada = dtpSeleccionarFecha.Value.Hour;
+
+
+            // Establecer los límites del rango
+            int limiteInferior = 7; // 7:00 AM
+            int limiteSuperior = 24; // 11:59 PM
+
+            // Verificar si la hora seleccionada está dentro del rango
+
+            /// és un checkeo para borrar 
+            if (HoraSeleccionada >= limiteInferior && HoraSeleccionada < limiteSuperior)
+            {/*si vamos a poner el horario en algún lado, va acá */
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un horario dentro de nuestro turno (7:00 - 23:59).");
             }
         }
 

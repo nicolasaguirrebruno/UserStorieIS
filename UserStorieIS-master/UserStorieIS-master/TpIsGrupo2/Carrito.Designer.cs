@@ -28,301 +28,296 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Carrito));
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
-            this.imageList3 = new System.Windows.Forms.ImageList(this.components);
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.process1 = new System.Diagnostics.Process();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.subtotal = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cantProducto = new System.Windows.Forms.NumericUpDown();
-            this.btnComprar = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.total = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.button5 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cantProducto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            this.SuspendLayout();
+            label1 = new Label();
+            label3 = new Label();
+            imageList1 = new ImageList(components);
+            imageList2 = new ImageList(components);
+            imageList3 = new ImageList(components);
+            pictureBox2 = new PictureBox();
+            pictureBox1 = new PictureBox();
+            process1 = new System.Diagnostics.Process();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            groupBox1 = new GroupBox();
+            subtotal = new Label();
+            label2 = new Label();
+            cantProducto = new NumericUpDown();
+            btnComprar = new Button();
+            pictureBox3 = new PictureBox();
+            pictureBox4 = new PictureBox();
+            label5 = new Label();
+            total = new Label();
+            groupBox2 = new GroupBox();
+            pictureBox5 = new PictureBox();
+            button5 = new Button();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)cantProducto).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(36)))), ((int)(((byte)(34)))));
-            this.label1.Location = new System.Drawing.Point(111, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(190, 24);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Carrito de Compras";
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.FromArgb(37, 36, 34);
+            label1.Location = new Point(111, 13);
+            label1.Name = "label1";
+            label1.Size = new Size(190, 24);
+            label1.TabIndex = 4;
+            label1.Text = "Carrito de Compras";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(135, 31);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(162, 20);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Hamburguesa Simple";
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = Color.FromArgb(120, 83, 101);
+            label3.Location = new Point(135, 31);
+            label3.Name = "label3";
+            label3.Size = new Size(166, 21);
+            label3.TabIndex = 9;
+            label3.Text = "Hamburguesa Simple";
             // 
             // imageList1
             // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            imageList1.ColorDepth = ColorDepth.Depth8Bit;
+            imageList1.ImageSize = new Size(16, 16);
+            imageList1.TransparentColor = Color.Transparent;
             // 
             // imageList2
             // 
-            this.imageList2.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList2.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
+            imageList2.ColorDepth = ColorDepth.Depth8Bit;
+            imageList2.ImageSize = new Size(16, 16);
+            imageList2.TransparentColor = Color.Transparent;
             // 
             // imageList3
             // 
-            this.imageList3.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList3.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList3.TransparentColor = System.Drawing.Color.Transparent;
+            imageList3.ColorDepth = ColorDepth.Depth8Bit;
+            imageList3.ImageSize = new Size(16, 16);
+            imageList3.TransparentColor = Color.Transparent;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(22, 21);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(107, 103);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 22;
-            this.pictureBox2.TabStop = false;
+            pictureBox2.BackColor = Color.Transparent;
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(22, 21);
+            pictureBox2.Margin = new Padding(3, 2, 3, 2);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(107, 103);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 22;
+            pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(308, 21);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(46, 39);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 23;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(308, 21);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(46, 39);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 23;
+            pictureBox1.TabStop = false;
             // 
             // process1
             // 
-            this.process1.StartInfo.Domain = "";
-            this.process1.StartInfo.LoadUserProfile = false;
-            this.process1.StartInfo.Password = null;
-            this.process1.StartInfo.StandardErrorEncoding = null;
-            this.process1.StartInfo.StandardInputEncoding = null;
-            this.process1.StartInfo.StandardOutputEncoding = null;
-            this.process1.StartInfo.UserName = "";
-            this.process1.SynchronizingObject = this;
+            process1.StartInfo.Domain = "";
+            process1.StartInfo.LoadUserProfile = false;
+            process1.StartInfo.Password = null;
+            process1.StartInfo.StandardErrorEncoding = null;
+            process1.StartInfo.StandardInputEncoding = null;
+            process1.StartInfo.StandardOutputEncoding = null;
+            process1.StartInfo.UserName = "";
+            process1.SynchronizingObject = this;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.subtotal);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.cantProducto);
-            this.groupBox1.Controls.Add(this.pictureBox2);
-            this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(12, 73);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(360, 173);
-            this.groupBox1.TabIndex = 24;
-            this.groupBox1.TabStop = false;
+            groupBox1.Controls.Add(subtotal);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Controls.Add(cantProducto);
+            groupBox1.Controls.Add(pictureBox2);
+            groupBox1.Controls.Add(pictureBox1);
+            groupBox1.Controls.Add(label3);
+            groupBox1.Location = new Point(12, 73);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(360, 173);
+            groupBox1.TabIndex = 24;
+            groupBox1.TabStop = false;
             // 
             // subtotal
             // 
-            this.subtotal.AutoSize = true;
-            this.subtotal.BackColor = System.Drawing.Color.Transparent;
-            this.subtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.subtotal.ForeColor = System.Drawing.Color.Black;
-            this.subtotal.Location = new System.Drawing.Point(291, 139);
-            this.subtotal.Name = "subtotal";
-            this.subtotal.Size = new System.Drawing.Size(18, 20);
-            this.subtotal.TabIndex = 26;
-            this.subtotal.Text = "$";
+            subtotal.AutoSize = true;
+            subtotal.BackColor = Color.Transparent;
+            subtotal.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            subtotal.ForeColor = Color.Black;
+            subtotal.Location = new Point(291, 139);
+            subtotal.Name = "subtotal";
+            subtotal.Size = new Size(19, 21);
+            subtotal.TabIndex = 26;
+            subtotal.Text = "$";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(22, 139);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(152, 20);
-            this.label2.TabIndex = 25;
-            this.label2.Text = "Subtotal (sin envío) :";
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.ForeColor = Color.FromArgb(120, 83, 101);
+            label2.Location = new Point(22, 139);
+            label2.Name = "label2";
+            label2.Size = new Size(151, 21);
+            label2.TabIndex = 25;
+            label2.Text = "Subtotal (sin envío) :";
             // 
             // cantProducto
             // 
-            this.cantProducto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cantProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cantProducto.Location = new System.Drawing.Point(147, 72);
-            this.cantProducto.Name = "cantProducto";
-            this.cantProducto.ReadOnly = true;
-            this.cantProducto.Size = new System.Drawing.Size(69, 38);
-            this.cantProducto.TabIndex = 24;
-            this.cantProducto.TabStop = false;
-            this.cantProducto.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.cantProducto.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            cantProducto.BorderStyle = BorderStyle.FixedSingle;
+            cantProducto.Font = new Font("Cyntho Next", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            cantProducto.Location = new Point(147, 72);
+            cantProducto.Name = "cantProducto";
+            cantProducto.ReadOnly = true;
+            cantProducto.Size = new Size(69, 31);
+            cantProducto.TabIndex = 24;
+            cantProducto.TabStop = false;
+            cantProducto.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            cantProducto.ValueChanged += numericUpDown1_ValueChanged;
             // 
             // btnComprar
             // 
-            this.btnComprar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(82)))), ((int)(((byte)(153)))));
-            this.btnComprar.FlatAppearance.BorderSize = 0;
-            this.btnComprar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnComprar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnComprar.ForeColor = System.Drawing.Color.White;
-            this.btnComprar.Location = new System.Drawing.Point(82, 330);
-            this.btnComprar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnComprar.Name = "btnComprar";
-            this.btnComprar.Size = new System.Drawing.Size(245, 48);
-            this.btnComprar.TabIndex = 25;
-            this.btnComprar.Text = "Comprar";
-            this.btnComprar.UseVisualStyleBackColor = false;
-            this.btnComprar.Click += new System.EventHandler(this.btnComprar_Click);
+            btnComprar.BackColor = Color.FromArgb(192, 133, 162);
+            btnComprar.FlatAppearance.BorderSize = 0;
+            btnComprar.FlatStyle = FlatStyle.Flat;
+            btnComprar.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            btnComprar.ForeColor = Color.White;
+            btnComprar.Location = new Point(82, 330);
+            btnComprar.Margin = new Padding(3, 2, 3, 2);
+            btnComprar.Name = "btnComprar";
+            btnComprar.Size = new Size(245, 48);
+            btnComprar.TabIndex = 25;
+            btnComprar.Text = "Comprar";
+            btnComprar.UseVisualStyleBackColor = false;
+            btnComprar.Click += btnComprar_Click;
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = global::TpIsGrupo2.Images.circlesv2;
-            this.pictureBox3.Location = new System.Drawing.Point(-110, 288);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(186, 189);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 26;
-            this.pictureBox3.TabStop = false;
+            pictureBox3.BackColor = Color.Transparent;
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(-110, 288);
+            pictureBox3.Margin = new Padding(3, 2, 3, 2);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(186, 189);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 26;
+            pictureBox3.TabStop = false;
             // 
             // pictureBox4
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Image = global::TpIsGrupo2.Images.circlesv2;
-            this.pictureBox4.Location = new System.Drawing.Point(248, 382);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(304, 256);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 27;
-            this.pictureBox4.TabStop = false;
+            pictureBox4.BackColor = Color.Transparent;
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(248, 382);
+            pictureBox4.Margin = new Padding(3, 2, 3, 2);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(304, 256);
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox4.TabIndex = 27;
+            pictureBox4.TabStop = false;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(16, 14);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 20);
-            this.label5.TabIndex = 28;
-            this.label5.Text = "Total:";
+            label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
+            label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.ForeColor = Color.FromArgb(120, 83, 101);
+            label5.Location = new Point(16, 14);
+            label5.Name = "label5";
+            label5.Size = new Size(45, 21);
+            label5.TabIndex = 28;
+            label5.Text = "Total:";
             // 
             // total
             // 
-            this.total.AutoSize = true;
-            this.total.BackColor = System.Drawing.Color.Transparent;
-            this.total.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.total.ForeColor = System.Drawing.Color.Black;
-            this.total.Location = new System.Drawing.Point(291, 19);
-            this.total.Name = "total";
-            this.total.Size = new System.Drawing.Size(18, 20);
-            this.total.TabIndex = 29;
-            this.total.Text = "$";
+            total.AutoSize = true;
+            total.BackColor = Color.Transparent;
+            total.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            total.ForeColor = Color.Black;
+            total.Location = new Point(291, 19);
+            total.Name = "total";
+            total.Size = new Size(19, 21);
+            total.TabIndex = 29;
+            total.Text = "$";
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.total);
-            this.groupBox2.Location = new System.Drawing.Point(12, 252);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(360, 47);
-            this.groupBox2.TabIndex = 30;
-            this.groupBox2.TabStop = false;
+            groupBox2.Controls.Add(label5);
+            groupBox2.Controls.Add(total);
+            groupBox2.Location = new Point(12, 252);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(360, 47);
+            groupBox2.TabIndex = 30;
+            groupBox2.TabStop = false;
             // 
             // pictureBox5
             // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Image = global::TpIsGrupo2.Images.circlesv2;
-            this.pictureBox5.Location = new System.Drawing.Point(303, -9);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(194, 178);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 31;
-            this.pictureBox5.TabStop = false;
+            pictureBox5.BackColor = Color.Transparent;
+            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
+            pictureBox5.Location = new Point(303, -9);
+            pictureBox5.Margin = new Padding(3, 2, 3, 2);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(194, 178);
+            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox5.TabIndex = 31;
+            pictureBox5.TabStop = false;
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(23, 9);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(42, 40);
-            this.button5.TabIndex = 20;
-            this.button5.UseVisualStyleBackColor = false;
+            button5.BackColor = Color.Transparent;
+            button5.BackgroundImage = (Image)resources.GetObject("button5.BackgroundImage");
+            button5.BackgroundImageLayout = ImageLayout.Stretch;
+            button5.FlatAppearance.BorderSize = 0;
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.Location = new Point(23, 9);
+            button5.Margin = new Padding(3, 2, 3, 2);
+            button5.Name = "button5";
+            button5.Size = new Size(42, 40);
+            button5.TabIndex = 20;
+            button5.UseVisualStyleBackColor = false;
             // 
             // Carrito
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(390, 432);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.btnComprar);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox5);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Carrito";
-            this.Text = "Carrito";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cantProducto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Control;
+            ClientSize = new Size(390, 432);
+            Controls.Add(groupBox2);
+            Controls.Add(pictureBox4);
+            Controls.Add(pictureBox3);
+            Controls.Add(btnComprar);
+            Controls.Add(groupBox1);
+            Controls.Add(button5);
+            Controls.Add(label1);
+            Controls.Add(pictureBox5);
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "Carrito";
+            Text = "Carrito";
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)cantProducto).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

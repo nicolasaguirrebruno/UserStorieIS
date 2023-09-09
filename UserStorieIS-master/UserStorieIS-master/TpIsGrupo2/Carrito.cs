@@ -13,7 +13,7 @@ namespace TpIsGrupo2
     public partial class Carrito : Form
     {
         //Form form1 = new Form(); //forma 1
-        
+
         private Form1 form1; //forma 2
 
 
@@ -22,14 +22,14 @@ namespace TpIsGrupo2
             InitializeComponent();
             this.StartPosition = FormStartPosition.Manual;
             this.Location = new System.Drawing.Point(500, 10);
-            this.form1 = form; 
+            this.form1 = form;
 
             subtotal.Text = "$4500";
             total.Text = "$4500";
         }
 
-  
-    
+
+
         private void btnComprar_Click(object sender, EventArgs e)
         {
 
@@ -48,8 +48,8 @@ namespace TpIsGrupo2
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
             decimal cant = cantProducto.Value * 4500;
-            subtotal.Text = "$" + cant.ToString();    
-            total.Text = "$" + cant.ToString();   
+            subtotal.Text = "$" + cant.ToString();
+            total.Text = "$" + cant.ToString();
 
         }
     }
