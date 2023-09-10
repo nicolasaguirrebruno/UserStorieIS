@@ -655,7 +655,7 @@ namespace TpIsGrupo2
 
         private void ConfirmarCompra_Activated(object sender, EventArgs e)
         {
-            nupEfectivo.Value = (decimal)producto.TotalProducto;
+            nupEfectivo.Value = (decimal)producto.SubtotalProducto;
 
             lblMontoValido.Visible = false;
 

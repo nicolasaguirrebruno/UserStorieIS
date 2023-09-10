@@ -21,8 +21,8 @@ namespace TpIsGrupo2
             lblCalle.Text = envio.Calle + " " + envio.NumeroCalle.ToString();
             lblCiudad.Text = envio.Ciudad;
             lblCantidadProducto.Text = producto.CantProducto.ToString();
-            lblPrecioFinal.Text = producto.TotalProducto.ToString();
-            lblSubtotal.Text = producto.SubtotalProducto.ToString();
+            lblPrecioFinal.Text ="$" + " " + producto.TotalProducto.ToString();
+            lblSubtotal.Text = "$" + " " + producto.SubtotalProducto.ToString();
             lblNombreProducto.Text = producto.NombreProducto;
 
         }

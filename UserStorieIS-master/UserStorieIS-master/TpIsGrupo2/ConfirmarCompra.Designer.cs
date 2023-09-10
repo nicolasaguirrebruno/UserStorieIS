@@ -46,6 +46,10 @@
             lblSubtotal = new Label();
             label8 = new Label();
             panel6 = new Panel();
+            label10 = new Label();
+            label9 = new Label();
+            label4 = new Label();
+            label3 = new Label();
             label16 = new Label();
             lblCiudad = new Label();
             lblCalle = new Label();
@@ -55,10 +59,6 @@
             lblPrecioFinal = new Label();
             label15 = new Label();
             btnComprar = new Button();
-            label3 = new Label();
-            label4 = new Label();
-            label9 = new Label();
-            label10 = new Label();
             gradientPanel1.SuspendLayout();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
@@ -275,6 +275,54 @@
             panel6.Size = new Size(335, 130);
             panel6.TabIndex = 27;
             // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.BackColor = Color.Transparent;
+            label10.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label10.ForeColor = Color.Silver;
+            label10.Location = new Point(219, 98);
+            label10.Name = "label10";
+            label10.Size = new Size(109, 20);
+            label10.TabIndex = 31;
+            label10.Text = "Villa Carlos Paz";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.BackColor = Color.Transparent;
+            label9.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label9.ForeColor = Color.FromArgb(64, 64, 64);
+            label9.Location = new Point(12, 98);
+            label9.Name = "label9";
+            label9.Size = new Size(118, 20);
+            label9.TabIndex = 30;
+            label9.Text = "Hora de entrega";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
+            label4.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.ForeColor = Color.FromArgb(64, 64, 64);
+            label4.Location = new Point(12, 70);
+            label4.Name = "label4";
+            label4.Size = new Size(56, 20);
+            label4.TabIndex = 29;
+            label4.Text = "Ciudad";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.ForeColor = Color.FromArgb(64, 64, 64);
+            label3.Location = new Point(12, 40);
+            label3.Name = "label3";
+            label3.Size = new Size(72, 20);
+            label3.TabIndex = 28;
+            label3.Text = "Direccion";
+            // 
             // label16
             // 
             label16.AutoSize = true;
@@ -339,9 +387,9 @@
             panel7.BorderStyle = BorderStyle.FixedSingle;
             panel7.Controls.Add(lblPrecioFinal);
             panel7.Controls.Add(label15);
-            panel7.Location = new Point(13, 681);
+            panel7.Location = new Point(28, 681);
             panel7.Name = "panel7";
-            panel7.Size = new Size(350, 51);
+            panel7.Size = new Size(335, 51);
             panel7.TabIndex = 28;
             // 
             // lblPrecioFinal
@@ -375,62 +423,14 @@
             btnComprar.FlatStyle = FlatStyle.Flat;
             btnComprar.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             btnComprar.ForeColor = Color.White;
-            btnComprar.Location = new Point(13, 755);
+            btnComprar.Location = new Point(29, 753);
             btnComprar.Margin = new Padding(3, 2, 3, 2);
             btnComprar.Name = "btnComprar";
-            btnComprar.Size = new Size(349, 48);
+            btnComprar.Size = new Size(334, 48);
             btnComprar.TabIndex = 29;
             btnComprar.Text = "Finalizar Compra";
             btnComprar.UseVisualStyleBackColor = false;
             btnComprar.Click += btnComprar_Click;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.ForeColor = Color.FromArgb(64, 64, 64);
-            label3.Location = new Point(12, 40);
-            label3.Name = "label3";
-            label3.Size = new Size(72, 20);
-            label3.TabIndex = 28;
-            label3.Text = "Direccion";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.Transparent;
-            label4.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.ForeColor = Color.FromArgb(64, 64, 64);
-            label4.Location = new Point(12, 70);
-            label4.Name = "label4";
-            label4.Size = new Size(56, 20);
-            label4.TabIndex = 29;
-            label4.Text = "Ciudad";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.BackColor = Color.Transparent;
-            label9.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.ForeColor = Color.FromArgb(64, 64, 64);
-            label9.Location = new Point(12, 98);
-            label9.Name = "label9";
-            label9.Size = new Size(118, 20);
-            label9.TabIndex = 30;
-            label9.Text = "Hora de entrega";
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.BackColor = Color.Transparent;
-            label10.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label10.ForeColor = Color.Silver;
-            label10.Location = new Point(219, 98);
-            label10.Name = "label10";
-            label10.Size = new Size(109, 20);
-            label10.TabIndex = 31;
-            label10.Text = "Villa Carlos Paz";
             // 
             // ConfirmarCompra
             // 
