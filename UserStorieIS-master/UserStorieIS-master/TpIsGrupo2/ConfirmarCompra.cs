@@ -15,19 +15,19 @@ namespace TpIsGrupo2
     public partial class ConfirmarCompra : Form
     {
         LoadingSpinner loading;
-        public Form anterior1; 
+        public Form anterior1;
         public ConfirmarCompra(Envio envio, Producto producto, Form envios)
         {
             anterior1 = envios;
             InitializeComponent();
             lblCalle.Text = envio.Calle + " " + envio.NumeroCalle.ToString();
             lblCiudad.Text = envio.Ciudad;
-            lblHoraEntrega.Text = envio.horaentrega.ToString(); 
+            lblHoraEntrega.Text = envio.horaentrega.ToString();
             lblCantidadProducto.Text = producto.CantProducto.ToString();
-            lblPrecioFinal.Text ="$" + " " + producto.TotalProducto.ToString();
+            lblPrecioFinal.Text = "$" + " " + producto.TotalProducto.ToString();
             lblSubtotal.Text = "$" + " " + producto.SubtotalProducto.ToString();
             lblNombreProducto.Text = producto.NombreProducto;
-            
+
         }
 
         private async void btnComprar_Click(object sender, EventArgs e)
