@@ -27,7 +27,7 @@ namespace TpIsGrupo2
         {
             InitializeComponent();
 
-            producto = new Producto("Hamburguesa Simple", 4500, 4500, true, 1);
+            producto = new Producto("Hamburguesa Simple", 4500, 5000, true, 1);
 
          
 
@@ -527,7 +527,7 @@ namespace TpIsGrupo2
             pnlDatosEfectivo.Visible = true;
             lblSimbolo.Visible = true;
 
-            nupEfectivo.Value = (decimal)producto.SubtotalProducto;
+            nupEfectivo.Value = (decimal)producto.SubtotalProducto+500;
             lblMontoValido.Visible = false;
 
             // quitar visible errores de tarjeta
