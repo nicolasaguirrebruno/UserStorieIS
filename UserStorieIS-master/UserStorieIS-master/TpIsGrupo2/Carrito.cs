@@ -35,6 +35,10 @@ namespace TpIsGrupo2
             total.Text = "$" + producto.SubtotalProducto.ToString();
             this.producto = producto;
             cant = 1;
+
+            cant = cantProducto.Value * 4500;
+            subtotal.Text = "$" + cant.ToString();
+            total.Text = "$" + cant.ToString();
         }
 
 
@@ -61,7 +65,7 @@ namespace TpIsGrupo2
             {
 
                 ErrorProductoMessage error = new ErrorProductoMessage();
-                error.Show();
+                error.ShowDialog();
 
                 return;
 

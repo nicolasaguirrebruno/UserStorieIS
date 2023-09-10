@@ -21,6 +21,8 @@ namespace TpIsGrupo2
 
         bool allTestPassed = false;
 
+        bool entregaPronto = false; 
+
         public ConfirmarPedido()
         {
             InitializeComponent();
@@ -57,7 +59,9 @@ namespace TpIsGrupo2
 
             dtpSeleccionarFecha.Format = DateTimePickerFormat.Custom;
             dtpSeleccionarFecha.CustomFormat = "yyyy-MM-dd HH:mm";
-            dtpSeleccionarFecha.Visible = true;
+            dtpSeleccionarFecha.Visible = false;
+
+
         }
 
 
@@ -155,13 +159,25 @@ namespace TpIsGrupo2
                 envio.Ciudad = cmbCiudades.Text;
                 envio.Calle = CapitalizarPalabras(txtCalle.Text.ToLower());
                 envio.NumeroCalle = int.Parse(txtNumero.Text);
+                
+                if (entregaPronto)
+                {
+                    envio.horaentrega = dtpSeleccionarFecha.Value.ToString();
+                }
+                else
+                {
+                    envio.horaentrega = "lo más pronto posible ";
+                }
+
                 this.Hide();
-                ConfirmarCompra confirmarComprar = new ConfirmarCompra(envio, producto);
+                lblErrorFecha.Visible = false;
+                ConfirmarCompra confirmarComprar = new ConfirmarCompra(envio, producto,this);
                 confirmarComprar.ShowDialog();
 
 
 
             }
+
 
         }
         public static string CapitalizarPalabras(string texto)
@@ -609,6 +625,7 @@ namespace TpIsGrupo2
 
             dtpSeleccionarFecha.Enabled = true;
 
+            entregaPronto = true;
             //seteo la fecha minima de seleccion en el datepicker
 
         }
@@ -624,7 +641,7 @@ namespace TpIsGrupo2
             }
             dtpSeleccionarFecha.Visible = false;
             dtpSeleccionarFecha.Value = DateTime.Now;
-            //acá tambien debería quedar acentado en algún lado 
+            entregaPronto = false;
         }
 
 

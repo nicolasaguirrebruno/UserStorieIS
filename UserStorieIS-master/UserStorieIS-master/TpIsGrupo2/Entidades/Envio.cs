@@ -14,11 +14,14 @@ namespace TpIsGrupo2.Entidades
 
         public int NumeroCalle {  get; set; }
 
-        public Envio(string ciudad, string calle, int numeroCalle) { 
+        public String horaentrega { get; set; }
+
+        public Envio(string ciudad, string calle, int numeroCalle, String hora) { 
         
             this.Ciudad = ciudad;
             this.Calle = calle; 
             this.NumeroCalle = numeroCalle;
+            this.horaentrega = hora; 
         }
 
         public Envio() { }
