@@ -31,7 +31,7 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Carrito));
             label1 = new Label();
-            label3 = new Label();
+            lblNombre = new Label();
             imageList1 = new ImageList(components);
             imageList2 = new ImageList(components);
             imageList3 = new ImageList(components);
@@ -43,6 +43,7 @@
             subtotal = new Label();
             label2 = new Label();
             cantProducto = new NumericUpDown();
+            lblPorAhora = new Label();
             btnComprar = new Button();
             pictureBox3 = new PictureBox();
             pictureBox4 = new PictureBox();
@@ -51,6 +52,7 @@
             groupBox2 = new GroupBox();
             pictureBox5 = new PictureBox();
             button5 = new Button();
+            btnAgregar = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox1.SuspendLayout();
@@ -67,23 +69,23 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(37, 36, 34);
-            label1.Location = new Point(111, 13);
+            label1.Location = new Point(95, 16);
             label1.Name = "label1";
             label1.Size = new Size(190, 24);
             label1.TabIndex = 4;
             label1.Text = "Carrito de Compras";
             // 
-            // label3
+            // lblNombre
             // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = Color.FromArgb(120, 83, 101);
-            label3.Location = new Point(135, 31);
-            label3.Name = "label3";
-            label3.Size = new Size(166, 21);
-            label3.TabIndex = 9;
-            label3.Text = "Hamburguesa Simple";
+            lblNombre.AutoSize = true;
+            lblNombre.BackColor = Color.Transparent;
+            lblNombre.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblNombre.ForeColor = Color.FromArgb(120, 83, 101);
+            lblNombre.Location = new Point(135, 31);
+            lblNombre.Name = "lblNombre";
+            lblNombre.Size = new Size(166, 21);
+            lblNombre.TabIndex = 9;
+            lblNombre.Text = "Hamburguesa Simple";
             // 
             // imageList1
             // 
@@ -119,13 +121,14 @@
             // 
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(308, 21);
+            pictureBox1.Location = new Point(307, 27);
             pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(46, 39);
+            pictureBox1.Size = new Size(36, 31);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 23;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // process1
             // 
@@ -145,7 +148,7 @@
             groupBox1.Controls.Add(cantProducto);
             groupBox1.Controls.Add(pictureBox2);
             groupBox1.Controls.Add(pictureBox1);
-            groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(lblNombre);
             groupBox1.Location = new Point(12, 73);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(360, 173);
@@ -188,6 +191,17 @@
             cantProducto.TabStop = false;
             cantProducto.Value = new decimal(new int[] { 1, 0, 0, 0 });
             cantProducto.ValueChanged += numericUpDown1_ValueChanged;
+            // 
+            // lblPorAhora
+            // 
+            lblPorAhora.AutoSize = true;
+            lblPorAhora.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblPorAhora.Location = new Point(10, 160);
+            lblPorAhora.Name = "lblPorAhora";
+            lblPorAhora.Size = new Size(372, 21);
+            lblPorAhora.TabIndex = 32;
+            lblPorAhora.Text = "Por ahora no tienes ningun producto en el carrito.";
+            lblPorAhora.Visible = false;
             // 
             // btnComprar
             // 
@@ -289,12 +303,31 @@
             button5.TabIndex = 20;
             button5.UseVisualStyleBackColor = false;
             // 
+            // btnAgregar
+            // 
+            btnAgregar.BackColor = Color.FromArgb(192, 133, 162);
+            btnAgregar.FlatAppearance.BorderSize = 0;
+            btnAgregar.FlatStyle = FlatStyle.Flat;
+            btnAgregar.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAgregar.ForeColor = Color.White;
+            btnAgregar.Location = new Point(70, 230);
+            btnAgregar.Margin = new Padding(3, 2, 3, 2);
+            btnAgregar.Name = "btnAgregar";
+            btnAgregar.Size = new Size(245, 48);
+            btnAgregar.TabIndex = 33;
+            btnAgregar.Text = "Agregar Producto";
+            btnAgregar.UseVisualStyleBackColor = false;
+            btnAgregar.Visible = false;
+            btnAgregar.Click += btnAgregar_Click;
+            // 
             // Carrito
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(390, 432);
+            Controls.Add(btnAgregar);
+            Controls.Add(lblPorAhora);
             Controls.Add(groupBox2);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox3);
@@ -323,7 +356,7 @@
         #endregion
 
         private Label label1;
-        private Label label3;
+        private Label lblNombre;
         private ImageList imageList1;
         private ImageList imageList2;
         private ImageList imageList3;
@@ -343,5 +376,7 @@
         private GroupBox groupBox2;
         private PictureBox pictureBox5;
         private Button button5;
+        private Label lblPorAhora;
+        private Button btnAgregar;
     }
 }

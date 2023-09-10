@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TpIsGrupo2.Entidades;
 
 namespace TpIsGrupo2
 {
@@ -14,18 +15,25 @@ namespace TpIsGrupo2
     {
         //Form form1 = new Form(); //forma 1
 
-        private Form1 form1; //forma 2
+        private ConfirmarPedido form1; //forma 2
 
 
-        public Carrito(Form1 form)
+
+        decimal cant;
+
+        Producto producto;
+
+        public Carrito(ConfirmarPedido form, Producto producto)
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.Manual;
             this.Location = new System.Drawing.Point(500, 10);
             this.form1 = form;
-
-            subtotal.Text = "$4500";
+            subtotal.Text = producto.SubtotalProducto.ToString();
+            cantProducto.Value = producto.CantProducto;
             total.Text = "$4500";
+            total.Text = "$" + producto.SubtotalProducto.ToString();
+            this.producto = producto;
         }
 
 
@@ -39,6 +47,25 @@ namespace TpIsGrupo2
             // Luego, llama al método ActualizarMontoEfectivoCarrito con el valor entero
             form1.ActualizarMontoEfectivoCarrito(monto);
 
+            if (cant > 0)
+            {
+                this.producto.NombreProducto = lblNombre.Text;
+                this.producto.SubtotalProducto = (float)cant;
+                this.producto.TotalProducto = (float)cant + 500;
+                this.producto.ExisteProducto = true;
+                this.producto.CantProducto = (int)cantProducto.Value;
+
+            }
+            else
+            {
+
+                ErrorProductoMessage error = new ErrorProductoMessage();
+                error.Show();
+
+                return;
+
+            }
+
 
             form1.Show();
 
@@ -47,10 +74,37 @@ namespace TpIsGrupo2
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
-            decimal cant = cantProducto.Value * 4500;
+            cant = cantProducto.Value * 4500;
             subtotal.Text = "$" + cant.ToString();
             total.Text = "$" + cant.ToString();
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            groupBox1.Visible = false;
+            groupBox2.Visible = false;
+            lblPorAhora.Visible = true;
+            btnComprar.Visible = false;
+            btnAgregar.Visible = true;
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            groupBox1.Visible = true;
+            groupBox2.Visible = true;
+            lblPorAhora.Visible = false;
+            btnComprar.Visible = true;
+            btnAgregar.Visible = false;
+
+
+            this.producto.NombreProducto = lblNombre.Text;
+            this.producto.SubtotalProducto = 1;
+            this.producto.TotalProducto = 4500;
+            this.producto.ExisteProducto = true;
+            this.producto.CantProducto = 1;
+            cantProducto.Value = 1;
+            cant = (decimal)producto.SubtotalProducto;
         }
     }
 }
