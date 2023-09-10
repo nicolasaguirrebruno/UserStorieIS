@@ -34,6 +34,7 @@ namespace TpIsGrupo2
             total.Text = "$4500";
             total.Text = "$" + producto.SubtotalProducto.ToString();
             this.producto = producto;
+            cant = 1;
         }
 
 
