@@ -69,15 +69,13 @@
             btnCarrito = new Button();
             btnComprar = new Button();
             pnlDireccion = new GradientPanel();
-            lbl_completarNumCalle = new Label();
+            label4 = new Label();
             lbl_completarCalle = new Label();
             lbl_completarCiudad = new Label();
             cmbCiudades = new ComboBox();
-            label4 = new Label();
             label3 = new Label();
             label2 = new Label();
             txtCalle = new TextBox();
-            txtNumero = new TextBox();
             label1 = new Label();
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
@@ -117,8 +115,9 @@
             pnlGeneral.Margin = new Padding(3, 2, 3, 2);
             pnlGeneral.MaximumSize = new Size(0, 1100);
             pnlGeneral.Name = "pnlGeneral";
-            pnlGeneral.Size = new Size(390, 1100);
+            pnlGeneral.Size = new Size(390, 788);
             pnlGeneral.TabIndex = 0;
+            pnlGeneral.Paint += pnlGeneral_Paint;
             // 
             // pnlDatosEfectivo
             // 
@@ -161,7 +160,7 @@
             // nupEfectivo
             // 
             nupEfectivo.DecimalPlaces = 2;
-            nupEfectivo.Font = new Font("Cyntho Next", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            nupEfectivo.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             nupEfectivo.Location = new Point(28, 51);
             nupEfectivo.Maximum = new decimal(new int[] { 1241513984, 370409800, 542101, 0 });
             nupEfectivo.Name = "nupEfectivo";
@@ -380,7 +379,7 @@
             // 
             // txtFechaVencimiento
             // 
-            txtFechaVencimiento.Font = new Font("Cyntho Next", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtFechaVencimiento.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtFechaVencimiento.Location = new Point(16, 240);
             txtFechaVencimiento.Margin = new Padding(3, 2, 3, 2);
             txtFechaVencimiento.Name = "txtFechaVencimiento";
@@ -441,7 +440,7 @@
             // 
             // txtCodigoSeguridad
             // 
-            txtCodigoSeguridad.Font = new Font("Cyntho Next", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtCodigoSeguridad.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtCodigoSeguridad.Location = new Point(11, 315);
             txtCodigoSeguridad.Margin = new Padding(3, 2, 3, 2);
             txtCodigoSeguridad.Name = "txtCodigoSeguridad";
@@ -475,7 +474,7 @@
             // 
             // txtNombreTitular
             // 
-            txtNombreTitular.Font = new Font("Cyntho Next", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtNombreTitular.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtNombreTitular.Location = new Point(15, 166);
             txtNombreTitular.Margin = new Padding(3, 2, 3, 2);
             txtNombreTitular.Name = "txtNombreTitular";
@@ -485,7 +484,7 @@
             // 
             // txtNumeroTarjeta
             // 
-            txtNumeroTarjeta.Font = new Font("Cyntho Next", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtNumeroTarjeta.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtNumeroTarjeta.Location = new Point(14, 98);
             txtNumeroTarjeta.Margin = new Padding(3, 2, 3, 2);
             txtNumeroTarjeta.Name = "txtNumeroTarjeta";
@@ -624,33 +623,31 @@
             pnlDireccion.BackColor = Color.White;
             pnlDireccion.ColorBottom = Color.Empty;
             pnlDireccion.ColorTop = Color.Empty;
-            pnlDireccion.Controls.Add(lbl_completarNumCalle);
+            pnlDireccion.Controls.Add(label4);
             pnlDireccion.Controls.Add(lbl_completarCalle);
             pnlDireccion.Controls.Add(lbl_completarCiudad);
             pnlDireccion.Controls.Add(cmbCiudades);
-            pnlDireccion.Controls.Add(label4);
             pnlDireccion.Controls.Add(label3);
             pnlDireccion.Controls.Add(label2);
             pnlDireccion.Controls.Add(txtCalle);
-            pnlDireccion.Controls.Add(txtNumero);
             pnlDireccion.ForeColor = Color.Coral;
             pnlDireccion.Location = new Point(71, 55);
             pnlDireccion.Margin = new Padding(3, 2, 3, 2);
             pnlDireccion.Name = "pnlDireccion";
-            pnlDireccion.Size = new Size(245, 213);
+            pnlDireccion.Size = new Size(245, 200);
             pnlDireccion.TabIndex = 12;
             // 
-            // lbl_completarNumCalle
+            // label4
             // 
-            lbl_completarNumCalle.AutoSize = true;
-            lbl_completarNumCalle.BackColor = Color.Transparent;
-            lbl_completarNumCalle.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_completarNumCalle.ForeColor = Color.Red;
-            lbl_completarNumCalle.Location = new Point(25, 190);
-            lbl_completarNumCalle.Name = "lbl_completarNumCalle";
-            lbl_completarNumCalle.Size = new Size(133, 17);
-            lbl_completarNumCalle.TabIndex = 14;
-            lbl_completarNumCalle.Text = "Ingrese el n° de calle";
+            label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
+            label4.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = Color.FromArgb(120, 83, 101);
+            label4.Location = new Point(59, 8);
+            label4.Name = "label4";
+            label4.Size = new Size(126, 20);
+            label4.TabIndex = 14;
+            label4.Text = "Lugar de entrega";
             // 
             // lbl_completarCalle
             // 
@@ -658,7 +655,7 @@
             lbl_completarCalle.BackColor = Color.Transparent;
             lbl_completarCalle.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_completarCalle.ForeColor = Color.Red;
-            lbl_completarCalle.Location = new Point(28, 122);
+            lbl_completarCalle.Location = new Point(28, 169);
             lbl_completarCalle.Name = "lbl_completarCalle";
             lbl_completarCalle.Size = new Size(154, 17);
             lbl_completarCalle.TabIndex = 13;
@@ -670,7 +667,7 @@
             lbl_completarCiudad.BackColor = Color.Transparent;
             lbl_completarCiudad.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_completarCiudad.ForeColor = Color.Red;
-            lbl_completarCiudad.Location = new Point(32, 60);
+            lbl_completarCiudad.Location = new Point(28, 95);
             lbl_completarCiudad.Name = "lbl_completarCiudad";
             lbl_completarCiudad.Size = new Size(141, 17);
             lbl_completarCiudad.TabIndex = 12;
@@ -678,26 +675,14 @@
             // 
             // cmbCiudades
             // 
-            cmbCiudades.Font = new Font("Cyntho Next", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            cmbCiudades.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             cmbCiudades.FormattingEnabled = true;
-            cmbCiudades.Location = new Point(30, 35);
+            cmbCiudades.Location = new Point(28, 68);
             cmbCiudades.Margin = new Padding(3, 2, 3, 2);
             cmbCiudades.Name = "cmbCiudades";
-            cmbCiudades.Size = new Size(168, 22);
+            cmbCiudades.Size = new Size(168, 23);
             cmbCiudades.TabIndex = 8;
             cmbCiudades.SelectedIndexChanged += cmbCiudades_SelectedIndexChanged;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.Transparent;
-            label4.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.ForeColor = Color.FromArgb(120, 83, 101);
-            label4.Location = new Point(29, 145);
-            label4.Name = "label4";
-            label4.Size = new Size(133, 20);
-            label4.TabIndex = 11;
-            label4.Text = "Ingrese el numero";
             // 
             // label3
             // 
@@ -705,7 +690,7 @@
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.FromArgb(120, 83, 101);
-            label3.Location = new Point(30, 12);
+            label3.Location = new Point(28, 41);
             label3.Name = "label3";
             label3.Size = new Size(150, 20);
             label3.TabIndex = 9;
@@ -717,32 +702,22 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.FromArgb(120, 83, 101);
-            label2.Location = new Point(29, 77);
+            label2.Location = new Point(28, 117);
             label2.Name = "label2";
-            label2.Size = new Size(113, 20);
+            label2.Size = new Size(164, 20);
             label2.TabIndex = 10;
-            label2.Text = "Ingrese su calle";
+            label2.Text = "Ingrese calle y número";
             // 
             // txtCalle
             // 
-            txtCalle.Font = new Font("Cyntho Next", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            txtCalle.Location = new Point(28, 99);
+            txtCalle.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtCalle.Location = new Point(28, 144);
             txtCalle.Margin = new Padding(3, 2, 3, 2);
+            txtCalle.MaxLength = 240;
             txtCalle.Name = "txtCalle";
             txtCalle.Size = new Size(170, 21);
             txtCalle.TabIndex = 7;
             txtCalle.TextChanged += txtCalle_TextChanged;
-            // 
-            // txtNumero
-            // 
-            txtNumero.Font = new Font("Cyntho Next", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            txtNumero.Location = new Point(28, 167);
-            txtNumero.Margin = new Padding(3, 2, 3, 2);
-            txtNumero.Name = "txtNumero";
-            txtNumero.Size = new Size(92, 21);
-            txtNumero.TabIndex = 6;
-            txtNumero.TextChanged += txtNumero_TextChanged;
-            txtNumero.KeyPress += txtNumero_KeyPress;
             // 
             // label1
             // 
@@ -796,7 +771,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(390, 1100);
+            ClientSize = new Size(390, 788);
             Controls.Add(pnlGeneral);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
@@ -830,12 +805,10 @@
         private PictureBox pictureBox1;
         private PictureBox pictureBox3;
         private Label label1;
-        private TextBox txtNumero;
         private TextBox txtCalle;
         private Label label3;
         private ComboBox cmbCiudades;
         private Label label2;
-        private Label label4;
         private GradientPanel pnlDireccion;
         private GradientPanel pnlMetodo;
         private Label label6;
@@ -860,7 +833,6 @@
         private Label lblSeleccioneMetodo;
         private Label lbl_completarCiudad;
         private Label lbl_completarCalle;
-        private Label lbl_completarNumCalle;
         private RadioButton rbDebito;
         private RadioButton rbCredito;
         private RadioButton rbEfectivo;
@@ -881,5 +853,6 @@
         private RadioButton rbFechaSeleccion;
         private RadioButton rnPronto;
         private Label lblErrorFecha;
+        private Label label4;
     }
 }

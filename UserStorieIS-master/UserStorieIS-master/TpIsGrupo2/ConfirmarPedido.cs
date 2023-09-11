@@ -21,7 +21,7 @@ namespace TpIsGrupo2
 
         bool allTestPassed = false;
 
-        bool entregaPronto = false; 
+        bool entregaPronto = false;
 
         public ConfirmarPedido()
         {
@@ -29,14 +29,11 @@ namespace TpIsGrupo2
 
             producto = new Producto("Hamburguesa Simple", 4500, 5000, true, 1);
 
-         
-
-
 
             CargarComboCiudades();
+            cmbCiudades.SelectedIndex = -1;
             lbl_completarCiudad.Visible = false;
             lbl_completarCalle.Visible = false;
-            lbl_completarNumCalle.Visible = false;
 
             // bandera para validar que el monto sea distinto de cero
             lblMontoValido.Visible = false;
@@ -131,16 +128,6 @@ namespace TpIsGrupo2
                 lbl_completarCalle.Visible = true;
                 allTestPassed = false;
             }
-            if (txtNumero.Text == "")
-            {
-                ControlPaint.DrawBorder(txtNumero.CreateGraphics(), txtNumero.ClientRectangle, Color.Red, ButtonBorderStyle.Solid);
-                lbl_completarNumCalle.Visible = true;
-                allTestPassed = false;
-            }
-            //if (cmbCiudades.Text == "" || txtCalle.Text == "" || txtNumero.Text == "")
-            //{
-            //    MessageBox.Show("Debe completar campos obligatorios");
-            //}
 
             if (pnlDatosTarjeta.Visible == true)
             {
@@ -158,8 +145,7 @@ namespace TpIsGrupo2
             {
                 envio.Ciudad = cmbCiudades.Text;
                 envio.Calle = CapitalizarPalabras(txtCalle.Text.ToLower());
-                envio.NumeroCalle = int.Parse(txtNumero.Text);
-                
+
                 if (entregaPronto)
                 {
                     envio.horaentrega = dtpSeleccionarFecha.Value.ToString();
@@ -171,7 +157,7 @@ namespace TpIsGrupo2
 
                 this.Hide();
                 lblErrorFecha.Visible = false;
-                ConfirmarCompra confirmarComprar = new ConfirmarCompra(envio, producto,this);
+                ConfirmarCompra confirmarComprar = new ConfirmarCompra(envio, producto, this);
                 confirmarComprar.ShowDialog();
 
 
@@ -383,11 +369,6 @@ namespace TpIsGrupo2
             lbl_completarCiudad.Visible = false;
         }
 
-        private void txtNumero_TextChanged(object sender, EventArgs e)
-        {
-            lbl_completarNumCalle.Visible = false;
-        }
-
         private void rbCredito_CheckedChanged(object sender, EventArgs e)
         {
             // Programar todo lo que sea marcar uno y desmarcar el otro
@@ -527,7 +508,7 @@ namespace TpIsGrupo2
             pnlDatosEfectivo.Visible = true;
             lblSimbolo.Visible = true;
 
-            nupEfectivo.Value = (decimal)producto.SubtotalProducto+500;
+            nupEfectivo.Value = (decimal)producto.SubtotalProducto + 500;
             lblMontoValido.Visible = false;
 
             // quitar visible errores de tarjeta
@@ -701,6 +682,11 @@ namespace TpIsGrupo2
                 lblMontoValido.ForeColor = Color.Red;
                 lblMontoValido.Text = "Ingrese un monto valido";
             }
+        }
+
+        private void pnlGeneral_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 
