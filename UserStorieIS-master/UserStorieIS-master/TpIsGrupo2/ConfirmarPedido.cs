@@ -122,11 +122,21 @@ namespace TpIsGrupo2
                 allTestPassed = false;
             }
 
-            if (txtCalle.Text == "")
+            if (txtCalle.Text == "" )
             {
+                
                 ControlPaint.DrawBorder(txtCalle.CreateGraphics(), txtCalle.ClientRectangle, Color.Red, ButtonBorderStyle.Solid);
                 lbl_completarCalle.Visible = true;
                 allTestPassed = false;
+            }
+            else
+            {
+               if (!VerificarDireccion(txtCalle.Text)) 
+                {
+                    lbl_completarCalle.Text = "Ingrese el número de calle ";
+                    lbl_completarCalle.Visible = true;
+                    allTestPassed = false;
+                }
             }
 
             if (pnlDatosTarjeta.Visible == true)
@@ -218,6 +228,7 @@ namespace TpIsGrupo2
         public void ActualizarMontoEfectivoCarrito(decimal nuevoMonto)
         {
             montoEfectivoCarrito = nuevoMonto; // Esto está permitido dentro de la misma clase
+            setCashConditions();
         }
 
         private void btnCarrito_Click(object sender, EventArgs e)
@@ -653,10 +664,10 @@ namespace TpIsGrupo2
 
         private void ConfirmarCompra_Activated(object sender, EventArgs e)
         {
-            
 
-            
+            nupEfectivo.Value = (decimal)producto.TotalProducto;
 
+            lblMontoValido.Visible = false; 
             if (producto.ExisteProducto)
             {
                 lblCantidadProductos.Text = "1";
@@ -696,6 +707,20 @@ namespace TpIsGrupo2
                 e.Handled = true; // Esto evita que el carácter se escriba en el TextBox.
             }
         }
+
+
+        // chatgepeteda
+
+        public static bool VerificarDireccion(string direccion)
+        {
+            // Dividir la dirección en palabras
+            string[] palabras = direccion.Split(' ');
+
+            // Verificar si hay al menos dos palabras y si la última es un número
+            return palabras.Length >= 2 && int.TryParse(palabras[palabras.Length - 1], out _);
+        }
+
+
     }
 
 }
