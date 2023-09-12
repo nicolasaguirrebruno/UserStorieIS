@@ -26,8 +26,7 @@ namespace TpIsGrupo2
         public Carrito(ConfirmarPedido form, Producto producto)
         {
             InitializeComponent();
-            this.StartPosition = FormStartPosition.Manual;
-            this.Location = new System.Drawing.Point(500, 10);
+
             this.form1 = form;
             subtotal.Text = producto.SubtotalProducto.ToString();
             cantProducto.Value = producto.CantProducto;

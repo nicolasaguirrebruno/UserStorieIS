@@ -635,7 +635,7 @@
             this.pnlDireccion.Location = new System.Drawing.Point(71, 55);
             this.pnlDireccion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlDireccion.Name = "pnlDireccion";
-            this.pnlDireccion.Size = new System.Drawing.Size(245, 200);
+            this.pnlDireccion.Size = new System.Drawing.Size(245, 205);
             this.pnlDireccion.TabIndex = 12;
             // 
             // label4
@@ -656,7 +656,7 @@
             this.lbl_completarCalle.BackColor = System.Drawing.Color.Transparent;
             this.lbl_completarCalle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbl_completarCalle.ForeColor = System.Drawing.Color.Red;
-            this.lbl_completarCalle.Location = new System.Drawing.Point(28, 169);
+            this.lbl_completarCalle.Location = new System.Drawing.Point(25, 167);
             this.lbl_completarCalle.Name = "lbl_completarCalle";
             this.lbl_completarCalle.Size = new System.Drawing.Size(154, 17);
             this.lbl_completarCalle.TabIndex = 13;

@@ -131,9 +131,12 @@ namespace TpIsGrupo2
             }
             else
             {
+
+
+
                if (!VerificarDireccion(txtCalle.Text)) 
                 {
-                    lbl_completarCalle.Text = "Ingrese el número de calle ";
+                    lbl_completarCalle.Text = "Ingrese correctamente la \ndirección";
                     lbl_completarCalle.Visible = true;
                     allTestPassed = false;
                 }
@@ -718,6 +721,11 @@ namespace TpIsGrupo2
 
             // Verificar si hay al menos dos palabras y si la última es un número
             return palabras.Length >= 2 && int.TryParse(palabras[palabras.Length - 1], out _);
+
+
+
+
+
         }
 
 
