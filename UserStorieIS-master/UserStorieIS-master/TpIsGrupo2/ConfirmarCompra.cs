@@ -23,9 +23,19 @@ namespace TpIsGrupo2
             lblCalle.Text = envio.Calle ;
             lblCiudad.Text = envio.Ciudad;
             lblHoraEntrega.Text = envio.horaentrega.ToString();
-            lblCantidadProducto.Text = producto.CantProducto.ToString();
+            lblCantidadProducto.Text = "Cantidad:" + producto.CantProducto.ToString();
             lblPrecioFinal.Text = "$" + " " + producto.TotalProducto.ToString();
-            lblSubtotal.Text = "$" + " " + producto.SubtotalProducto.ToString();
+
+            if (producto.SubtotalProducto ==1)
+            {
+                lblSubtotal.Text = "$" + " " + "4500";
+            }
+            else
+            {
+                lblSubtotal.Text = "$" + " " + producto.SubtotalProducto.ToString();
+            }
+            
+
             lblNombreProducto.Text = producto.NombreProducto;
 
         }

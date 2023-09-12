@@ -40,6 +40,7 @@ namespace TpIsGrupo2
             total.Text = "$" + cant.ToString();
             button5.Visible = false;
             button5.Hide();
+
         }
 
 
@@ -57,7 +58,16 @@ namespace TpIsGrupo2
             {
                 this.producto.NombreProducto = lblNombre.Text;
                 this.producto.SubtotalProducto = (float)cant;
-                this.producto.TotalProducto = (float)cant + 500;
+
+                if (cant != 1)
+                {
+                    this.producto.TotalProducto = (float)cant + 500;
+                }
+                else
+                {
+                    this.producto.TotalProducto = ((float)cant *4500)+ 500;
+                }
+
                 this.producto.ExisteProducto = true;
                 this.producto.CantProducto = (int)cantProducto.Value;
 

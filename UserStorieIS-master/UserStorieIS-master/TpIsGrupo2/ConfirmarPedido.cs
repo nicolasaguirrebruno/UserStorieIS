@@ -165,7 +165,7 @@ namespace TpIsGrupo2
                 }
                 else
                 {
-                    envio.horaentrega = "lo más pronto posible ";
+                    envio.horaentrega = "Lo más pronto posible ";
                 }
 
                 this.Hide();
