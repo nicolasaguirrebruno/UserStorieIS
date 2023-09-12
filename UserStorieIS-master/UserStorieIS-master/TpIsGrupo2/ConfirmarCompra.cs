@@ -20,7 +20,7 @@ namespace TpIsGrupo2
         {
             anterior1 = envios;
             InitializeComponent();
-            lblCalle.Text = envio.Calle + " " + envio.NumeroCalle.ToString();
+            lblCalle.Text = envio.Calle ;
             lblCiudad.Text = envio.Ciudad;
             lblHoraEntrega.Text = envio.horaentrega.ToString();
             lblCantidadProducto.Text = producto.CantProducto.ToString();

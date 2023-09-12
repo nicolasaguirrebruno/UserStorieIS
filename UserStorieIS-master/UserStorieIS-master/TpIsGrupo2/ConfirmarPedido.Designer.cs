@@ -29,773 +29,776 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfirmarPedido));
-            pnlGeneral = new GradientPanel();
-            pnlDatosEfectivo = new GradientPanel();
-            lblSimbolo = new Label();
-            lblMontoValido = new Label();
-            nupEfectivo = new NumericUpDown();
-            lblEfectivo = new Label();
-            lblSeleccioneMetodo = new Label();
-            pnlHoraEntrega = new GradientPanel();
-            lblErrorFecha = new Label();
-            rbFechaSeleccion = new RadioButton();
-            rnPronto = new RadioButton();
-            dtpSeleccionarFecha = new DateTimePicker();
-            label11 = new Label();
-            pnlDatosTarjeta = new GradientPanel();
-            lblErrorCodigo = new Label();
-            lblErrorFechaVencimiento = new Label();
-            lblErrorNombre = new Label();
-            lblErrorNumero = new Label();
-            lblFechita = new Label();
-            lblFechaVencimiento = new Label();
-            txtFechaVencimiento = new TextBox();
-            lblErrorTarjeta = new Label();
-            btnError = new Button();
-            label12 = new Label();
-            label9 = new Label();
-            txtCodigoSeguridad = new TextBox();
-            lblNombreTitular = new Label();
-            label5 = new Label();
-            txtNombreTitular = new TextBox();
-            txtNumeroTarjeta = new TextBox();
-            btnVisa = new Button();
-            lblCantidadProductos = new Label();
-            pnlMetodo = new GradientPanel();
-            rbDebito = new RadioButton();
-            rbCredito = new RadioButton();
-            rbEfectivo = new RadioButton();
-            label6 = new Label();
-            btnCarrito = new Button();
-            btnComprar = new Button();
-            pnlDireccion = new GradientPanel();
-            label4 = new Label();
-            lbl_completarCalle = new Label();
-            lbl_completarCiudad = new Label();
-            cmbCiudades = new ComboBox();
-            label3 = new Label();
-            label2 = new Label();
-            txtCalle = new TextBox();
-            label1 = new Label();
-            pictureBox3 = new PictureBox();
-            pictureBox2 = new PictureBox();
-            pictureBox1 = new PictureBox();
-            pnlGeneral.SuspendLayout();
-            pnlDatosEfectivo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)nupEfectivo).BeginInit();
-            pnlHoraEntrega.SuspendLayout();
-            pnlDatosTarjeta.SuspendLayout();
-            pnlMetodo.SuspendLayout();
-            pnlDireccion.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            SuspendLayout();
+            this.pnlGeneral = new TpIsGrupo2.GradientPanel();
+            this.pnlDatosEfectivo = new TpIsGrupo2.GradientPanel();
+            this.lblSimbolo = new System.Windows.Forms.Label();
+            this.lblMontoValido = new System.Windows.Forms.Label();
+            this.nupEfectivo = new System.Windows.Forms.NumericUpDown();
+            this.lblEfectivo = new System.Windows.Forms.Label();
+            this.lblSeleccioneMetodo = new System.Windows.Forms.Label();
+            this.pnlHoraEntrega = new TpIsGrupo2.GradientPanel();
+            this.lblErrorFecha = new System.Windows.Forms.Label();
+            this.rbFechaSeleccion = new System.Windows.Forms.RadioButton();
+            this.rnPronto = new System.Windows.Forms.RadioButton();
+            this.dtpSeleccionarFecha = new System.Windows.Forms.DateTimePicker();
+            this.label11 = new System.Windows.Forms.Label();
+            this.pnlDatosTarjeta = new TpIsGrupo2.GradientPanel();
+            this.lblErrorCodigo = new System.Windows.Forms.Label();
+            this.lblErrorFechaVencimiento = new System.Windows.Forms.Label();
+            this.lblErrorNombre = new System.Windows.Forms.Label();
+            this.lblErrorNumero = new System.Windows.Forms.Label();
+            this.lblFechita = new System.Windows.Forms.Label();
+            this.lblFechaVencimiento = new System.Windows.Forms.Label();
+            this.txtFechaVencimiento = new System.Windows.Forms.TextBox();
+            this.lblErrorTarjeta = new System.Windows.Forms.Label();
+            this.btnError = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtCodigoSeguridad = new System.Windows.Forms.TextBox();
+            this.lblNombreTitular = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtNombreTitular = new System.Windows.Forms.TextBox();
+            this.txtNumeroTarjeta = new System.Windows.Forms.TextBox();
+            this.btnVisa = new System.Windows.Forms.Button();
+            this.lblCantidadProductos = new System.Windows.Forms.Label();
+            this.pnlMetodo = new TpIsGrupo2.GradientPanel();
+            this.rbDebito = new System.Windows.Forms.RadioButton();
+            this.rbCredito = new System.Windows.Forms.RadioButton();
+            this.rbEfectivo = new System.Windows.Forms.RadioButton();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnCarrito = new System.Windows.Forms.Button();
+            this.btnComprar = new System.Windows.Forms.Button();
+            this.pnlDireccion = new TpIsGrupo2.GradientPanel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lbl_completarCalle = new System.Windows.Forms.Label();
+            this.lbl_completarCiudad = new System.Windows.Forms.Label();
+            this.cmbCiudades = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtCalle = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pnlGeneral.SuspendLayout();
+            this.pnlDatosEfectivo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupEfectivo)).BeginInit();
+            this.pnlHoraEntrega.SuspendLayout();
+            this.pnlDatosTarjeta.SuspendLayout();
+            this.pnlMetodo.SuspendLayout();
+            this.pnlDireccion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
             // 
             // pnlGeneral
             // 
-            pnlGeneral.ColorBottom = Color.FromArgb(240, 230, 239);
-            pnlGeneral.ColorTop = Color.FromArgb(224, 224, 224);
-            pnlGeneral.Controls.Add(pnlDatosEfectivo);
-            pnlGeneral.Controls.Add(lblSeleccioneMetodo);
-            pnlGeneral.Controls.Add(pnlHoraEntrega);
-            pnlGeneral.Controls.Add(pnlDatosTarjeta);
-            pnlGeneral.Controls.Add(lblCantidadProductos);
-            pnlGeneral.Controls.Add(pnlMetodo);
-            pnlGeneral.Controls.Add(btnCarrito);
-            pnlGeneral.Controls.Add(btnComprar);
-            pnlGeneral.Controls.Add(pnlDireccion);
-            pnlGeneral.Controls.Add(label1);
-            pnlGeneral.Controls.Add(pictureBox3);
-            pnlGeneral.Controls.Add(pictureBox2);
-            pnlGeneral.Controls.Add(pictureBox1);
-            pnlGeneral.Dock = DockStyle.Fill;
-            pnlGeneral.Font = new Font("Segoe UI Emoji", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            pnlGeneral.Location = new Point(0, 0);
-            pnlGeneral.Margin = new Padding(3, 2, 3, 2);
-            pnlGeneral.MaximumSize = new Size(0, 1100);
-            pnlGeneral.Name = "pnlGeneral";
-            pnlGeneral.Size = new Size(390, 788);
-            pnlGeneral.TabIndex = 0;
-            pnlGeneral.Paint += pnlGeneral_Paint;
+            this.pnlGeneral.ColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(230)))), ((int)(((byte)(239)))));
+            this.pnlGeneral.ColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pnlGeneral.Controls.Add(this.pnlDatosEfectivo);
+            this.pnlGeneral.Controls.Add(this.lblSeleccioneMetodo);
+            this.pnlGeneral.Controls.Add(this.pnlHoraEntrega);
+            this.pnlGeneral.Controls.Add(this.pnlDatosTarjeta);
+            this.pnlGeneral.Controls.Add(this.lblCantidadProductos);
+            this.pnlGeneral.Controls.Add(this.pnlMetodo);
+            this.pnlGeneral.Controls.Add(this.btnCarrito);
+            this.pnlGeneral.Controls.Add(this.btnComprar);
+            this.pnlGeneral.Controls.Add(this.pnlDireccion);
+            this.pnlGeneral.Controls.Add(this.label1);
+            this.pnlGeneral.Controls.Add(this.pictureBox3);
+            this.pnlGeneral.Controls.Add(this.pictureBox2);
+            this.pnlGeneral.Controls.Add(this.pictureBox1);
+            this.pnlGeneral.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlGeneral.Font = new System.Drawing.Font("Segoe UI Emoji", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.pnlGeneral.Location = new System.Drawing.Point(0, 0);
+            this.pnlGeneral.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlGeneral.MaximumSize = new System.Drawing.Size(0, 1100);
+            this.pnlGeneral.Name = "pnlGeneral";
+            this.pnlGeneral.Size = new System.Drawing.Size(390, 1100);
+            this.pnlGeneral.TabIndex = 0;
             // 
             // pnlDatosEfectivo
             // 
-            pnlDatosEfectivo.BackColor = Color.White;
-            pnlDatosEfectivo.ColorBottom = Color.Empty;
-            pnlDatosEfectivo.ColorTop = Color.Empty;
-            pnlDatosEfectivo.Controls.Add(lblSimbolo);
-            pnlDatosEfectivo.Controls.Add(lblMontoValido);
-            pnlDatosEfectivo.Controls.Add(nupEfectivo);
-            pnlDatosEfectivo.Controls.Add(lblEfectivo);
-            pnlDatosEfectivo.Location = new Point(64, 924);
-            pnlDatosEfectivo.Margin = new Padding(3, 2, 3, 2);
-            pnlDatosEfectivo.Name = "pnlDatosEfectivo";
-            pnlDatosEfectivo.Size = new Size(243, 105);
-            pnlDatosEfectivo.TabIndex = 17;
-            pnlDatosEfectivo.Visible = false;
+            this.pnlDatosEfectivo.BackColor = System.Drawing.Color.White;
+            this.pnlDatosEfectivo.ColorBottom = System.Drawing.Color.Empty;
+            this.pnlDatosEfectivo.ColorTop = System.Drawing.Color.Empty;
+            this.pnlDatosEfectivo.Controls.Add(this.lblSimbolo);
+            this.pnlDatosEfectivo.Controls.Add(this.lblMontoValido);
+            this.pnlDatosEfectivo.Controls.Add(this.nupEfectivo);
+            this.pnlDatosEfectivo.Controls.Add(this.lblEfectivo);
+            this.pnlDatosEfectivo.Location = new System.Drawing.Point(64, 924);
+            this.pnlDatosEfectivo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlDatosEfectivo.Name = "pnlDatosEfectivo";
+            this.pnlDatosEfectivo.Size = new System.Drawing.Size(243, 105);
+            this.pnlDatosEfectivo.TabIndex = 17;
+            this.pnlDatosEfectivo.Visible = false;
             // 
             // lblSimbolo
             // 
-            lblSimbolo.AutoSize = true;
-            lblSimbolo.Font = new Font("Segoe UI Emoji", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            lblSimbolo.Location = new Point(5, 52);
-            lblSimbolo.Name = "lblSimbolo";
-            lblSimbolo.Size = new Size(17, 19);
-            lblSimbolo.TabIndex = 16;
-            lblSimbolo.Text = "$";
+            this.lblSimbolo.AutoSize = true;
+            this.lblSimbolo.Font = new System.Drawing.Font("Segoe UI Emoji", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblSimbolo.Location = new System.Drawing.Point(5, 52);
+            this.lblSimbolo.Name = "lblSimbolo";
+            this.lblSimbolo.Size = new System.Drawing.Size(17, 19);
+            this.lblSimbolo.TabIndex = 16;
+            this.lblSimbolo.Text = "$";
             // 
             // lblMontoValido
             // 
-            lblMontoValido.AutoSize = true;
-            lblMontoValido.BackColor = Color.Transparent;
-            lblMontoValido.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            lblMontoValido.ForeColor = Color.Red;
-            lblMontoValido.Location = new Point(28, 77);
-            lblMontoValido.Name = "lblMontoValido";
-            lblMontoValido.Size = new Size(158, 17);
-            lblMontoValido.TabIndex = 15;
-            lblMontoValido.Text = "Ingrese un monto valido";
+            this.lblMontoValido.AutoSize = true;
+            this.lblMontoValido.BackColor = System.Drawing.Color.Transparent;
+            this.lblMontoValido.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblMontoValido.ForeColor = System.Drawing.Color.Red;
+            this.lblMontoValido.Location = new System.Drawing.Point(28, 77);
+            this.lblMontoValido.Name = "lblMontoValido";
+            this.lblMontoValido.Size = new System.Drawing.Size(158, 17);
+            this.lblMontoValido.TabIndex = 15;
+            this.lblMontoValido.Text = "Ingrese un monto valido";
             // 
             // nupEfectivo
             // 
-            nupEfectivo.DecimalPlaces = 2;
-            nupEfectivo.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            nupEfectivo.Location = new Point(28, 51);
-            nupEfectivo.Maximum = new decimal(new int[] { 1241513984, 370409800, 542101, 0 });
-            nupEfectivo.Name = "nupEfectivo";
-            nupEfectivo.Size = new Size(120, 21);
-            nupEfectivo.TabIndex = 14;
-            nupEfectivo.Leave += nupEfectivo_Leave;
+            this.nupEfectivo.DecimalPlaces = 2;
+            this.nupEfectivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.nupEfectivo.Location = new System.Drawing.Point(28, 51);
+            this.nupEfectivo.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.nupEfectivo.Name = "nupEfectivo";
+            this.nupEfectivo.Size = new System.Drawing.Size(120, 21);
+            this.nupEfectivo.TabIndex = 14;
+            this.nupEfectivo.Leave += new System.EventHandler(this.nupEfectivo_Leave);
             // 
             // lblEfectivo
             // 
-            lblEfectivo.AutoSize = true;
-            lblEfectivo.BackColor = Color.Transparent;
-            lblEfectivo.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            lblEfectivo.ForeColor = Color.FromArgb(120, 83, 101);
-            lblEfectivo.Location = new Point(27, 19);
-            lblEfectivo.Name = "lblEfectivo";
-            lblEfectivo.Size = new Size(198, 20);
-            lblEfectivo.TabIndex = 13;
-            lblEfectivo.Text = "Ingrese el monto en efectivo";
+            this.lblEfectivo.AutoSize = true;
+            this.lblEfectivo.BackColor = System.Drawing.Color.Transparent;
+            this.lblEfectivo.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblEfectivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(83)))), ((int)(((byte)(101)))));
+            this.lblEfectivo.Location = new System.Drawing.Point(27, 19);
+            this.lblEfectivo.Name = "lblEfectivo";
+            this.lblEfectivo.Size = new System.Drawing.Size(198, 20);
+            this.lblEfectivo.TabIndex = 13;
+            this.lblEfectivo.Text = "Ingrese el monto en efectivo";
             // 
             // lblSeleccioneMetodo
             // 
-            lblSeleccioneMetodo.AutoSize = true;
-            lblSeleccioneMetodo.BackColor = Color.Transparent;
-            lblSeleccioneMetodo.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblSeleccioneMetodo.ForeColor = Color.FromArgb(64, 64, 64);
-            lblSeleccioneMetodo.Location = new Point(23, 600);
-            lblSeleccioneMetodo.Name = "lblSeleccioneMetodo";
-            lblSeleccioneMetodo.Size = new Size(335, 20);
-            lblSeleccioneMetodo.TabIndex = 16;
-            lblSeleccioneMetodo.Text = "Seleccione un método de pago para continuar";
+            this.lblSeleccioneMetodo.AutoSize = true;
+            this.lblSeleccioneMetodo.BackColor = System.Drawing.Color.Transparent;
+            this.lblSeleccioneMetodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblSeleccioneMetodo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblSeleccioneMetodo.Location = new System.Drawing.Point(23, 600);
+            this.lblSeleccioneMetodo.Name = "lblSeleccioneMetodo";
+            this.lblSeleccioneMetodo.Size = new System.Drawing.Size(335, 20);
+            this.lblSeleccioneMetodo.TabIndex = 16;
+            this.lblSeleccioneMetodo.Text = "Seleccione un método de pago para continuar";
             // 
             // pnlHoraEntrega
             // 
-            pnlHoraEntrega.BackColor = Color.White;
-            pnlHoraEntrega.ColorBottom = Color.Empty;
-            pnlHoraEntrega.ColorTop = Color.Empty;
-            pnlHoraEntrega.Controls.Add(lblErrorFecha);
-            pnlHoraEntrega.Controls.Add(rbFechaSeleccion);
-            pnlHoraEntrega.Controls.Add(rnPronto);
-            pnlHoraEntrega.Controls.Add(dtpSeleccionarFecha);
-            pnlHoraEntrega.Controls.Add(label11);
-            pnlHoraEntrega.Location = new Point(71, 272);
-            pnlHoraEntrega.Margin = new Padding(3, 2, 3, 2);
-            pnlHoraEntrega.Name = "pnlHoraEntrega";
-            pnlHoraEntrega.Size = new Size(245, 142);
-            pnlHoraEntrega.TabIndex = 14;
+            this.pnlHoraEntrega.BackColor = System.Drawing.Color.White;
+            this.pnlHoraEntrega.ColorBottom = System.Drawing.Color.Empty;
+            this.pnlHoraEntrega.ColorTop = System.Drawing.Color.Empty;
+            this.pnlHoraEntrega.Controls.Add(this.lblErrorFecha);
+            this.pnlHoraEntrega.Controls.Add(this.rbFechaSeleccion);
+            this.pnlHoraEntrega.Controls.Add(this.rnPronto);
+            this.pnlHoraEntrega.Controls.Add(this.dtpSeleccionarFecha);
+            this.pnlHoraEntrega.Controls.Add(this.label11);
+            this.pnlHoraEntrega.Location = new System.Drawing.Point(71, 272);
+            this.pnlHoraEntrega.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlHoraEntrega.Name = "pnlHoraEntrega";
+            this.pnlHoraEntrega.Size = new System.Drawing.Size(245, 142);
+            this.pnlHoraEntrega.TabIndex = 14;
             // 
             // lblErrorFecha
             // 
-            lblErrorFecha.AutoSize = true;
-            lblErrorFecha.BackColor = Color.Transparent;
-            lblErrorFecha.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            lblErrorFecha.ForeColor = Color.Red;
-            lblErrorFecha.Location = new Point(3, 123);
-            lblErrorFecha.Name = "lblErrorFecha";
-            lblErrorFecha.Size = new Size(107, 17);
-            lblErrorFecha.TabIndex = 15;
-            lblErrorFecha.Text = "Error de la fecha";
-            lblErrorFecha.Visible = false;
+            this.lblErrorFecha.AutoSize = true;
+            this.lblErrorFecha.BackColor = System.Drawing.Color.Transparent;
+            this.lblErrorFecha.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblErrorFecha.ForeColor = System.Drawing.Color.Red;
+            this.lblErrorFecha.Location = new System.Drawing.Point(3, 123);
+            this.lblErrorFecha.Name = "lblErrorFecha";
+            this.lblErrorFecha.Size = new System.Drawing.Size(107, 17);
+            this.lblErrorFecha.TabIndex = 15;
+            this.lblErrorFecha.Text = "Error de la fecha";
+            this.lblErrorFecha.Visible = false;
             // 
             // rbFechaSeleccion
             // 
-            rbFechaSeleccion.AutoSize = true;
-            rbFechaSeleccion.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            rbFechaSeleccion.ForeColor = Color.FromArgb(120, 83, 101);
-            rbFechaSeleccion.Location = new Point(9, 65);
-            rbFechaSeleccion.Name = "rbFechaSeleccion";
-            rbFechaSeleccion.Size = new Size(223, 24);
-            rbFechaSeleccion.TabIndex = 14;
-            rbFechaSeleccion.TabStop = true;
-            rbFechaSeleccion.Text = "Seleccionar Fecha De Entrega";
-            rbFechaSeleccion.UseVisualStyleBackColor = true;
-            rbFechaSeleccion.CheckedChanged += rbFechaSeleccion_CheckedChanged;
+            this.rbFechaSeleccion.AutoSize = true;
+            this.rbFechaSeleccion.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rbFechaSeleccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(83)))), ((int)(((byte)(101)))));
+            this.rbFechaSeleccion.Location = new System.Drawing.Point(9, 65);
+            this.rbFechaSeleccion.Name = "rbFechaSeleccion";
+            this.rbFechaSeleccion.Size = new System.Drawing.Size(223, 24);
+            this.rbFechaSeleccion.TabIndex = 14;
+            this.rbFechaSeleccion.Text = "Seleccionar Fecha De Entrega";
+            this.rbFechaSeleccion.UseVisualStyleBackColor = true;
+            this.rbFechaSeleccion.CheckedChanged += new System.EventHandler(this.rbFechaSeleccion_CheckedChanged);
             // 
             // rnPronto
             // 
-            rnPronto.AutoSize = true;
-            rnPronto.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            rnPronto.ForeColor = Color.FromArgb(120, 83, 101);
-            rnPronto.Location = new Point(9, 35);
-            rnPronto.Name = "rnPronto";
-            rnPronto.Size = new Size(176, 24);
-            rnPronto.TabIndex = 13;
-            rnPronto.TabStop = true;
-            rnPronto.Text = "Lo más pronto posible";
-            rnPronto.UseVisualStyleBackColor = true;
-            rnPronto.CheckedChanged += rnPronto_CheckedChanged;
+            this.rnPronto.AutoSize = true;
+            this.rnPronto.Checked = true;
+            this.rnPronto.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rnPronto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(83)))), ((int)(((byte)(101)))));
+            this.rnPronto.Location = new System.Drawing.Point(9, 35);
+            this.rnPronto.Name = "rnPronto";
+            this.rnPronto.Size = new System.Drawing.Size(176, 24);
+            this.rnPronto.TabIndex = 13;
+            this.rnPronto.TabStop = true;
+            this.rnPronto.Text = "Lo más pronto posible";
+            this.rnPronto.UseVisualStyleBackColor = true;
+            this.rnPronto.CheckedChanged += new System.EventHandler(this.rnPronto_CheckedChanged);
             // 
             // dtpSeleccionarFecha
             // 
-            dtpSeleccionarFecha.CalendarForeColor = Color.FromArgb(153, 61, 1);
-            dtpSeleccionarFecha.DropDownAlign = LeftRightAlignment.Right;
-            dtpSeleccionarFecha.Enabled = false;
-            dtpSeleccionarFecha.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            dtpSeleccionarFecha.Format = DateTimePickerFormat.Short;
-            dtpSeleccionarFecha.Location = new Point(8, 94);
-            dtpSeleccionarFecha.Margin = new Padding(3, 2, 3, 2);
-            dtpSeleccionarFecha.MaxDate = new DateTime(2023, 9, 15, 0, 0, 0, 0);
-            dtpSeleccionarFecha.MinDate = new DateTime(2023, 9, 8, 0, 0, 0, 0);
-            dtpSeleccionarFecha.Name = "dtpSeleccionarFecha";
-            dtpSeleccionarFecha.Size = new Size(219, 23);
-            dtpSeleccionarFecha.TabIndex = 11;
+            this.dtpSeleccionarFecha.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(61)))), ((int)(((byte)(1)))));
+            this.dtpSeleccionarFecha.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dtpSeleccionarFecha.Enabled = false;
+            this.dtpSeleccionarFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dtpSeleccionarFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpSeleccionarFecha.Location = new System.Drawing.Point(8, 94);
+            this.dtpSeleccionarFecha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpSeleccionarFecha.MaxDate = new System.DateTime(2023, 9, 15, 0, 0, 0, 0);
+            this.dtpSeleccionarFecha.MinDate = new System.DateTime(2023, 9, 8, 0, 0, 0, 0);
+            this.dtpSeleccionarFecha.Name = "dtpSeleccionarFecha";
+            this.dtpSeleccionarFecha.Size = new System.Drawing.Size(219, 23);
+            this.dtpSeleccionarFecha.TabIndex = 11;
             // 
             // label11
             // 
-            label11.AutoSize = true;
-            label11.BackColor = Color.Transparent;
-            label11.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label11.ForeColor = Color.FromArgb(120, 83, 101);
-            label11.Location = new Point(57, 8);
-            label11.Name = "label11";
-            label11.Size = new Size(121, 20);
-            label11.TabIndex = 9;
-            label11.Text = "Hora de entrega";
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(83)))), ((int)(((byte)(101)))));
+            this.label11.Location = new System.Drawing.Point(57, 8);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(121, 20);
+            this.label11.TabIndex = 9;
+            this.label11.Text = "Hora de entrega";
             // 
             // pnlDatosTarjeta
             // 
-            pnlDatosTarjeta.BackColor = Color.White;
-            pnlDatosTarjeta.ColorBottom = Color.Empty;
-            pnlDatosTarjeta.ColorTop = Color.Empty;
-            pnlDatosTarjeta.Controls.Add(lblErrorCodigo);
-            pnlDatosTarjeta.Controls.Add(lblErrorFechaVencimiento);
-            pnlDatosTarjeta.Controls.Add(lblErrorNombre);
-            pnlDatosTarjeta.Controls.Add(lblErrorNumero);
-            pnlDatosTarjeta.Controls.Add(lblFechita);
-            pnlDatosTarjeta.Controls.Add(lblFechaVencimiento);
-            pnlDatosTarjeta.Controls.Add(txtFechaVencimiento);
-            pnlDatosTarjeta.Controls.Add(lblErrorTarjeta);
-            pnlDatosTarjeta.Controls.Add(btnError);
-            pnlDatosTarjeta.Controls.Add(label12);
-            pnlDatosTarjeta.Controls.Add(label9);
-            pnlDatosTarjeta.Controls.Add(txtCodigoSeguridad);
-            pnlDatosTarjeta.Controls.Add(lblNombreTitular);
-            pnlDatosTarjeta.Controls.Add(label5);
-            pnlDatosTarjeta.Controls.Add(txtNombreTitular);
-            pnlDatosTarjeta.Controls.Add(txtNumeroTarjeta);
-            pnlDatosTarjeta.Controls.Add(btnVisa);
-            pnlDatosTarjeta.Location = new Point(71, 555);
-            pnlDatosTarjeta.Margin = new Padding(3, 2, 3, 2);
-            pnlDatosTarjeta.Name = "pnlDatosTarjeta";
-            pnlDatosTarjeta.Size = new Size(243, 365);
-            pnlDatosTarjeta.TabIndex = 14;
-            pnlDatosTarjeta.Visible = false;
+            this.pnlDatosTarjeta.BackColor = System.Drawing.Color.White;
+            this.pnlDatosTarjeta.ColorBottom = System.Drawing.Color.Empty;
+            this.pnlDatosTarjeta.ColorTop = System.Drawing.Color.Empty;
+            this.pnlDatosTarjeta.Controls.Add(this.lblErrorCodigo);
+            this.pnlDatosTarjeta.Controls.Add(this.lblErrorFechaVencimiento);
+            this.pnlDatosTarjeta.Controls.Add(this.lblErrorNombre);
+            this.pnlDatosTarjeta.Controls.Add(this.lblErrorNumero);
+            this.pnlDatosTarjeta.Controls.Add(this.lblFechita);
+            this.pnlDatosTarjeta.Controls.Add(this.lblFechaVencimiento);
+            this.pnlDatosTarjeta.Controls.Add(this.txtFechaVencimiento);
+            this.pnlDatosTarjeta.Controls.Add(this.lblErrorTarjeta);
+            this.pnlDatosTarjeta.Controls.Add(this.btnError);
+            this.pnlDatosTarjeta.Controls.Add(this.label12);
+            this.pnlDatosTarjeta.Controls.Add(this.label9);
+            this.pnlDatosTarjeta.Controls.Add(this.txtCodigoSeguridad);
+            this.pnlDatosTarjeta.Controls.Add(this.lblNombreTitular);
+            this.pnlDatosTarjeta.Controls.Add(this.label5);
+            this.pnlDatosTarjeta.Controls.Add(this.txtNombreTitular);
+            this.pnlDatosTarjeta.Controls.Add(this.txtNumeroTarjeta);
+            this.pnlDatosTarjeta.Controls.Add(this.btnVisa);
+            this.pnlDatosTarjeta.Location = new System.Drawing.Point(71, 555);
+            this.pnlDatosTarjeta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlDatosTarjeta.Name = "pnlDatosTarjeta";
+            this.pnlDatosTarjeta.Size = new System.Drawing.Size(243, 365);
+            this.pnlDatosTarjeta.TabIndex = 14;
+            this.pnlDatosTarjeta.Visible = false;
             // 
             // lblErrorCodigo
             // 
-            lblErrorCodigo.AutoSize = true;
-            lblErrorCodigo.BackColor = Color.Transparent;
-            lblErrorCodigo.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            lblErrorCodigo.ForeColor = Color.Red;
-            lblErrorCodigo.Location = new Point(8, 338);
-            lblErrorCodigo.Name = "lblErrorCodigo";
-            lblErrorCodigo.Size = new Size(158, 17);
-            lblErrorCodigo.TabIndex = 25;
-            lblErrorCodigo.Text = "Ingrese un codigo valido";
+            this.lblErrorCodigo.AutoSize = true;
+            this.lblErrorCodigo.BackColor = System.Drawing.Color.Transparent;
+            this.lblErrorCodigo.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblErrorCodigo.ForeColor = System.Drawing.Color.Red;
+            this.lblErrorCodigo.Location = new System.Drawing.Point(8, 338);
+            this.lblErrorCodigo.Name = "lblErrorCodigo";
+            this.lblErrorCodigo.Size = new System.Drawing.Size(158, 17);
+            this.lblErrorCodigo.TabIndex = 25;
+            this.lblErrorCodigo.Text = "Ingrese un codigo valido";
             // 
             // lblErrorFechaVencimiento
             // 
-            lblErrorFechaVencimiento.AutoSize = true;
-            lblErrorFechaVencimiento.BackColor = Color.Transparent;
-            lblErrorFechaVencimiento.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            lblErrorFechaVencimiento.ForeColor = Color.Red;
-            lblErrorFechaVencimiento.Location = new Point(16, 263);
-            lblErrorFechaVencimiento.Name = "lblErrorFechaVencimiento";
-            lblErrorFechaVencimiento.Size = new Size(155, 17);
-            lblErrorFechaVencimiento.TabIndex = 24;
-            lblErrorFechaVencimiento.Text = "Ingrese una fecha valida";
+            this.lblErrorFechaVencimiento.AutoSize = true;
+            this.lblErrorFechaVencimiento.BackColor = System.Drawing.Color.Transparent;
+            this.lblErrorFechaVencimiento.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblErrorFechaVencimiento.ForeColor = System.Drawing.Color.Red;
+            this.lblErrorFechaVencimiento.Location = new System.Drawing.Point(16, 263);
+            this.lblErrorFechaVencimiento.Name = "lblErrorFechaVencimiento";
+            this.lblErrorFechaVencimiento.Size = new System.Drawing.Size(155, 17);
+            this.lblErrorFechaVencimiento.TabIndex = 24;
+            this.lblErrorFechaVencimiento.Text = "Ingrese una fecha valida";
             // 
             // lblErrorNombre
             // 
-            lblErrorNombre.AutoSize = true;
-            lblErrorNombre.BackColor = Color.Transparent;
-            lblErrorNombre.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            lblErrorNombre.ForeColor = Color.Red;
-            lblErrorNombre.Location = new Point(13, 191);
-            lblErrorNombre.Name = "lblErrorNombre";
-            lblErrorNombre.Size = new Size(165, 17);
-            lblErrorNombre.TabIndex = 22;
-            lblErrorNombre.Text = "Ingrese un nombre valido";
+            this.lblErrorNombre.AutoSize = true;
+            this.lblErrorNombre.BackColor = System.Drawing.Color.Transparent;
+            this.lblErrorNombre.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblErrorNombre.ForeColor = System.Drawing.Color.Red;
+            this.lblErrorNombre.Location = new System.Drawing.Point(13, 191);
+            this.lblErrorNombre.Name = "lblErrorNombre";
+            this.lblErrorNombre.Size = new System.Drawing.Size(165, 17);
+            this.lblErrorNombre.TabIndex = 22;
+            this.lblErrorNombre.Text = "Ingrese un nombre valido";
             // 
             // lblErrorNumero
             // 
-            lblErrorNumero.AutoSize = true;
-            lblErrorNumero.BackColor = Color.Transparent;
-            lblErrorNumero.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            lblErrorNumero.ForeColor = Color.Red;
-            lblErrorNumero.Location = new Point(14, 123);
-            lblErrorNumero.Name = "lblErrorNumero";
-            lblErrorNumero.Size = new Size(165, 17);
-            lblErrorNumero.TabIndex = 21;
-            lblErrorNumero.Text = "Ingrese un numero valido";
+            this.lblErrorNumero.AutoSize = true;
+            this.lblErrorNumero.BackColor = System.Drawing.Color.Transparent;
+            this.lblErrorNumero.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblErrorNumero.ForeColor = System.Drawing.Color.Red;
+            this.lblErrorNumero.Location = new System.Drawing.Point(14, 123);
+            this.lblErrorNumero.Name = "lblErrorNumero";
+            this.lblErrorNumero.Size = new System.Drawing.Size(165, 17);
+            this.lblErrorNumero.TabIndex = 21;
+            this.lblErrorNumero.Text = "Ingrese un numero valido";
             // 
             // lblFechita
             // 
-            lblFechita.AutoSize = true;
-            lblFechita.BackColor = Color.Transparent;
-            lblFechita.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            lblFechita.ForeColor = Color.Black;
-            lblFechita.Location = new Point(114, 240);
-            lblFechita.Name = "lblFechita";
-            lblFechita.Size = new Size(80, 17);
-            lblFechita.TabIndex = 20;
-            lblFechita.Text = "(MM/AAAA)";
+            this.lblFechita.AutoSize = true;
+            this.lblFechita.BackColor = System.Drawing.Color.Transparent;
+            this.lblFechita.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblFechita.ForeColor = System.Drawing.Color.Black;
+            this.lblFechita.Location = new System.Drawing.Point(114, 240);
+            this.lblFechita.Name = "lblFechita";
+            this.lblFechita.Size = new System.Drawing.Size(80, 17);
+            this.lblFechita.TabIndex = 20;
+            this.lblFechita.Text = "(MM/AAAA)";
             // 
             // lblFechaVencimiento
             // 
-            lblFechaVencimiento.AutoSize = true;
-            lblFechaVencimiento.BackColor = Color.Transparent;
-            lblFechaVencimiento.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            lblFechaVencimiento.ForeColor = Color.FromArgb(120, 83, 101);
-            lblFechaVencimiento.Location = new Point(13, 212);
-            lblFechaVencimiento.Name = "lblFechaVencimiento";
-            lblFechaVencimiento.Size = new Size(219, 20);
-            lblFechaVencimiento.TabIndex = 19;
-            lblFechaVencimiento.Text = "Ingrese la fecha de vencimiento";
+            this.lblFechaVencimiento.AutoSize = true;
+            this.lblFechaVencimiento.BackColor = System.Drawing.Color.Transparent;
+            this.lblFechaVencimiento.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblFechaVencimiento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(83)))), ((int)(((byte)(101)))));
+            this.lblFechaVencimiento.Location = new System.Drawing.Point(13, 212);
+            this.lblFechaVencimiento.Name = "lblFechaVencimiento";
+            this.lblFechaVencimiento.Size = new System.Drawing.Size(219, 20);
+            this.lblFechaVencimiento.TabIndex = 19;
+            this.lblFechaVencimiento.Text = "Ingrese la fecha de vencimiento";
             // 
             // txtFechaVencimiento
             // 
-            txtFechaVencimiento.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            txtFechaVencimiento.Location = new Point(16, 240);
-            txtFechaVencimiento.Margin = new Padding(3, 2, 3, 2);
-            txtFechaVencimiento.Name = "txtFechaVencimiento";
-            txtFechaVencimiento.Size = new Size(92, 21);
-            txtFechaVencimiento.TabIndex = 18;
-            txtFechaVencimiento.KeyPress += txtFechaVencimiento_KeyPress;
+            this.txtFechaVencimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtFechaVencimiento.Location = new System.Drawing.Point(16, 240);
+            this.txtFechaVencimiento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtFechaVencimiento.Name = "txtFechaVencimiento";
+            this.txtFechaVencimiento.Size = new System.Drawing.Size(92, 21);
+            this.txtFechaVencimiento.TabIndex = 18;
             // 
             // lblErrorTarjeta
             // 
-            lblErrorTarjeta.AutoSize = true;
-            lblErrorTarjeta.BackColor = Color.Transparent;
-            lblErrorTarjeta.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            lblErrorTarjeta.ForeColor = Color.Red;
-            lblErrorTarjeta.Location = new Point(91, 42);
-            lblErrorTarjeta.Name = "lblErrorTarjeta";
-            lblErrorTarjeta.Size = new Size(110, 17);
-            lblErrorTarjeta.TabIndex = 17;
-            lblErrorTarjeta.Text = "Datos Invalidos!!";
+            this.lblErrorTarjeta.AutoSize = true;
+            this.lblErrorTarjeta.BackColor = System.Drawing.Color.Transparent;
+            this.lblErrorTarjeta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblErrorTarjeta.ForeColor = System.Drawing.Color.Red;
+            this.lblErrorTarjeta.Location = new System.Drawing.Point(91, 42);
+            this.lblErrorTarjeta.Name = "lblErrorTarjeta";
+            this.lblErrorTarjeta.Size = new System.Drawing.Size(110, 17);
+            this.lblErrorTarjeta.TabIndex = 17;
+            this.lblErrorTarjeta.Text = "Datos Invalidos!!";
             // 
             // btnError
             // 
-            btnError.BackgroundImage = Images.Imagen_de_error;
-            btnError.BackgroundImageLayout = ImageLayout.Zoom;
-            btnError.FlatAppearance.BorderSize = 0;
-            btnError.FlatStyle = FlatStyle.Flat;
-            btnError.Location = new Point(28, 38);
-            btnError.Margin = new Padding(3, 2, 3, 2);
-            btnError.Name = "btnError";
-            btnError.Padding = new Padding(9, 8, 9, 8);
-            btnError.Size = new Size(65, 26);
-            btnError.TabIndex = 16;
-            btnError.TextImageRelation = TextImageRelation.TextBeforeImage;
-            btnError.UseVisualStyleBackColor = true;
+            this.btnError.BackgroundImage = global::TpIsGrupo2.Images.Imagen_de_error;
+            this.btnError.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnError.FlatAppearance.BorderSize = 0;
+            this.btnError.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnError.Location = new System.Drawing.Point(28, 38);
+            this.btnError.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnError.Name = "btnError";
+            this.btnError.Padding = new System.Windows.Forms.Padding(9, 8, 9, 8);
+            this.btnError.Size = new System.Drawing.Size(65, 26);
+            this.btnError.TabIndex = 16;
+            this.btnError.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnError.UseVisualStyleBackColor = true;
             // 
             // label12
             // 
-            label12.AutoSize = true;
-            label12.BackColor = Color.Transparent;
-            label12.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label12.ForeColor = Color.FromArgb(120, 83, 101);
-            label12.Location = new Point(21, 12);
-            label12.Name = "label12";
-            label12.Size = new Size(211, 20);
-            label12.TabIndex = 12;
-            label12.Text = "Ingrese los datos de su tarjeta";
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(83)))), ((int)(((byte)(101)))));
+            this.label12.Location = new System.Drawing.Point(21, 12);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(211, 20);
+            this.label12.TabIndex = 12;
+            this.label12.Text = "Ingrese los datos de su tarjeta";
             // 
             // label9
             // 
-            label9.AutoSize = true;
-            label9.BackColor = Color.Transparent;
-            label9.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.ForeColor = Color.FromArgb(120, 83, 101);
-            label9.Location = new Point(11, 296);
-            label9.Name = "label9";
-            label9.Size = new Size(165, 20);
-            label9.TabIndex = 13;
-            label9.Text = "Ingrese el codigo (CVC)";
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(83)))), ((int)(((byte)(101)))));
+            this.label9.Location = new System.Drawing.Point(11, 296);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(165, 20);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Ingrese el codigo (CVC)";
             // 
             // txtCodigoSeguridad
             // 
-            txtCodigoSeguridad.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            txtCodigoSeguridad.Location = new Point(11, 315);
-            txtCodigoSeguridad.Margin = new Padding(3, 2, 3, 2);
-            txtCodigoSeguridad.Name = "txtCodigoSeguridad";
-            txtCodigoSeguridad.Size = new Size(92, 21);
-            txtCodigoSeguridad.TabIndex = 12;
-            txtCodigoSeguridad.KeyPress += txtCodigoSeguridad_KeyPress;
+            this.txtCodigoSeguridad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCodigoSeguridad.Location = new System.Drawing.Point(11, 315);
+            this.txtCodigoSeguridad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCodigoSeguridad.MaxLength = 3;
+            this.txtCodigoSeguridad.Name = "txtCodigoSeguridad";
+            this.txtCodigoSeguridad.Size = new System.Drawing.Size(92, 21);
+            this.txtCodigoSeguridad.TabIndex = 12;
             // 
             // lblNombreTitular
             // 
-            lblNombreTitular.AutoSize = true;
-            lblNombreTitular.BackColor = Color.Transparent;
-            lblNombreTitular.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            lblNombreTitular.ForeColor = Color.FromArgb(120, 83, 101);
-            lblNombreTitular.Location = new Point(14, 147);
-            lblNombreTitular.Name = "lblNombreTitular";
-            lblNombreTitular.Size = new Size(199, 20);
-            lblNombreTitular.TabIndex = 13;
-            lblNombreTitular.Text = "Ingrese el nombre y apellido";
+            this.lblNombreTitular.AutoSize = true;
+            this.lblNombreTitular.BackColor = System.Drawing.Color.Transparent;
+            this.lblNombreTitular.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNombreTitular.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(83)))), ((int)(((byte)(101)))));
+            this.lblNombreTitular.Location = new System.Drawing.Point(14, 147);
+            this.lblNombreTitular.Name = "lblNombreTitular";
+            this.lblNombreTitular.Size = new System.Drawing.Size(199, 20);
+            this.lblNombreTitular.TabIndex = 13;
+            this.lblNombreTitular.Text = "Ingrese el nombre y apellido";
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.Transparent;
-            label5.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.ForeColor = Color.FromArgb(120, 83, 101);
-            label5.Location = new Point(14, 79);
-            label5.Name = "label5";
-            label5.Size = new Size(128, 20);
-            label5.TabIndex = 13;
-            label5.Text = "Ingrese el numero";
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(83)))), ((int)(((byte)(101)))));
+            this.label5.Location = new System.Drawing.Point(14, 79);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(128, 20);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Ingrese el numero";
             // 
             // txtNombreTitular
             // 
-            txtNombreTitular.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            txtNombreTitular.Location = new Point(15, 166);
-            txtNombreTitular.Margin = new Padding(3, 2, 3, 2);
-            txtNombreTitular.Name = "txtNombreTitular";
-            txtNombreTitular.Size = new Size(170, 21);
-            txtNombreTitular.TabIndex = 12;
-            txtNombreTitular.KeyPress += txtNombreTitular_KeyPress;
+            this.txtNombreTitular.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtNombreTitular.Location = new System.Drawing.Point(15, 166);
+            this.txtNombreTitular.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNombreTitular.MaxLength = 239;
+            this.txtNombreTitular.Name = "txtNombreTitular";
+            this.txtNombreTitular.Size = new System.Drawing.Size(170, 21);
+            this.txtNombreTitular.TabIndex = 12;
             // 
             // txtNumeroTarjeta
             // 
-            txtNumeroTarjeta.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            txtNumeroTarjeta.Location = new Point(14, 98);
-            txtNumeroTarjeta.Margin = new Padding(3, 2, 3, 2);
-            txtNumeroTarjeta.Name = "txtNumeroTarjeta";
-            txtNumeroTarjeta.Size = new Size(208, 21);
-            txtNumeroTarjeta.TabIndex = 12;
-            txtNumeroTarjeta.TextChanged += txtNumeroTarjeta_TextChanged;
-            txtNumeroTarjeta.KeyPress += txtNumeroTarjeta_KeyPress;
+            this.txtNumeroTarjeta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtNumeroTarjeta.Location = new System.Drawing.Point(14, 98);
+            this.txtNumeroTarjeta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNumeroTarjeta.MaxLength = 19;
+            this.txtNumeroTarjeta.Name = "txtNumeroTarjeta";
+            this.txtNumeroTarjeta.Size = new System.Drawing.Size(208, 21);
+            this.txtNumeroTarjeta.TabIndex = 12;
+            this.txtNumeroTarjeta.TextChanged += new System.EventHandler(this.txtNumeroTarjeta_TextChanged);
             // 
             // btnVisa
             // 
-            btnVisa.BackgroundImage = Images.visa2;
-            btnVisa.BackgroundImageLayout = ImageLayout.Zoom;
-            btnVisa.FlatAppearance.BorderSize = 0;
-            btnVisa.FlatStyle = FlatStyle.Flat;
-            btnVisa.Location = new Point(91, 42);
-            btnVisa.Margin = new Padding(3, 2, 3, 2);
-            btnVisa.Name = "btnVisa";
-            btnVisa.Padding = new Padding(9, 8, 9, 8);
-            btnVisa.Size = new Size(65, 26);
-            btnVisa.TabIndex = 0;
-            btnVisa.TextImageRelation = TextImageRelation.TextBeforeImage;
-            btnVisa.UseVisualStyleBackColor = true;
+            this.btnVisa.BackgroundImage = global::TpIsGrupo2.Images.visa2;
+            this.btnVisa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnVisa.FlatAppearance.BorderSize = 0;
+            this.btnVisa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVisa.Location = new System.Drawing.Point(91, 42);
+            this.btnVisa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnVisa.Name = "btnVisa";
+            this.btnVisa.Padding = new System.Windows.Forms.Padding(9, 8, 9, 8);
+            this.btnVisa.Size = new System.Drawing.Size(65, 26);
+            this.btnVisa.TabIndex = 0;
+            this.btnVisa.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnVisa.UseVisualStyleBackColor = true;
             // 
             // lblCantidadProductos
             // 
-            lblCantidadProductos.AutoSize = true;
-            lblCantidadProductos.BackColor = Color.FromArgb(144, 100, 121);
-            lblCantidadProductos.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            lblCantidadProductos.ForeColor = Color.White;
-            lblCantidadProductos.Location = new Point(331, 3);
-            lblCantidadProductos.Name = "lblCantidadProductos";
-            lblCantidadProductos.Size = new Size(17, 18);
-            lblCantidadProductos.TabIndex = 18;
-            lblCantidadProductos.Text = "0";
+            this.lblCantidadProductos.AutoSize = true;
+            this.lblCantidadProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(100)))), ((int)(((byte)(121)))));
+            this.lblCantidadProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblCantidadProductos.ForeColor = System.Drawing.Color.White;
+            this.lblCantidadProductos.Location = new System.Drawing.Point(331, 3);
+            this.lblCantidadProductos.Name = "lblCantidadProductos";
+            this.lblCantidadProductos.Size = new System.Drawing.Size(17, 18);
+            this.lblCantidadProductos.TabIndex = 18;
+            this.lblCantidadProductos.Text = "0";
             // 
             // pnlMetodo
             // 
-            pnlMetodo.BackColor = Color.White;
-            pnlMetodo.ColorBottom = Color.Empty;
-            pnlMetodo.ColorTop = Color.Empty;
-            pnlMetodo.Controls.Add(rbDebito);
-            pnlMetodo.Controls.Add(rbCredito);
-            pnlMetodo.Controls.Add(rbEfectivo);
-            pnlMetodo.Controls.Add(label6);
-            pnlMetodo.Location = new Point(69, 418);
-            pnlMetodo.Margin = new Padding(3, 2, 3, 2);
-            pnlMetodo.Name = "pnlMetodo";
-            pnlMetodo.Size = new Size(243, 133);
-            pnlMetodo.TabIndex = 13;
+            this.pnlMetodo.BackColor = System.Drawing.Color.White;
+            this.pnlMetodo.ColorBottom = System.Drawing.Color.Empty;
+            this.pnlMetodo.ColorTop = System.Drawing.Color.Empty;
+            this.pnlMetodo.Controls.Add(this.rbDebito);
+            this.pnlMetodo.Controls.Add(this.rbCredito);
+            this.pnlMetodo.Controls.Add(this.rbEfectivo);
+            this.pnlMetodo.Controls.Add(this.label6);
+            this.pnlMetodo.Location = new System.Drawing.Point(69, 418);
+            this.pnlMetodo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlMetodo.Name = "pnlMetodo";
+            this.pnlMetodo.Size = new System.Drawing.Size(243, 133);
+            this.pnlMetodo.TabIndex = 13;
             // 
             // rbDebito
             // 
-            rbDebito.AutoSize = true;
-            rbDebito.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            rbDebito.ForeColor = Color.FromArgb(120, 83, 101);
-            rbDebito.Location = new Point(21, 90);
-            rbDebito.Name = "rbDebito";
-            rbDebito.Size = new Size(140, 24);
-            rbDebito.TabIndex = 14;
-            rbDebito.TabStop = true;
-            rbDebito.Text = "Tarjeta de debito";
-            rbDebito.UseVisualStyleBackColor = true;
-            rbDebito.CheckedChanged += rbDebito_CheckedChanged;
+            this.rbDebito.AutoSize = true;
+            this.rbDebito.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rbDebito.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(83)))), ((int)(((byte)(101)))));
+            this.rbDebito.Location = new System.Drawing.Point(21, 90);
+            this.rbDebito.Name = "rbDebito";
+            this.rbDebito.Size = new System.Drawing.Size(140, 24);
+            this.rbDebito.TabIndex = 14;
+            this.rbDebito.Text = "Tarjeta de debito";
+            this.rbDebito.UseVisualStyleBackColor = true;
+            this.rbDebito.CheckedChanged += new System.EventHandler(this.rbDebito_CheckedChanged);
             // 
             // rbCredito
             // 
-            rbCredito.AutoSize = true;
-            rbCredito.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            rbCredito.ForeColor = Color.FromArgb(120, 83, 101);
-            rbCredito.Location = new Point(21, 60);
-            rbCredito.Name = "rbCredito";
-            rbCredito.Size = new Size(143, 24);
-            rbCredito.TabIndex = 13;
-            rbCredito.TabStop = true;
-            rbCredito.Text = "Tarjeta de credito";
-            rbCredito.UseVisualStyleBackColor = true;
-            rbCredito.CheckedChanged += rbCredito_CheckedChanged;
+            this.rbCredito.AutoSize = true;
+            this.rbCredito.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rbCredito.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(83)))), ((int)(((byte)(101)))));
+            this.rbCredito.Location = new System.Drawing.Point(21, 60);
+            this.rbCredito.Name = "rbCredito";
+            this.rbCredito.Size = new System.Drawing.Size(143, 24);
+            this.rbCredito.TabIndex = 13;
+            this.rbCredito.Text = "Tarjeta de credito";
+            this.rbCredito.UseVisualStyleBackColor = true;
+            this.rbCredito.CheckedChanged += new System.EventHandler(this.rbCredito_CheckedChanged);
             // 
             // rbEfectivo
             // 
-            rbEfectivo.AutoSize = true;
-            rbEfectivo.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            rbEfectivo.ForeColor = Color.FromArgb(120, 83, 101);
-            rbEfectivo.Location = new Point(23, 32);
-            rbEfectivo.Name = "rbEfectivo";
-            rbEfectivo.Size = new Size(80, 24);
-            rbEfectivo.TabIndex = 12;
-            rbEfectivo.TabStop = true;
-            rbEfectivo.Text = "Efectivo";
-            rbEfectivo.UseVisualStyleBackColor = true;
-            rbEfectivo.CheckedChanged += rbEfectivo_CheckedChanged;
+            this.rbEfectivo.AutoSize = true;
+            this.rbEfectivo.Checked = true;
+            this.rbEfectivo.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rbEfectivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(83)))), ((int)(((byte)(101)))));
+            this.rbEfectivo.Location = new System.Drawing.Point(23, 32);
+            this.rbEfectivo.Name = "rbEfectivo";
+            this.rbEfectivo.Size = new System.Drawing.Size(80, 24);
+            this.rbEfectivo.TabIndex = 12;
+            this.rbEfectivo.TabStop = true;
+            this.rbEfectivo.Text = "Efectivo";
+            this.rbEfectivo.UseVisualStyleBackColor = true;
+            this.rbEfectivo.CheckedChanged += new System.EventHandler(this.rbEfectivo_CheckedChanged);
             // 
             // label6
             // 
-            label6.AutoSize = true;
-            label6.BackColor = Color.Transparent;
-            label6.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.ForeColor = Color.FromArgb(120, 83, 101);
-            label6.Location = new Point(57, 8);
-            label6.Name = "label6";
-            label6.Size = new Size(123, 20);
-            label6.TabIndex = 9;
-            label6.Text = "Metodo de pago";
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(83)))), ((int)(((byte)(101)))));
+            this.label6.Location = new System.Drawing.Point(57, 8);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(123, 20);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Metodo de pago";
             // 
             // btnCarrito
             // 
-            btnCarrito.BackColor = Color.Transparent;
-            btnCarrito.BackgroundImage = (Image)resources.GetObject("btnCarrito.BackgroundImage");
-            btnCarrito.BackgroundImageLayout = ImageLayout.Stretch;
-            btnCarrito.Location = new Point(292, 9);
-            btnCarrito.Margin = new Padding(3, 2, 3, 2);
-            btnCarrito.Name = "btnCarrito";
-            btnCarrito.Size = new Size(47, 38);
-            btnCarrito.TabIndex = 17;
-            btnCarrito.UseVisualStyleBackColor = false;
-            btnCarrito.Click += btnCarrito_Click;
+            this.btnCarrito.BackColor = System.Drawing.Color.Transparent;
+            this.btnCarrito.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCarrito.BackgroundImage")));
+            this.btnCarrito.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCarrito.Location = new System.Drawing.Point(292, 9);
+            this.btnCarrito.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCarrito.Name = "btnCarrito";
+            this.btnCarrito.Size = new System.Drawing.Size(47, 38);
+            this.btnCarrito.TabIndex = 17;
+            this.btnCarrito.UseVisualStyleBackColor = false;
+            this.btnCarrito.Click += new System.EventHandler(this.btnCarrito_Click);
             // 
             // btnComprar
             // 
-            btnComprar.BackColor = Color.FromArgb(192, 133, 162);
-            btnComprar.FlatAppearance.BorderSize = 0;
-            btnComprar.FlatStyle = FlatStyle.Flat;
-            btnComprar.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            btnComprar.ForeColor = Color.White;
-            btnComprar.Location = new Point(64, 1033);
-            btnComprar.Margin = new Padding(3, 2, 3, 2);
-            btnComprar.Name = "btnComprar";
-            btnComprar.Size = new Size(245, 48);
-            btnComprar.TabIndex = 15;
-            btnComprar.Text = "Comprar";
-            btnComprar.UseVisualStyleBackColor = false;
-            btnComprar.Click += btnComprar_Click;
+            this.btnComprar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(133)))), ((int)(((byte)(162)))));
+            this.btnComprar.FlatAppearance.BorderSize = 0;
+            this.btnComprar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnComprar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnComprar.ForeColor = System.Drawing.Color.White;
+            this.btnComprar.Location = new System.Drawing.Point(64, 1033);
+            this.btnComprar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnComprar.Name = "btnComprar";
+            this.btnComprar.Size = new System.Drawing.Size(245, 48);
+            this.btnComprar.TabIndex = 15;
+            this.btnComprar.Text = "Comprar";
+            this.btnComprar.UseVisualStyleBackColor = false;
+            this.btnComprar.Click += new System.EventHandler(this.btnComprar_Click);
             // 
             // pnlDireccion
             // 
-            pnlDireccion.BackColor = Color.White;
-            pnlDireccion.ColorBottom = Color.Empty;
-            pnlDireccion.ColorTop = Color.Empty;
-            pnlDireccion.Controls.Add(label4);
-            pnlDireccion.Controls.Add(lbl_completarCalle);
-            pnlDireccion.Controls.Add(lbl_completarCiudad);
-            pnlDireccion.Controls.Add(cmbCiudades);
-            pnlDireccion.Controls.Add(label3);
-            pnlDireccion.Controls.Add(label2);
-            pnlDireccion.Controls.Add(txtCalle);
-            pnlDireccion.ForeColor = Color.Coral;
-            pnlDireccion.Location = new Point(71, 55);
-            pnlDireccion.Margin = new Padding(3, 2, 3, 2);
-            pnlDireccion.Name = "pnlDireccion";
-            pnlDireccion.Size = new Size(245, 200);
-            pnlDireccion.TabIndex = 12;
+            this.pnlDireccion.BackColor = System.Drawing.Color.White;
+            this.pnlDireccion.ColorBottom = System.Drawing.Color.Empty;
+            this.pnlDireccion.ColorTop = System.Drawing.Color.Empty;
+            this.pnlDireccion.Controls.Add(this.label4);
+            this.pnlDireccion.Controls.Add(this.lbl_completarCalle);
+            this.pnlDireccion.Controls.Add(this.lbl_completarCiudad);
+            this.pnlDireccion.Controls.Add(this.cmbCiudades);
+            this.pnlDireccion.Controls.Add(this.label3);
+            this.pnlDireccion.Controls.Add(this.label2);
+            this.pnlDireccion.Controls.Add(this.txtCalle);
+            this.pnlDireccion.ForeColor = System.Drawing.Color.Coral;
+            this.pnlDireccion.Location = new System.Drawing.Point(71, 55);
+            this.pnlDireccion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlDireccion.Name = "pnlDireccion";
+            this.pnlDireccion.Size = new System.Drawing.Size(245, 200);
+            this.pnlDireccion.TabIndex = 12;
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.Transparent;
-            label4.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.ForeColor = Color.FromArgb(120, 83, 101);
-            label4.Location = new Point(59, 8);
-            label4.Name = "label4";
-            label4.Size = new Size(126, 20);
-            label4.TabIndex = 14;
-            label4.Text = "Lugar de entrega";
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(83)))), ((int)(((byte)(101)))));
+            this.label4.Location = new System.Drawing.Point(59, 8);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(126, 20);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Lugar de entrega";
             // 
             // lbl_completarCalle
             // 
-            lbl_completarCalle.AutoSize = true;
-            lbl_completarCalle.BackColor = Color.Transparent;
-            lbl_completarCalle.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_completarCalle.ForeColor = Color.Red;
-            lbl_completarCalle.Location = new Point(28, 169);
-            lbl_completarCalle.Name = "lbl_completarCalle";
-            lbl_completarCalle.Size = new Size(154, 17);
-            lbl_completarCalle.TabIndex = 13;
-            lbl_completarCalle.Text = "Ingrese nombre de calle";
+            this.lbl_completarCalle.AutoSize = true;
+            this.lbl_completarCalle.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_completarCalle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_completarCalle.ForeColor = System.Drawing.Color.Red;
+            this.lbl_completarCalle.Location = new System.Drawing.Point(28, 169);
+            this.lbl_completarCalle.Name = "lbl_completarCalle";
+            this.lbl_completarCalle.Size = new System.Drawing.Size(154, 17);
+            this.lbl_completarCalle.TabIndex = 13;
+            this.lbl_completarCalle.Text = "Ingrese nombre de calle";
             // 
             // lbl_completarCiudad
             // 
-            lbl_completarCiudad.AutoSize = true;
-            lbl_completarCiudad.BackColor = Color.Transparent;
-            lbl_completarCiudad.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_completarCiudad.ForeColor = Color.Red;
-            lbl_completarCiudad.Location = new Point(28, 95);
-            lbl_completarCiudad.Name = "lbl_completarCiudad";
-            lbl_completarCiudad.Size = new Size(141, 17);
-            lbl_completarCiudad.TabIndex = 12;
-            lbl_completarCiudad.Text = "Seleccione una ciudad";
+            this.lbl_completarCiudad.AutoSize = true;
+            this.lbl_completarCiudad.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_completarCiudad.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_completarCiudad.ForeColor = System.Drawing.Color.Red;
+            this.lbl_completarCiudad.Location = new System.Drawing.Point(28, 95);
+            this.lbl_completarCiudad.Name = "lbl_completarCiudad";
+            this.lbl_completarCiudad.Size = new System.Drawing.Size(141, 17);
+            this.lbl_completarCiudad.TabIndex = 12;
+            this.lbl_completarCiudad.Text = "Seleccione una ciudad";
             // 
             // cmbCiudades
             // 
-            cmbCiudades.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            cmbCiudades.FormattingEnabled = true;
-            cmbCiudades.Location = new Point(28, 68);
-            cmbCiudades.Margin = new Padding(3, 2, 3, 2);
-            cmbCiudades.Name = "cmbCiudades";
-            cmbCiudades.Size = new Size(168, 23);
-            cmbCiudades.TabIndex = 8;
-            cmbCiudades.SelectedIndexChanged += cmbCiudades_SelectedIndexChanged;
+            this.cmbCiudades.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cmbCiudades.FormattingEnabled = true;
+            this.cmbCiudades.Location = new System.Drawing.Point(28, 68);
+            this.cmbCiudades.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbCiudades.Name = "cmbCiudades";
+            this.cmbCiudades.Size = new System.Drawing.Size(168, 23);
+            this.cmbCiudades.TabIndex = 8;
+            this.cmbCiudades.SelectedIndexChanged += new System.EventHandler(this.cmbCiudades_SelectedIndexChanged);
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = Color.FromArgb(120, 83, 101);
-            label3.Location = new Point(28, 41);
-            label3.Name = "label3";
-            label3.Size = new Size(150, 20);
-            label3.TabIndex = 9;
-            label3.Text = "Seleccione su ciudad";
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(83)))), ((int)(((byte)(101)))));
+            this.label3.Location = new System.Drawing.Point(28, 41);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(150, 20);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Seleccione su ciudad";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.FromArgb(120, 83, 101);
-            label2.Location = new Point(28, 117);
-            label2.Name = "label2";
-            label2.Size = new Size(164, 20);
-            label2.TabIndex = 10;
-            label2.Text = "Ingrese calle y número";
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(83)))), ((int)(((byte)(101)))));
+            this.label2.Location = new System.Drawing.Point(28, 117);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(164, 20);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Ingrese calle y número";
             // 
             // txtCalle
             // 
-            txtCalle.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            txtCalle.Location = new Point(28, 144);
-            txtCalle.Margin = new Padding(3, 2, 3, 2);
-            txtCalle.MaxLength = 240;
-            txtCalle.Name = "txtCalle";
-            txtCalle.Size = new Size(170, 21);
-            txtCalle.TabIndex = 7;
-            txtCalle.TextChanged += txtCalle_TextChanged;
+            this.txtCalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCalle.Location = new System.Drawing.Point(28, 144);
+            this.txtCalle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCalle.MaxLength = 239;
+            this.txtCalle.Name = "txtCalle";
+            this.txtCalle.Size = new System.Drawing.Size(170, 21);
+            this.txtCalle.TabIndex = 7;
+            this.txtCalle.TextChanged += new System.EventHandler(this.txtCalle_TextChanged);
+            this.txtCalle.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCalle_KeyPress);
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.FromArgb(37, 36, 34);
-            label1.Location = new Point(100, 18);
-            label1.Name = "label1";
-            label1.Size = new Size(172, 24);
-            label1.TabIndex = 3;
-            label1.Text = "Confirmar Pedido";
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(36)))), ((int)(((byte)(34)))));
+            this.label1.Location = new System.Drawing.Point(100, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(172, 24);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Confirmar Pedido";
             // 
             // pictureBox3
             // 
-            pictureBox3.BackColor = Color.Transparent;
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(236, 730);
-            pictureBox3.Margin = new Padding(3, 2, 3, 2);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(304, 256);
-            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox3.TabIndex = 2;
-            pictureBox3.TabStop = false;
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(236, 730);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(304, 256);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
-            pictureBox2.BackColor = Color.Transparent;
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(-98, 302);
-            pictureBox2.Margin = new Padding(3, 2, 3, 2);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(186, 189);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 1;
-            pictureBox2.TabStop = false;
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(-98, 302);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(186, 189);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(308, 61);
-            pictureBox1.Margin = new Padding(3, 2, 3, 2);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(194, 178);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(308, 61);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(194, 178);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // ConfirmarPedido
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(390, 788);
-            Controls.Add(pnlGeneral);
-            FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 2, 3, 2);
-            Name = "ConfirmarPedido";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
-            Activated += ConfirmarCompra_Activated;
-            pnlGeneral.ResumeLayout(false);
-            pnlGeneral.PerformLayout();
-            pnlDatosEfectivo.ResumeLayout(false);
-            pnlDatosEfectivo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)nupEfectivo).EndInit();
-            pnlHoraEntrega.ResumeLayout(false);
-            pnlHoraEntrega.PerformLayout();
-            pnlDatosTarjeta.ResumeLayout(false);
-            pnlDatosTarjeta.PerformLayout();
-            pnlMetodo.ResumeLayout(false);
-            pnlMetodo.PerformLayout();
-            pnlDireccion.ResumeLayout(false);
-            pnlDireccion.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(390, 1100);
+            this.Controls.Add(this.pnlGeneral);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "ConfirmarPedido";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Form1";
+            this.Activated += new System.EventHandler(this.ConfirmarCompra_Activated);
+            this.pnlGeneral.ResumeLayout(false);
+            this.pnlGeneral.PerformLayout();
+            this.pnlDatosEfectivo.ResumeLayout(false);
+            this.pnlDatosEfectivo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupEfectivo)).EndInit();
+            this.pnlHoraEntrega.ResumeLayout(false);
+            this.pnlHoraEntrega.PerformLayout();
+            this.pnlDatosTarjeta.ResumeLayout(false);
+            this.pnlDatosTarjeta.PerformLayout();
+            this.pnlMetodo.ResumeLayout(false);
+            this.pnlMetodo.PerformLayout();
+            this.pnlDireccion.ResumeLayout(false);
+            this.pnlDireccion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion

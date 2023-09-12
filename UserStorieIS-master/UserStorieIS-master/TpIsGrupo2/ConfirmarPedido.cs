@@ -58,7 +58,7 @@ namespace TpIsGrupo2
             dtpSeleccionarFecha.CustomFormat = "yyyy-MM-dd HH:mm";
             dtpSeleccionarFecha.Visible = false;
 
-
+            setCashConditions();
         }
 
 
@@ -201,7 +201,7 @@ namespace TpIsGrupo2
             }
 
             // Verificar si el valor es igual o mayor al montoEfectivoCarrito
-            if (valorEfectivo >= montoEfectivoCarrito)
+            if (valorEfectivo >= montoEfectivoCarrito+500)
             {
                 // Si es igual o mayor, ocultar el mensaje de error
                 lblMontoValido.Visible = false;
@@ -500,6 +500,7 @@ namespace TpIsGrupo2
 
         private void setCashConditions()
         {
+            nupEfectivo.Value = (decimal)producto.SubtotalProducto +500 ;
             pnlGeneral.VerticalScroll.Value = 0;
             // Este metodo hace que se vea el panel del metodo tarjeta y reubicar la posicion de boton
             pnlDatosTarjeta.Visible = false;
@@ -508,7 +509,6 @@ namespace TpIsGrupo2
             pnlDatosEfectivo.Visible = true;
             lblSimbolo.Visible = true;
 
-            nupEfectivo.Value = (decimal)producto.SubtotalProducto + 500;
             lblMontoValido.Visible = false;
 
             // quitar visible errores de tarjeta
@@ -653,9 +653,9 @@ namespace TpIsGrupo2
 
         private void ConfirmarCompra_Activated(object sender, EventArgs e)
         {
-            nupEfectivo.Value = (decimal)producto.SubtotalProducto;
+            
 
-            lblMontoValido.Visible = false;
+            
 
             if (producto.ExisteProducto)
             {
@@ -670,12 +670,12 @@ namespace TpIsGrupo2
 
         private void nupEfectivo_Leave(object sender, EventArgs e)
         {
-            if ((float)nupEfectivo.Value > producto.SubtotalProducto)
+            if ((float)nupEfectivo.Value > ((float)producto.SubtotalProducto+500) )
             {
 
                 lblMontoValido.Visible = true;
                 lblMontoValido.ForeColor = Color.Black;
-                lblMontoValido.Text = "Su vuelto es " + ((float)nupEfectivo.Value - producto.SubtotalProducto).ToString();
+                lblMontoValido.Text = "Su vuelto es " + ((float)nupEfectivo.Value - (producto.SubtotalProducto+500)).ToString();
             }
             else
             {
@@ -687,6 +687,14 @@ namespace TpIsGrupo2
         private void pnlGeneral_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void txtCalle_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetterOrDigit(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; // Esto evita que el carácter se escriba en el TextBox.
+            }
         }
     }
 

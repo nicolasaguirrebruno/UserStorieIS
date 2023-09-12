@@ -39,6 +39,8 @@ namespace TpIsGrupo2
             cant = cantProducto.Value * 4500;
             subtotal.Text = "$" + cant.ToString();
             total.Text = "$" + cant.ToString();
+            button5.Visible = false;
+            button5.Hide();
         }
 
 
